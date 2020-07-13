@@ -61,21 +61,7 @@
     <el-divider></el-divider>
     <div class="tab-table">
       <el-tabs tab-position="left" style="height: 200px;">
-        <el-tab-pane label="5G商用">
-          <el-table style="width: 100%">
-            <el-table-column prop="date">
-              <template>
-                <p>NVIDA GPU 液冷服务器</p>
-                <p>
-                  <el-tag>人工智能</el-tag>
-                  <el-tag>高新制造业</el-tag>
-                </p>
-              </template>
-            </el-table-column>
-            <el-table-column prop="name"></el-table-column>
-            <el-table-column prop="address"></el-table-column>
-          </el-table>
-        </el-tab-pane>
+        <el-tab-pane label="5G商用"></el-tab-pane>
         <el-tab-pane label="高分子材料">配置管理</el-tab-pane>
         <el-tab-pane label="新能源">角色管理</el-tab-pane>
         <el-tab-pane label="生物医药">定时任务补偿</el-tab-pane>
