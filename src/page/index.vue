@@ -3,6 +3,7 @@
     <!-- 头部导航 -->
     <header-tittle />
     <div class="header-image">
+      1
       <el-carousel height="150px">
         <el-carousel-item v-for="item in items" :key="item">
           <h3 class="small">{{ item }}</h3>
@@ -10,56 +11,113 @@
       </el-carousel>
     </div>
     <div>
-      <el-row class="intro">
+      <el-row class="intro" style="padding-top:10px;padding-left:50px;padding-right:100px">
         <el-col :span="4">
-          <span class="intro-text intro-text-top">企业理念</span>
+          <div style="line-height:200px">
+            <el-tag
+              type="info"
+              line-height="200px"
+              style="height:60px;width:150px;line-height:60px;font-size:18px"
+            >企业理念</el-tag>
+          </div>
         </el-col>
         <el-col :span="20">
           <div class="intro-detail">
-            <el-row>
-              <el-col :span="12">
-                <div class="detail-left">政府</div>
+            <el-row style="height:100%" :gutter="20">
+              <el-col :span="9" style="height:100%">
+                <div class="intro-detail-idea">
+                  <p style="padding: 5px;">政府以及产业链上游企业在平台上发布需求、相关政策以及路演活动</p>
+                </div>
               </el-col>
-              <el-col :span="12">
-                <div class="detail-right">中小</div>
+              <el-col :span="6" style="height:100%">
+                <div class="intro-detail-arrow">
+                  <el-image
+                    style=" height:100%;width:100%"
+                    src="static/img/icon/Arrow.png"
+                    fit="fill"
+                  ></el-image>
+                </div>
+              </el-col>
+              <el-col :span="9" style="height:100%">
+                <div class="intro-detail-idea">
+                  <div>
+                    <p style="padding: 5px;">中小科创公司在平台上发布公司概况、产品介绍、技术支持以及合作模式</p>
+                  </div>
+                </div>
               </el-col>
             </el-row>
           </div>
         </el-col>
       </el-row>
 
-      <el-row class="intro">
+      <el-row class="intro" style="padding-left:50px;padding-right:100px">
         <el-col :span="4">
-          <span class="intro-text">聚焦领域</span>
+          <div style="line-height:200px">
+            <el-tag
+              type="info"
+              line-height="200px"
+              style="height:60px;width:150px;line-height:60px;font-size:18px"
+            >聚焦领域</el-tag>
+          </div>
         </el-col>
         <el-col :span="20">
           <div class="intro-detail">
-            <el-row>
-              <el-col :span="4">
-                <div class="detail-left">人工智能</div>
+            <el-row style="height:100%">
+              <el-col :span="4" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" height: 80%" src="static/img/icon/AI.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">人工智能</div>
+                  <div style="margin-top:10px;color:#ABB2B9">AI</div>
+                </div>
               </el-col>
-              <el-col :span="4">
-                <div class="detail-right">人工智能</div>
+              <el-col :span="4" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" height: 80%" src="static/img/icon/Internet.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">物联网</div>
+                  <div style="margin-top:10px;color:#ABB2B9">IOT</div>
+                </div>
               </el-col>
-              <el-col :span="4">
-                <div class="detail-left">人工智能</div>
+              <el-col :span="4" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" height: 80%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">高端制造</div>
+                  <div style="margin-top:10px;color:#ABB2B9">Advanced Manufacture</div>
+                </div>
               </el-col>
-              <el-col :span="4">
-                <div class="detail-right">人工智能</div>
+              <el-col :span="4" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" height: 80%" src="static/img/icon/Material.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">新材料</div>
+                  <div style="margin-top:10px;color:#ABB2B9">New Meterial</div>
+                </div>
               </el-col>
-              <el-col :span="4">
-                <div class="detail-left">人工智能</div>
+              <el-col :span="4" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" height: 80%" src="static/img/icon/Medical.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">大健康</div>
+                  <div style="margin-top:10px;color:#ABB2B9">Healthcare</div>
+                </div>
               </el-col>
-              <el-col :span="4">
-                <div class="detail-right">人工智能</div>
+              <el-col :span="4" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" height: 80%" src="static/img/icon/Car.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">车联网</div>
+                  <div style="margin-top:10px;color:#ABB2B9">ICV</div>
+                </div>
               </el-col>
             </el-row>
           </div>
         </el-col>
       </el-row>
     </div>
-    <el-divider></el-divider>
+    <div style="margin-top:60px;margin-bottom:40px">
+      <el-divider></el-divider>
+    </div>
     <div class="technology-container">
+      <el-row class="sub-title">
+        <i class="el-icon-s-home"></i>
+        技术项目库
+      </el-row>
       <el-tabs tab-position="left">
         <el-tab-pane label="高端装备">
           <el-row class="technology-item" v-for="technology in technologies" :key="technology">
@@ -89,7 +147,7 @@
     <!-- </div> -->
     <el-divider></el-divider>
     <div class="policy">
-      <el-row class="policy-title">
+      <el-row class="sub-title">
         <i class="el-icon-document-copy"></i>
         政策一览
       </el-row>
@@ -465,12 +523,12 @@ main .el-menu {
 .header-image {
   width: 100%;
   .el-carousel--horizontal {
-    overflow-x: unset;
+    //overflow-x: unset;
   }
 }
 .intro {
-  height: 100px;
-  line-height: 100px;
+  height: 200px;
+  //line-height: 200px;
   text-align: center;
   .intro-text {
     // display: inline-block;
@@ -485,8 +543,38 @@ main .el-menu {
   .intro-text-top {
     // border-bottom: none;
   }
+  .intro-detail {
+    height: 200px;
+    .intro-detail-idea {
+      height: 43%;
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      top: 22%;
+      border: 2px solid #e5e7e9;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    .intro-detail-arrow {
+      height: 55%;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      top: 22%;
+      border-radius: 20px;
+    }
+    .intro-detail-img {
+      height: 70%;
+      width: 55%;
+      margin: 0 auto;
+      position: relative;
+      top: 15%;
+    }
+  }
 }
 .technology-container {
+  padding-left: 20px;
+  padding-right: 30px;
   .technology-item {
     padding: 10px;
     border-top: 1px solid #ccc;
@@ -511,6 +599,11 @@ main .el-menu {
       border: 1px solid #eee;
     }
   }
+}
+.sub-title {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 .policy {
   margin-top: 50px;
