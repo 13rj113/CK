@@ -50,7 +50,7 @@
         </el-col>
       </el-row>
 
-      <el-row class="intro" style="padding-left:50px;padding-right:100px">
+      <el-row class="intro" style="padding-top:0px;padding-left:50px;padding-right:100px">
         <el-col :span="4">
           <div style="line-height:200px">
             <el-tag
@@ -65,42 +65,42 @@
             <el-row style="height:100%">
               <el-col :span="4" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 80%" src="static/img/icon/AI.png" fit="fill"></el-image>
+                  <el-image style=" height: 70%" src="static/img/icon/AI.png" fit="fill"></el-image>
                   <div style="margin-top:15px">人工智能</div>
                   <div style="margin-top:10px;color:#ABB2B9">AI</div>
                 </div>
               </el-col>
               <el-col :span="4" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 80%" src="static/img/icon/Internet.png" fit="fill"></el-image>
+                  <el-image style=" height: 70%" src="static/img/icon/Internet.png" fit="fill"></el-image>
                   <div style="margin-top:15px">物联网</div>
                   <div style="margin-top:10px;color:#ABB2B9">IOT</div>
                 </div>
               </el-col>
               <el-col :span="4" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 80%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
+                  <el-image style=" height: 70%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
                   <div style="margin-top:15px">高端制造</div>
                   <div style="margin-top:10px;color:#ABB2B9">Advanced Manufacture</div>
                 </div>
               </el-col>
               <el-col :span="4" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 80%" src="static/img/icon/Material.png" fit="fill"></el-image>
+                  <el-image style=" height: 70%" src="static/img/icon/Material.png" fit="fill"></el-image>
                   <div style="margin-top:15px">新材料</div>
                   <div style="margin-top:10px;color:#ABB2B9">New Meterial</div>
                 </div>
               </el-col>
               <el-col :span="4" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 80%" src="static/img/icon/Medical.png" fit="fill"></el-image>
+                  <el-image style=" height: 70%" src="static/img/icon/Medical.png" fit="fill"></el-image>
                   <div style="margin-top:15px">大健康</div>
                   <div style="margin-top:10px;color:#ABB2B9">Healthcare</div>
                 </div>
               </el-col>
               <el-col :span="4" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 80%" src="static/img/icon/Car.png" fit="fill"></el-image>
+                  <el-image style=" height: 70%" src="static/img/icon/Car.png" fit="fill"></el-image>
                   <div style="margin-top:15px">车联网</div>
                   <div style="margin-top:10px;color:#ABB2B9">ICV</div>
                 </div>
@@ -110,7 +110,7 @@
         </el-col>
       </el-row>
     </div>
-    <div style="margin-top:60px;margin-bottom:40px">
+    <div style="margin-top:40px;margin-bottom:40px">
       <el-divider></el-divider>
     </div>
     <div class="technology-container">
