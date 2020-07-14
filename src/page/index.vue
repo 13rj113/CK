@@ -59,9 +59,26 @@
       </el-row>
     </div>
     <el-divider></el-divider>
-    <div class="tab-table">
-      <el-tabs tab-position="left" style="height: 200px;">
-        <el-tab-pane label="5G商用"></el-tab-pane>
+    <div class="technology-container">
+      <el-tabs tab-position="left">
+        <el-tab-pane label="高端装备">
+          <el-row class="technology-item" v-for="technology in technologies" :key="technology">
+            <el-col :span="6">
+              <div class="technology-title">{{technology.title}}</div>
+              <span
+                class="technology-title-tag"
+                v-for="tag in technology.titleTag"
+                :key="tag"
+              >{{tag}}</span>
+            </el-col>
+            <el-col :span="3">
+              <div class="technology-tags" v-for="tag in technology.tags" :key="tag">{{tag}}</div>
+            </el-col>
+            <el-col :span="15">
+              <div class="technology-content">{{technology.content}}</div>
+            </el-col>
+          </el-row>
+        </el-tab-pane>
         <el-tab-pane label="高分子材料">配置管理</el-tab-pane>
         <el-tab-pane label="新能源">角色管理</el-tab-pane>
         <el-tab-pane label="生物医药">定时任务补偿</el-tab-pane>
@@ -348,26 +365,62 @@ export default {
       fieldValue: "",
       active: true,
       items: [1, 2, 3, 4],
-      tableData: [
+      technologies: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          title: "钢结构、空间结构、码头船坞工程类产品",
+          titleTag: ["高端制造", "海洋工程装备"],
+          tags: ["大批量销售阶段", "地区：广东 深圳"],
+          content:
+            "公司制造高强度高耐候性建筑用锌-5%铝-混合稀土合金（Galfan）镀层拉索产品研制，单层索网结构点支式幕墙的索夹装置荣获2009年度东莞市专利优秀奖，建筑门窗多点锁闭五金系统荣获2010年东莞市科学技术进步三等奖，“高强度高耐候性建筑用锌-5%铝-混合稀土合金（Galfan）镀层拉索产品研制”项目荣获2013年度“中国钢结构协会科学技术奖”一等奖。"
         },
         {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
+          title: "车用可视化智动新风系统产品项目",
+          titleTag: ["智能制造", "高端制造"],
+          tags: ["研发阶段", "地区：江苏 南京"],
+          content:
+            "纤风物语™ 车内智动新风系统是一款集多功能显示器、滤芯传感器、纤风物语App、多功能定制滤芯为一体的车内空气可视化管理系统，是一款智能车内空气净化软件，通过手机绑定智能设备，实现随时随地检测车内外空气质量，及时更换滤芯，改善车内空气质量。"
         },
         {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
+          title: "量子点增强显示技术",
+          titleTag: ["智能制造", "医疗设备与器械"],
+          tags: ["测试验证阶段", "地区：日本"],
+          content:
+            "公司的量子点技术将打破国际垄断，成为中国市场上量子点显示材料与技术应用的引领者，为显示面板商、终端品牌商提供质优价廉的QLED 材料、技术解决方案，持续提高消费者的视觉体验。"
         },
         {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
+          title: "量子点增强显示技术",
+          titleTag: ["智能制造", "医疗设备与器械"],
+          tags: ["测试验证阶段", "地区：日本"],
+          content:
+            "公司的量子点技术将打破国际垄断，成为中国市场上量子点显示材料与技术应用的引领者，为显示面板商、终端品牌商提供质优价廉的QLED 材料、技术解决方案，持续提高消费者的视觉体验。"
+        },
+        {
+          title: "量子点增强显示技术",
+          titleTag: ["智能制造", "医疗设备与器械"],
+          tags: ["测试验证阶段", "地区：日本"],
+          content:
+            "公司的量子点技术将打破国际垄断，成为中国市场上量子点显示材料与技术应用的引领者，为显示面板商、终端品牌商提供质优价廉的QLED 材料、技术解决方案，持续提高消费者的视觉体验。"
+        },
+        {
+          title: "量子点增强显示技术",
+          titleTag: ["智能制造", "医疗设备与器械"],
+          tags: ["测试验证阶段", "地区：日本"],
+          content:
+            "公司的量子点技术将打破国际垄断，成为中国市场上量子点显示材料与技术应用的引领者，为显示面板商、终端品牌商提供质优价廉的QLED 材料、技术解决方案，持续提高消费者的视觉体验。"
+        },
+        {
+          title: "量子点增强显示技术",
+          titleTag: ["智能制造", "医疗设备与器械"],
+          tags: ["测试验证阶段", "地区：日本"],
+          content:
+            "公司的量子点技术将打破国际垄断，成为中国市场上量子点显示材料与技术应用的引领者，为显示面板商、终端品牌商提供质优价廉的QLED 材料、技术解决方案，持续提高消费者的视觉体验。"
+        },
+        {
+          title: "量子点增强显示技术",
+          titleTag: ["智能制造", "医疗设备与器械"],
+          tags: ["测试验证阶段", "地区：日本"],
+          content:
+            "公司的量子点技术将打破国际垄断，成为中国市场上量子点显示材料与技术应用的引领者，为显示面板商、终端品牌商提供质优价廉的QLED 材料、技术解决方案，持续提高消费者的视觉体验。"
         }
       ]
     };
@@ -431,6 +484,32 @@ main .el-menu {
   }
   .intro-text-top {
     // border-bottom: none;
+  }
+}
+.technology-container {
+  .technology-item {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    .technology-title {
+      font-size: 1rem;
+    }
+    .technology-title-tag {
+      display: inline-block;
+      margin: 10px;
+      font-size: 0.8rem;
+      padding: 5px;
+      background: rgb(230, 229, 221);
+      border: 1px solid #ccc;
+    }
+    .technology-tags {
+      display: inline-block;
+      margin: 10px;
+      font-size: 0.8rem;
+      padding: 5px;
+      background: rgb(235, 230, 223);
+      border: 1px solid #eee;
+    }
   }
 }
 .policy {
