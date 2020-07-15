@@ -217,10 +217,20 @@
                 </el-col>
               </el-row>
               <el-divider></el-divider>
-              <policy-search-content />
-              <policy-search-content />
-              <policy-search-content />
-              <policy-search-content />
+              <el-row
+                style="height:100px;margin-bottom:20px"
+                :gutter="20"
+                v-for="policy in policy1"
+                :key="policy"
+              >
+                <el-col :span="4" style="height:100px">
+                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                </el-col>
+                <el-col :span="20" style="height:100px">
+                  <div class="policy-search-title">{{policy.title}}</div>
+                  <div class="policy-search-content">{{policy.content}}</div>
+                </el-col>
+              </el-row>
             </el-tab-pane>
             <el-tab-pane label="发改委">
               <el-row class="search-first" style="margin-bottom:15px">
@@ -263,9 +273,20 @@
                 </el-col>
               </el-row>
               <el-divider></el-divider>
-              <policy-search-content />
-              <policy-search-content />
-              <policy-search-content />
+              <el-row
+                style="height:100px;margin-bottom:20px"
+                :gutter="20"
+                v-for="policy in policy1"
+                :key="policy"
+              >
+                <el-col :span="4" style="height:100px">
+                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                </el-col>
+                <el-col :span="20" style="height:100px">
+                  <div class="policy-search-title">{{policy.title}}</div>
+                  <div class="policy-search-content">{{policy.content}}</div>
+                </el-col>
+              </el-row>
             </el-tab-pane>
             <el-tab-pane label="组织部">
               <el-row class="search-first" style="margin-bottom:15px">
@@ -308,8 +329,20 @@
                 </el-col>
               </el-row>
               <el-divider></el-divider>
-              <policy-search-content />
-              <policy-search-content />
+              <el-row
+                style="height:100px;margin-bottom:20px"
+                :gutter="20"
+                v-for="policy in policy1"
+                :key="policy"
+              >
+                <el-col :span="4" style="height:100px">
+                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                </el-col>
+                <el-col :span="20" style="height:100px">
+                  <div class="policy-search-title">{{policy.title}}</div>
+                  <div class="policy-search-content">{{policy.content}}</div>
+                </el-col>
+              </el-row>
             </el-tab-pane>
             <el-tab-pane label="经信局">
               <el-row class="search-first" style="margin-bottom:15px">
@@ -352,7 +385,20 @@
                 </el-col>
               </el-row>
               <el-divider></el-divider>
-              <policy-search-content />
+              <el-row
+                style="height:100px;margin-bottom:20px"
+                :gutter="20"
+                v-for="policy in policy1"
+                :key="policy"
+              >
+                <el-col :span="4" style="height:100px">
+                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                </el-col>
+                <el-col :span="20" style="height:100px">
+                  <div class="policy-search-title">{{policy.title}}</div>
+                  <div class="policy-search-content">{{policy.content}}</div>
+                </el-col>
+              </el-row>
             </el-tab-pane>
           </el-tabs>
         </el-col>
@@ -362,20 +408,26 @@
     <el-row style="height:100px;margin-top:60px">
       <el-col :span="8" style="height:100%;font-size:20px">
         <div style="height:100%">
-          <i class="el-icon-platform-eleme"></i>
-          海量政策采集分析
+          <p style="cursor: pointer;margin-top:0px">
+            <i class="el-icon-platform-eleme"></i>
+            海量政策采集分析
+          </p>
         </div>
       </el-col>
       <el-col :span="8" style="height:100%;font-size:20px">
         <div style="height:100%">
-          <i class="el-icon-s-flag"></i>
-          政策精准匹配
+          <p style="cursor: pointer;margin-top:0px">
+            <i class="el-icon-s-flag"></i>
+            政策精准匹配
+          </p>
         </div>
       </el-col>
       <el-col :span="8" style="height:100%;font-size:20px">
         <div style="height:100%">
-          <i class="el-icon-s-marketing"></i>
-          数据公开可视化
+          <p style="cursor: pointer;margin-top:0px">
+            <i class="el-icon-s-marketing"></i>
+            数据公开可视化
+          </p>
         </div>
       </el-col>
     </el-row>
@@ -423,6 +475,32 @@ export default {
       fieldValue: "",
       active: true,
       items: [1, 2, 3, 4],
+      policy1: [
+        {
+          title: "2020年智能制造云和软件开发云上云补贴",
+          content:
+            "使用软件开发云的企业：对于上云费用在10万元及以下的部分按照60%予以补贴，10万元以上的部分按照40%给予补贴，每家企业每年最高20万；使用智能制造云的企业：对其上云费用的40%给予补贴，每家企业每年最高50万元。",
+          image: "static/img/policy-1.jpg"
+        },
+        {
+          title: "浙江省2020年度人工智能百项应用示范项目",
+          content:
+            "围绕经济社会发展重大需求，针对现实生产生活中的痛点难点，推动人工智能技术服务提供企业与行业应用单位开展“1+1”深度合作，提出有效的应用解决方案，打造形成人工智能应用示范项目。",
+          image: "static/img/policy-2.jpg"
+        },
+        {
+          title: "浙江省杭州市经济技术开发区2020年度高新技术企业认定",
+          content:
+            "（一）企业申请认定时须注册成立一年以上；（二）对企业主要产品（服务）发挥核心支持作用的技术属于《国家重点支持的高新技术领域目录》规定的范围；（三）在中国境内（不含港、澳、台地区）注册的企业，通过自主研发、受让、受赠、并购等方式，或通过5年以上的独占许可方式。",
+          image: "static/img/policy-3.jpg"
+        },
+        {
+          title: "2020年科学仪器设备资源共享优惠补贴",
+          content:
+            "根据《厦门市科学仪器设备资源共享管理办法》，现开展2019年科学仪器设备资源共享优惠补贴经费申报工作，单台（套）价值在30万元及以上的科学仪器设备，已经纳入厦门市科学仪器设备资源共享网，并对外提供共享服务。",
+          image: "static/img/policy-4.jpg"
+        }
+      ],
       technologies: [
         {
           title: "钢结构、空间结构、码头船坞工程类产品",
@@ -569,6 +647,7 @@ main .el-menu {
       margin: 0 auto;
       position: relative;
       top: 15%;
+      cursor: pointer;
     }
   }
 }
@@ -618,6 +697,7 @@ main .el-menu {
       margin-bottom: 5px;
       margin-left: 20px;
       margin-right: 20px;
+      cursor: pointer;
     }
     .left-content {
       font-size: 15px;
