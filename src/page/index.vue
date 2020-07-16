@@ -440,11 +440,10 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
-import PolicySearchContent from "@/components/PolicySearchContent";
 
 export default {
   name: "index",
-  components: { HeaderTittle, EndOfPage, PolicySearchContent },
+  components: { HeaderTittle, EndOfPage },
   data: function() {
     return {
       areaOptions: [
