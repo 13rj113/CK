@@ -11,96 +11,87 @@
       </el-carousel>
     </div>
     <div>
-      <el-row class="intro" style="padding-top:10px;padding-left:50px;padding-right:100px">
-        <el-col :span="4">
-          <div style="line-height:200px">
-            <el-tag
-              type="info"
-              line-height="200px"
-              style="height:60px;width:150px;line-height:60px;font-size:18px"
-            >企业理念</el-tag>
-          </div>
-        </el-col>
-        <el-col :span="20">
-          <div class="intro-detail">
-            <el-row style="height:100%" :gutter="20">
-              <el-col :span="9" style="height:100%">
-                <div class="intro-detail-idea">
-                  <p style="padding: 5px;">政府以及产业链上游企业在平台上发布需求、相关政策以及路演活动</p>
-                </div>
-              </el-col>
-              <el-col :span="6" style="height:100%">
-                <div class="intro-detail-arrow">
-                  <el-image
-                    style=" height:100%;width:100%"
-                    src="static/img/icon/Arrow.png"
-                    fit="fill"
-                  ></el-image>
-                </div>
-              </el-col>
-              <el-col :span="9" style="height:100%">
-                <div class="intro-detail-idea">
-                  <div>
-                    <p style="padding: 5px;">中小科创公司在平台上发布公司概况、产品介绍、技术支持以及合作模式</p>
-                  </div>
-                </div>
-              </el-col>
-            </el-row>
-          </div>
-        </el-col>
+      <el-row class="intro-pic">
+        <el-row class="intro-first">
+          <el-col class="intro-first-1" :span="8">
+            <div class="intro-first-technology">
+              <p class="intro-sub-title">技术猎头</p>
+              <p class="intro-sub-content">打破企业寻找高新技术困难的壁垒</p>
+            </div>
+          </el-col>
+          <el-col class="intro-first-2" :span="8" :offset="8">
+            <div class="intro-first-policy">
+              <p class="intro-sub-title">政策解读</p>
+              <p class="intro-sub-content">帮助科创企业争取到最大的政策扶持</p>
+            </div>
+          </el-col>
+        </el-row>
+        <el-row class="intro-second"></el-row>
+        <el-row class="intro-third">
+          <el-col class="intro-third-2" :span="8">
+            <div class="intro-third-service">
+              <p class="intro-sub-title">园区服务</p>
+              <p class="intro-sub-content">实现科创公司与政府科创园区之间的对接</p>
+            </div>
+          </el-col>
+          <el-col class="intro-third-2" :span="8" :offset="8">
+            <div class="intro-third-science">
+              <p class="intro-sub-title">科技成果转化</p>
+              <p class="intro-sub-content">实现科学研究与技术开发的进一步推广实践</p>
+            </div>
+          </el-col>
+        </el-row>
       </el-row>
 
-      <el-row class="intro" style="padding-top:0px;padding-left:50px;padding-right:100px">
-        <el-col :span="4">
-          <div style="line-height:200px">
-            <el-tag
-              type="info"
-              line-height="200px"
-              style="height:60px;width:150px;line-height:60px;font-size:18px"
-            >聚焦领域</el-tag>
-          </div>
-        </el-col>
-        <el-col :span="20">
+      <el-row class="intro-icon">
+        <el-col :span="20" :offset="4">
           <div class="intro-detail">
             <el-row style="height:100%">
-              <el-col :span="4" style="height:100%">
+              <el-col :span="3" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 70%" src="static/img/icon/AI.png" fit="fill"></el-image>
+                  <el-image style=" width: 60%" src="static/img/icon/AI.png" fit="fill"></el-image>
                   <div style="margin-top:15px">人工智能</div>
                   <div style="margin-top:10px;color:#ABB2B9">AI</div>
                 </div>
               </el-col>
-              <el-col :span="4" style="height:100%">
+              <el-col :span="3" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 70%" src="static/img/icon/Internet.png" fit="fill"></el-image>
+                  <el-image style=" width: 60%" src="static/img/icon/5G.png" fit="fill"></el-image>
+                  <div style="margin-top:15px">5G商用</div>
+                  <div style="margin-top:10px;color:#ABB2B9">5G</div>
+                </div>
+              </el-col>
+              <el-col :span="3" style="height:100%">
+                <div class="intro-detail-img">
+                  <el-image style=" width: 60%" src="static/img/icon/Internet.png" fit="fill"></el-image>
                   <div style="margin-top:15px">物联网</div>
                   <div style="margin-top:10px;color:#ABB2B9">IOT</div>
                 </div>
               </el-col>
-              <el-col :span="4" style="height:100%">
+              <el-col :span="3" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 70%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
+                  <el-image style=" width: 60%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
                   <div style="margin-top:15px">高端制造</div>
                   <div style="margin-top:10px;color:#ABB2B9">Advanced Manufacture</div>
                 </div>
               </el-col>
-              <el-col :span="4" style="height:100%">
+              <el-col :span="3" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 70%" src="static/img/icon/Material.png" fit="fill"></el-image>
+                  <el-image style=" width: 60%" src="static/img/icon/Material.png" fit="fill"></el-image>
                   <div style="margin-top:15px">新材料</div>
                   <div style="margin-top:10px;color:#ABB2B9">New Meterial</div>
                 </div>
               </el-col>
-              <el-col :span="4" style="height:100%">
+              <el-col :span="3" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 70%" src="static/img/icon/Medical.png" fit="fill"></el-image>
+                  <el-image style=" width: 60%" src="static/img/icon/Medical.png" fit="fill"></el-image>
                   <div style="margin-top:15px">大健康</div>
                   <div style="margin-top:10px;color:#ABB2B9">Healthcare</div>
                 </div>
               </el-col>
-              <el-col :span="4" style="height:100%">
+              <el-col :span="3" style="height:100%">
                 <div class="intro-detail-img">
-                  <el-image style=" height: 70%" src="static/img/icon/Car.png" fit="fill"></el-image>
+                  <el-image style=" width: 60%" src="static/img/icon/Car.png" fit="fill"></el-image>
                   <div style="margin-top:15px">车联网</div>
                   <div style="margin-top:10px;color:#ABB2B9">ICV</div>
                 </div>
@@ -1933,11 +1924,76 @@ main .main-right {
 main .el-menu {
   background-color: transparent !important;
 }
+.intro-pic {
+  height: 400px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 100px;
+  background-image: url(/static/img/service.png);
+  background-repeat: no-repeat;
+  background-size: 26% 100%;
+  -moz-background-size: 100% 100%;
+  background-position: center;
+  .intro-sub-title {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 0px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  }
+  .intro-sub-content {
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  }
+  .intro-first {
+    height: 45%;
+    width: 100%;
+    .intro-first-1 {
+      height: 100%;
+      .intro-first-technology {
+        text-align: right;
+        margin-top: 100px;
+      }
+    }
+    .intro-first-2 {
+      height: 100%;
+      .intro-first-policy {
+        text-align: left;
+        margin-top: 100px;
+      }
+    }
+  }
+  .intro-second {
+    height: 10%;
+    width: 100%;
+  }
+  .intro-third {
+    height: 45%;
+    width: 100%;
+    .intro-third-2 {
+      height: 100%;
+      .intro-third-service {
+        text-align: right;
+        margin-top: 0px;
+      }
+    }
+    .intro-third-2 {
+      height: 100%;
+      .intro-third-science {
+        text-align: left;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+.intro-icon {
+  padding-top: 0px;
+  padding-left: 50px;
+  padding-right: 100px;
+}
 .header-image {
   width: 100%;
-  .el-carousel--horizontal {
-    //overflow-x: unset;
-  }
 }
 .intro {
   height: 200px;
@@ -1977,7 +2033,7 @@ main .el-menu {
       border-radius: 20px;
     }
     .intro-detail-img {
-      height: 70%;
+      height: 55%;
       width: 55%;
       margin: 0 auto;
       position: relative;
