@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import index from '@/page/index'
 import login from '@/page/login'
 import policyDetail from '@/page/policy/policyDetail'
+import platform from '@/page/platform/platform'
 
 Vue.use(Router)
 
@@ -30,6 +30,10 @@ export default new Router({
       meta: {
         keepalive: true
       }
+    }, {
+      path: '/platform',
+      name: 'platform',
+      component: platform
     }
   ]
 })
