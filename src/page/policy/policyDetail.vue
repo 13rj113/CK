@@ -6,7 +6,7 @@
       <div class="breadcrumb">
         <el-breadcrumb separator-class="el-icon-arrow-right">
           <el-breadcrumb-item :to="{ path: '/index' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>政策解读</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/policy' }">政策解读</el-breadcrumb-item>
           <el-breadcrumb-item>政策详细页</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
@@ -158,10 +158,10 @@ body {
   height: 2500px;
   padding: 20px;
   .breadcrumb {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
     .el-breadcrumb {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
   .policy-page {

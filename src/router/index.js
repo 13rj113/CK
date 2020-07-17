@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import index from '@/page/index'
 import login from '@/page/login'
 import policyDetail from '@/page/policy/policyDetail'
+import policy from '@/page/policy/policy'
 
 Vue.use(Router)
 
@@ -27,6 +28,13 @@ export default new Router({
       path: '/policyDetail',
       name: 'policyDetail',
       component: policyDetail,
+      meta: {
+        keepalive: true
+      }
+    }, {
+      path: '/policy',
+      name: 'policy',
+      component: policy,
       meta: {
         keepalive: true
       }
