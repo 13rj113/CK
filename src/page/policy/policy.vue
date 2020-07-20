@@ -2,14 +2,14 @@
   <div id="app">
     <!-- 头部导航 -->
     <header-tittle />
-    <div class="header-image1"></div>
+    <div class="header-image"></div>
     <div class="main">
-      <div class="breadcrumb">
+      <!-- <div class="breadcrumb">
         <el-breadcrumb separator-class="el-icon-arrow-right">
           <el-breadcrumb-item :to="{ path: '/index' }">首页</el-breadcrumb-item>
           <el-breadcrumb-item>政策解读</el-breadcrumb-item>
         </el-breadcrumb>
-      </div>
+      </div>-->
       <div class="sub-title">
         <el-row class="show-policy">
           <i class="el-icon-document-copy"></i>
@@ -139,7 +139,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 body {
   margin: 0;
 }
@@ -148,7 +148,7 @@ body {
   margin: 0 auto;
   font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
 }
-.header-image1 {
+.header-image {
   height: 450px;
   width: 100%;
   margin-top: 0px;
