@@ -1901,7 +1901,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 body {
   margin: 0;
 }
@@ -2213,6 +2213,7 @@ main .el-menu {
   margin-top: 5px;
   margin-bottom: 10px;
   text-align: left;
+  font-weight: bold;
 }
 .policy-search-content {
   float: left;
