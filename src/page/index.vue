@@ -3,12 +3,16 @@
     <!-- 头部导航 -->
     <header-tittle />
     <div class="header-image">
-      1
-      <el-carousel height="150px">
-        <el-carousel-item v-for="item in items" :key="item">
-          <h3 class="small">{{ item }}</h3>
-        </el-carousel-item>
-      </el-carousel>
+      <div class="header-select">
+        <el-input
+          v-model="input1"
+          placeholder="请输入搜索内容"
+          suffix-icon="el-icon-search"
+          style="height:50px"
+        >
+          <!-- <el-button slot="append" icon="el-icon-search"></el-button> -->
+        </el-input>
+      </div>
     </div>
     <div>
       <el-row class="intro-pic">
@@ -115,19 +119,19 @@
           <el-row
             class="technology-item"
             v-for="technology in technologies.device"
-            :key="technology"
+            :key="technology.index"
           >
             <el-col :span="6">
               <div class="technology-title">{{technology.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in technology.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{technology.content}}</div>
@@ -144,19 +148,19 @@
           <el-row
             class="technology-item"
             v-for="technology in technologies.material"
-            :key="technology"
+            :key="technology.index"
           >
             <el-col :span="6">
               <div class="technology-title">{{technology.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in technology.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{technology.content}}</div>
@@ -178,19 +182,19 @@
           <el-row
             class="technology-item"
             v-for="technology in technologies.biomedical"
-            :key="technology"
+            :key="technology.index"
           >
             <el-col :span="6">
               <div class="technology-title">{{technology.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in technology.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{technology.content}}</div>
@@ -207,19 +211,19 @@
           <el-row
             class="technology-item"
             v-for="technology in technologies.artIntel"
-            :key="technology"
+            :key="technology.index"
           >
             <el-col :span="6">
               <div class="technology-title">{{technology.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in technology.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{technology.content}}</div>
@@ -254,18 +258,18 @@
       </el-row>
       <el-tabs tab-position="left">
         <el-tab-pane class="technology-tab-container" label="新能源">
-          <el-row class="technology-item" v-for="demand in demands.newEnergy" :key="demand">
+          <el-row class="technology-item" v-for="demand in demands.newEnergy" :key="demand.index">
             <el-col :span="6">
               <div class="technology-title">{{demand.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in demand.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{demand.content}}</div>
@@ -279,18 +283,18 @@
           </el-row>
         </el-tab-pane>
         <el-tab-pane class="technology-tab-container" label="高新技术材料">
-          <el-row class="technology-item" v-for="demand in demands.material" :key="demand">
+          <el-row class="technology-item" v-for="demand in demands.material" :key="demand.index">
             <el-col :span="6">
               <div class="technology-title">{{demand.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in demand.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{demand.content}}</div>
@@ -304,18 +308,18 @@
           </el-row>
         </el-tab-pane>
         <el-tab-pane class="technology-tab-container" label="信息技术">
-          <el-row class="technology-item" v-for="demand in demands.infoTech" :key="demand">
+          <el-row class="technology-item" v-for="demand in demands.infoTech" :key="demand.index">
             <el-col :span="6">
               <div class="technology-title">{{demand.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in demand.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{demand.content}}</div>
@@ -329,18 +333,18 @@
           </el-row>
         </el-tab-pane>
         <el-tab-pane class="technology-tab-container" label="生物医疗">
-          <el-row class="technology-item" v-for="demand in demands.biomedical" :key="demand">
+          <el-row class="technology-item" v-for="demand in demands.biomedical" :key="demand.index">
             <el-col :span="6">
               <div class="technology-title">{{demand.title}}</div>
               <el-tag
                 class="technology-title-tag"
                 v-for="tag in demand.titleTag"
-                :key="tag"
+                :key="tag.index"
                 :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
               >{{tag.name}}</el-tag>
             </el-col>
             <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag">{{tag}}</div>
+              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
             </el-col>
             <el-col :span="14">
               <div class="technology-content">{{demand.content}}</div>
@@ -442,7 +446,7 @@
                 style="height:100px;margin-bottom:20px"
                 :gutter="20"
                 v-for="policy in policy1"
-                :key="policy"
+                :key="policy.index"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -498,7 +502,7 @@
                 style="height:100px;margin-bottom:20px"
                 :gutter="20"
                 v-for="policy in policy1"
-                :key="policy"
+                :key="policy.index"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -554,7 +558,7 @@
                 style="height:100px;margin-bottom:20px"
                 :gutter="20"
                 v-for="policy in policy1"
-                :key="policy"
+                :key="policy.index"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -610,7 +614,7 @@
                 style="height:100px;margin-bottom:20px"
                 :gutter="20"
                 v-for="policy in policy1"
-                :key="policy"
+                :key="policy.index"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -661,6 +665,7 @@ export default {
   components: { HeaderTittle, EndOfPage },
   data: function() {
     return {
+      input1: "",
       areaOptions: [
         {
           value: "1",
@@ -688,7 +693,13 @@ export default {
       ],
       fieldValue: "",
       active: true,
-      items: [1, 2, 3, 4],
+      imgList: [
+        {
+          name: "overview",
+          src: "static/img/banner-overview.png",
+          title: "崇科，做科技市场的捕猎人"
+        }
+      ],
       technologies: {
         device: [
           {
@@ -1993,7 +2004,30 @@ main .el-menu {
   padding-right: 100px;
 }
 .header-image {
+  height: 450px;
   width: 100%;
+  margin-top: 0px;
+  background-image: url(/static/img/banner-overview.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-position: center;
+  .header-select {
+    line-height: 500px;
+    // background-color: #1c2833;
+  }
+  .header-select input.el-input__inner {
+    height: 80%;
+    border-radius: 15px;
+    opacity: 0.65;
+  }
+  .header-select .el-input--suffix {
+    width: 30%;
+    .el-input__icon {
+      color: black;
+      width: 50px;
+    }
+  }
 }
 .intro {
   height: 200px;

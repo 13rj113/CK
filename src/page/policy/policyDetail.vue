@@ -10,12 +10,53 @@
           <el-breadcrumb-item>政策详细页</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
-      <div class="policy-page"></div>
+      <div class="policy-page">
+        <div class="policy-page-title">杭州市经济技术开发区2019年科技计划项目</div>
+        <el-row>
+          <el-col :span="6" :offset="6" class="policy-page-time">2018-12-29 16:55</el-col>
+          <el-col :span="6" class="policy-page-origin">发布机构：杭州市经信局</el-col>
+        </el-row>
+        <el-divider></el-divider>
+        <div class="policy-page-title-sub-1">补助说明：</div>
+        <p class="policy-page-text">（一）优先扶持发明专利中新技术、新产品、新工艺的研发、中试，给予30万元以内的扶持；</p>
+        <p
+          class="policy-page-text"
+        >（二）申报科技产业化项目，企业应具备项目生产规模已达到年销售收入在1000万元以上且企业年创税收已达到100万元以上，预测项目完成时新增销售收入达到1000万元以上且新增区级税收50万元以上的可给予30万元扶持。在此基础上，预测区级税收每增加50万元，可再增加扶持30万元，累计扶持总额不超过200万元。项目完成时实际销售收入、税收未达到预测的，按比例扣减扶持资金。</p>
+
+        <div class="policy-page-title-sub-2">科技奖励项目</div>
+        <p
+          class="policy-page-text"
+        >（一）获国家科技表彰的单位奖励30万元；获省政府或国家科技部门、科协部门及国家级学会表彰的单位奖励20万元；获市政府或省科技、科协部门表彰的单位奖励10万元。</p>
+        <p class="policy-page-text">（二）当年获得国内、国外发明专利授权的企业（个人）分别给予奖励5000元、1万元；获厦门市专利奖的给予相应奖金1:1的配套奖励。</p>
+        <p class="policy-page-text">（三）获区科技进步奖的表扬奖、三等奖、二等奖、一等奖分别奖励5万元、10万元、15万元、20万元。</p>
+        <p class="policy-page-text">（四）当年首次获高新技术企业资格的企业，一次性奖励15万元。</p>
+        <p class="policy-page-text">（五）经认定获得国家、省、市级重点实验室（工程）、研究中心和企业技术中心分别给予奖励80万元、50万元、30万元。</p>
+
+        <div class="policy-page-title-sub-1">申报条件：</div>
+        <p class="policy-page-title-sub-2">一、研发中试项目：</p>
+        <p class="policy-page-text">1．具有发明专利中的新技术、新产品、新工艺的企业可申报中试项目。</p>
+        <p class="policy-page-text">2．企业工商注册、税收归属地在湖里区，拥有较强的研发能力，健全的财务制度，良好的经营业绩，信誉良好。承担的科技项目都有结项。</p>
+        <p class="policy-page-title-sub-2">二、产业化项目：</p>
+        <p class="policy-page-text">1．企业工商注册、税收归属地在湖里区，拥有较强的研发能力，健全的财务制度，良好的经营业绩，信誉良好。承担的科技项目都有结项。</p>
+        <p
+          class="policy-page-text"
+        >2．申报的科技项目已投产，其生产规模已达1000万元以上且企业的年税收已达100万元以上，申报的科技计划项目完成时预测新增销售收入1000万元以上且新增区级税收50万元以上的企业。重点扶持高新技术领域内且适合我区产业转型、升级、可持续发展的项目。</p>
+        <p class="policy-page-title-sub-2">三、社会发展项目：</p>
+        <p class="policy-page-text">辖区行政事业单位及区属基层单位经主管部门同意并签署意见后可申报社会发展项目。</p>
+        <p class="policy-page-title-sub-2">四、科技奖励项目：</p>
+        <p class="policy-page-text">1．获得2018年国家科技表彰的单位。</p>
+        <p class="policy-page-text">2．获得2018年省政府或国家科技部门、科协部门及国家级学会表彰的单位。</p>
+        <p class="policy-page-text">3．获得2018年市政府或省科技部门、科协部门的表彰的单位。</p>
+        <p class="policy-page-text">4．获得2018年国内、国外发明专利授权的单位（个人）。</p>
+        <p class="policy-page-text">5．获得2018年厦门市专利奖的企业。</p>
+        <p class="policy-page-text">6．获得2018年国家、省、市级认定的重点实验室（工程）、研究中心和企业技术中心。</p>
+      </div>
       <div class="policy-origin">
-        <P>政策来源：</P>
+        <P>政策来源：《杭州市经济技术开发区科学技术资金管理办法》（杭州经发办〔2019〕68号）</P>
       </div>
       <div class="policy-download">
-        <P>附件下载：</P>
+        <P>附件下载1：杭州市科技局关于申报经济技术开发区2019年科技计划项目的通知.doc</P>
+        <p>附件下载2：申报表格.doc</p>
       </div>
 
       <div class="sub-title">
@@ -165,11 +206,41 @@ body {
     }
   }
   .policy-page {
-    height: 60%;
+    height: 55%;
     border: 1px solid #ccc;
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
+    .policy-page-title {
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+    .policy-page-time {
+      text-align: left;
+    }
+    .policy-page-origin {
+      text-align: right;
+    }
+    .policy-page-title-sub-1 {
+      text-align: left;
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 20px;
+      color: brown;
+    }
+    .policy-page-title-sub-2 {
+      text-align: left;
+      margin-left: 30px;
+      font-size: 15px;
+    }
+    .policy-page-text {
+      text-align: left;
+      margin-left: 30px;
+      margin-right: 30px;
+      font-size: 15px;
+    }
   }
   .policy-origin {
     text-align: left;
@@ -194,6 +265,7 @@ body {
     .process {
       font-size: 25px;
       color: #fbc02d;
+      margin-top: 80px;
     }
   }
   .flow-chart {

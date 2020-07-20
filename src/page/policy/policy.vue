@@ -2,6 +2,7 @@
   <div id="app">
     <!-- 头部导航 -->
     <header-tittle />
+    <div class="header-image1"></div>
     <div class="main">
       <div class="breadcrumb">
         <el-breadcrumb separator-class="el-icon-arrow-right">
@@ -146,6 +147,32 @@ body {
   min-width: 1200px;
   margin: 0 auto;
   font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+}
+.header-image1 {
+  height: 450px;
+  width: 100%;
+  margin-top: 0px;
+  background-image: url(/static/img/banner-policy.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-position: center;
+  .header-select {
+    line-height: 500px;
+    // background-color: #1c2833;
+  }
+  .header-select input.el-input__inner {
+    height: 80%;
+    border-radius: 15px;
+    opacity: 0.65;
+  }
+  .header-select .el-input--suffix {
+    width: 30%;
+    .el-input__icon {
+      color: black;
+      width: 50px;
+    }
+  }
 }
 .main {
   height: 2500px;

@@ -9,14 +9,14 @@
       </el-col>
       <el-col :span="6">
         <div class="header-select">
-          <el-input
+          <!-- <el-input
             v-model="input"
             placeholder="请输入内容"
             suffix-icon="el-icon-search"
             style="height:50px"
           >
-            <!-- <el-button slot="append" icon="el-icon-search"></el-button> -->
-          </el-input>
+          </el-input>-->
+          &nbsp;
         </div>
       </el-col>
       <el-col :span="12">
@@ -28,7 +28,7 @@
           background-color="#1C2833"
           text-color="#fff"
           active-text-color="#fff"
-          collapse-transition="true"
+          :collapse-transition="true"
           style="height:60px"
         >
           <el-menu-item index="1" style="float:right">登录</el-menu-item>
@@ -40,6 +40,7 @@
           </el-submenu>
           <el-menu-item index="3" style="float:right">需求库</el-menu-item>
           <el-menu-item index="4" style="float:right">技术库</el-menu-item>
+          <el-menu-item index="5" style="float:right">首页</el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
@@ -60,25 +61,30 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 .header {
   height: 60px;
-}
-.header-brand {
-  font-size: 150%;
-  color: #fff;
-  line-height: 60px;
-  background-color: #1c2833;
-}
-.header-select {
-  line-height: 60px;
-  background-color: #1c2833;
-}
-.header-select input.el-input__inner {
-  height: 80%;
-  border-radius: 20px;
-}
-.header-select .el-input--suffix {
-  width: 80%;
+  .el-menu.el-menu--horizontal {
+    border-bottom: solid 0px white;
+  }
+  .header-brand {
+    font-size: 200%;
+    color: #fff;
+    line-height: 60px;
+    background-color: #1c2833;
+    text-align: left;
+    padding-left: 15px;
+  }
+  .header-select {
+    line-height: 60px;
+    background-color: #1c2833;
+  }
+  .header-select input.el-input__inner {
+    height: 80%;
+    border-radius: 20px;
+  }
+  .header-select .el-input--suffix {
+    width: 80%;
+  }
 }
 </style>
