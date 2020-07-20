@@ -5,6 +5,7 @@ import login from '@/page/login'
 import policyDetail from '@/page/policy/policyDetail'
 import policy from '@/page/policy/policy'
 import platform from '@/page/platform/platform'
+import park from '@/page/park/park'
 
 Vue.use(Router)
 
@@ -42,6 +43,13 @@ export default new Router({
       path: '/platform',
       name: 'platform',
       component: platform,
+      meta: {
+        keepalive: true
+      }
+    },{
+      path: '/park',
+      name: 'park',
+      component: park,
       meta: {
         keepalive: true
       }
