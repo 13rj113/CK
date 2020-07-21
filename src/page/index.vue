@@ -14,7 +14,7 @@
         </el-input>
       </div>
     </div>
-    <div>
+    <el-card shadow="always" style="margin-top:20px">
       <el-row class="intro-pic">
         <el-row class="intro-first">
           <el-col class="intro-first-1" :span="8">
@@ -46,7 +46,8 @@
           </el-col>
         </el-row>
       </el-row>
-
+    </el-card>
+    <el-card shadow="always" style="margin-top:20px">
       <el-row class="intro-icon">
         <el-col :span="20" :offset="4">
           <div class="intro-detail">
@@ -104,7 +105,7 @@
           </div>
         </el-col>
       </el-row>
-    </div>
+    </el-card>
     <div style="margin-top:40px;margin-bottom:40px">
       <el-divider></el-divider>
     </div>
@@ -368,28 +369,29 @@
     </div>
 
     <el-divider></el-divider>
-    <div class="policy">
-      <el-row class="sub-title">
-        <i class="el-icon-document-copy"></i>
-        政策一览
-      </el-row>
-      <el-row class="policy-text">助力政府构建城市/园区科技创新生态体系</el-row>
-      <el-row :gutter="20" style="margin-left:10px;margin-right:10px">
-        <el-col :span="5">
-          <div class="policy-main policy-left">
-            <p class="left-title">区域技术市场</p>
-            <p class="left-content">构建全流程、全维度、全纵深的技术转移服务体系</p>
+    <el-card shadow="always" style="margin-top:20px">
+      <div class="policy">
+        <el-row class="sub-title">
+          <i class="el-icon-document-copy"></i>
+          政策一览
+        </el-row>
+        <el-row class="policy-text">助力政府构建城市/园区科技创新生态体系</el-row>
+        <el-row :gutter="20" style="margin-left:10px;margin-right:10px">
+          <el-col :span="5">
+            <div class="policy-main policy-left">
+              <p class="left-title">区域技术市场</p>
+              <p class="left-content">构建全流程、全维度、全纵深的技术转移服务体系</p>
 
-            <p class="left-title">产业大数据服务平台</p>
-            <p class="left-content">东西区域产业情况、精准配置资源，</p>
-            <p class="left-content">提供产业创新发展专业化服务</p>
+              <p class="left-title">产业大数据服务平台</p>
+              <p class="left-content">东西区域产业情况、精准配置资源，</p>
+              <p class="left-content">提供产业创新发展专业化服务</p>
 
-            <p class="left-title">园区创新管家</p>
-            <p class="left-content">为园区构建资源丰富、配置成效显著的创新体系</p>
+              <p class="left-title">园区创新管家</p>
+              <p class="left-content">为园区构建资源丰富、配置成效显著的创新体系</p>
 
-            <p class="left-title">高效技术转移管理运营中心</p>
-            <p class="left-content">全新的产学研合作模式，</p>
-            <p class="left-content">提升校地合作的效率和实效</p>
+              <p class="left-title">高效技术转移管理运营中心</p>
+              <p class="left-content">全新的产学研合作模式，</p>
+              <p class="left-content">提升校地合作的效率和实效</p>
 
             <p class="left-title">崇科（国际）创新中心</p>
             <p class="left-content">高端服务聚集与科技平台赋能</p>
@@ -631,26 +633,28 @@
       </el-row>
     </div>
 
-    <el-row class="bottom-container">
-      <el-col :span="8">
-        <div class="bottom-item">
-          <el-image src="static/img/icon/analyse.png" style="width: 100px;height:100px;"></el-image>
-          <div class="item-text">海量政策采集分析</div>
-        </div>
-      </el-col>
-      <el-col :span="8">
-        <div class="bottom-item">
-          <el-image src="static/img/icon/match.png" style="width: 100px;height:100px;"></el-image>
-          <div class="item-text">政策精准匹配</div>
-        </div>
-      </el-col>
-      <el-col :span="8">
-        <div class="bottom-item">
-          <el-image src="static/img/icon/data.png" style="width: 100px;height:100px;"></el-image>
-          <div class="item-text">数据公开可视化</div>
-        </div>
-      </el-col>
-    </el-row>
+    <el-card shadow="always" style="margin-top:20px;margin-bottom:20px">
+      <el-row class="bottom-container">
+        <el-col :span="8">
+          <div class="bottom-item">
+            <el-image src="static/img/icon/analyse.png" style="width: 100px;height:100px;"></el-image>
+            <div class="item-text">海量政策采集分析</div>
+          </div>
+        </el-col>
+        <el-col :span="8">
+          <div class="bottom-item">
+            <el-image src="static/img/icon/match.png" style="width: 100px;height:100px;"></el-image>
+            <div class="item-text">政策精准匹配</div>
+          </div>
+        </el-col>
+        <el-col :span="8">
+          <div class="bottom-item">
+            <el-image src="static/img/icon/data.png" style="width: 100px;height:100px;"></el-image>
+            <div class="item-text">数据公开可视化</div>
+          </div>
+        </el-col>
+      </el-row>
+    </el-card>
     <el-row>
       <end-of-page />
     </el-row>
@@ -1898,11 +1902,6 @@ export default {
         }
       ]
     };
-  },
-  methods: {
-    goTo(url) {
-      this.$router.push(url);
-    }
   }
 };
 </script>
@@ -1977,16 +1976,16 @@ main .el-menu {
       height: 100%;
       .intro-first-policy {
         text-align: left;
-        margin-top: 100px;
+        margin-top: 50px;
       }
     }
   }
   .intro-second {
-    height: 10%;
+    height: 25%;
     width: 100%;
   }
   .intro-third {
-    height: 45%;
+    height: 30%;
     width: 100%;
     .intro-third-2 {
       height: 100%;
@@ -2010,7 +2009,7 @@ main .el-menu {
   padding-right: 100px;
 }
 .header-image {
-  height: 450px;
+  height: 430px;
   width: 100%;
   margin-top: 0px;
   background-image: url(/static/img/banner-overview.png);
@@ -2141,7 +2140,7 @@ main .el-menu {
   }
 }
 .bottom-container {
-  margin: 60px 0;
+  margin: 20px 0;
   color: #f3c19b;
   .bottom-item {
     margin: 0 auto;
@@ -2162,10 +2161,10 @@ main .el-menu {
   margin-bottom: 30px;
 }
 .policy {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   .policy-main {
-    height: 480px;
+    height: 500px;
     border: 1px solid #ccc;
     .left-title {
       font-size: 18px;
