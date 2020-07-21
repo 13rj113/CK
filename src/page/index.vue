@@ -106,9 +106,6 @@
         </el-col>
       </el-row>
     </el-card>
-    <div style="margin-top:40px;margin-bottom:40px">
-      <el-divider></el-divider>
-    </div>
     <!-- 技术项目库 -->
     <el-card shadow="always" style="margin-top:20px">
       <div class="technology-container">
@@ -243,9 +240,6 @@
             <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
           </div>
         </div>
-      </div>
-      <div style="margin-top:40px;margin-bottom:40px">
-        <el-divider></el-divider>
       </div>
     </el-card>
     <!-- 产业链需求库 -->
