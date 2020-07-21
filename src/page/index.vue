@@ -1904,6 +1904,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    goTo(url) {
+      this.$router.push(url);
+    }
   }
 };
 </script>

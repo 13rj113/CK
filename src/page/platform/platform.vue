@@ -149,9 +149,9 @@ export default {
   .head-image {
     padding: 10px;
     height: 300px;
-    background: url(/static/img/banner-achievement.png) no-repeat center center;
-    background-size: 100% 100%;
-    color: #fff;
+    // background: url(/static/img/banner-achievement.png) no-repeat center center;
+    // background-size: 100% 100%;
+    // color: #fff;
     .head-search {
       margin: 0 auto;
       width: 300px;
