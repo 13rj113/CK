@@ -117,7 +117,7 @@
         </el-row>
       </div>
       <el-row class="success-img" :gutter="50">
-        <el-col class="succes-col" :span="6"></el-col>
+        <el-col class="success-col" :span="6"></el-col>
         <el-col class="success-col" :span="6"></el-col>
         <el-col class="success-col" :span="6"></el-col>
         <el-col class="success-col" :span="6"></el-col>
@@ -156,7 +156,7 @@ body {
   font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
 }
 .header-image {
-  height: 450px;
+  height: 400px;
   width: 100%;
   margin-top: 0px;
   background-image: url(/static/img/banner-headhunting.png);
@@ -200,7 +200,7 @@ body {
     margin-top: 0px;
     background-image: url(/static/img/earth.png);
     background-repeat: no-repeat;
-    background-size: 26% 100%;
+    background-size: 28% 100%;
     -moz-background-size: 100% 100%;
     background-position: center;
     .headhunting-sub-title {

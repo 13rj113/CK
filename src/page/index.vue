@@ -2006,7 +2006,7 @@ main .el-menu {
   padding-right: 100px;
 }
 .header-image {
-  height: 450px;
+  height: 430px;
   width: 100%;
   margin-top: 0px;
   background-image: url(/static/img/banner-overview.png);
