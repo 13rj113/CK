@@ -643,26 +643,28 @@
       </div>
     </el-card>
 
-    <el-row class="bottom-container">
-      <el-col :span="8">
-        <div class="bottom-item">
-          <el-image src="static/img/icon/analyse.png" style="width: 100px;height:100px;"></el-image>
-          <div class="item-text">海量政策采集分析</div>
-        </div>
-      </el-col>
-      <el-col :span="8">
-        <div class="bottom-item">
-          <el-image src="static/img/icon/match.png" style="width: 100px;height:100px;"></el-image>
-          <div class="item-text">政策精准匹配</div>
-        </div>
-      </el-col>
-      <el-col :span="8">
-        <div class="bottom-item">
-          <el-image src="static/img/icon/data.png" style="width: 100px;height:100px;"></el-image>
-          <div class="item-text">数据公开可视化</div>
-        </div>
-      </el-col>
-    </el-row>
+    <el-card shadow="always" style="margin-top:20px;margin-bottom:20px">
+      <el-row class="bottom-container">
+        <el-col :span="8">
+          <div class="bottom-item">
+            <el-image src="static/img/icon/analyse.png" style="width: 100px;height:100px;"></el-image>
+            <div class="item-text">海量政策采集分析</div>
+          </div>
+        </el-col>
+        <el-col :span="8">
+          <div class="bottom-item">
+            <el-image src="static/img/icon/match.png" style="width: 100px;height:100px;"></el-image>
+            <div class="item-text">政策精准匹配</div>
+          </div>
+        </el-col>
+        <el-col :span="8">
+          <div class="bottom-item">
+            <el-image src="static/img/icon/data.png" style="width: 100px;height:100px;"></el-image>
+            <div class="item-text">数据公开可视化</div>
+          </div>
+        </el-col>
+      </el-row>
+    </el-card>
     <el-row>
       <end-of-page />
     </el-row>
@@ -2148,7 +2150,7 @@ main .el-menu {
   }
 }
 .bottom-container {
-  margin: 60px 0;
+  margin: 20px 0;
   color: #f3c19b;
   .bottom-item {
     margin: 0 auto;

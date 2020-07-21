@@ -351,7 +351,7 @@ body {
 }
 .main {
   height: 2700px;
-  padding: 20px;
+  //padding: 20px;
   .breadcrumb {
     margin-top: 5px;
     margin-bottom: 10px;
