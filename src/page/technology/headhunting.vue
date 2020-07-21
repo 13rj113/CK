@@ -10,7 +10,7 @@
           什么是技术猎头
         </el-row>
       </div>
-      <el-card shadow="always">
+      <el-card shadow="always" style="margin-top:20px">
         <div class="headhunting-image-1">
           <el-row class="headhunting-first">
             <el-col class="headhunting-first-1" :span="8">
@@ -43,28 +43,28 @@
           </el-row>
         </div>
       </el-card>
-      <el-divider></el-divider>
 
-      <el-row class="process">
-        <el-col class="process-text" :span="4">资源整合</el-col>
-        <el-col class="process-text" :span="1">>></el-col>
-        <el-col class="process-text" :span="4">
-          <div>撮合对接</div>
-        </el-col>
-        <el-col class="process-text" :span="1">>></el-col>
-        <el-col class="process-text" :span="4">
-          <div>技术评估</div>
-        </el-col>
-        <el-col class="process-text" :span="1">>></el-col>
-        <el-col class="process-text" :span="4">
-          <div>技术交易</div>
-        </el-col>
-        <el-col class="process-text" :span="1">>></el-col>
-        <el-col class="process-text" :span="4">
-          <div>项目落地</div>
-        </el-col>
-      </el-row>
-      <el-divider></el-divider>
+      <el-card shadow="always" style="margin-top:20px">
+        <el-row class="process">
+          <el-col class="process-text" :span="4">资源整合</el-col>
+          <el-col class="process-text" :span="1">>></el-col>
+          <el-col class="process-text" :span="4">
+            <div>撮合对接</div>
+          </el-col>
+          <el-col class="process-text" :span="1">>></el-col>
+          <el-col class="process-text" :span="4">
+            <div>技术评估</div>
+          </el-col>
+          <el-col class="process-text" :span="1">>></el-col>
+          <el-col class="process-text" :span="4">
+            <div>技术交易</div>
+          </el-col>
+          <el-col class="process-text" :span="1">>></el-col>
+          <el-col class="process-text" :span="4">
+            <div>项目落地</div>
+          </el-col>
+        </el-row>
+      </el-card>
 
       <div class="sub-title">
         <el-row class="show-headhunting">
@@ -332,8 +332,8 @@ body {
   }
 }
 .main {
-  height: 2800px;
-  padding: 20px;
+  height: 2700px;
+  //padding: 20px;
   .sub-title {
     text-align: left;
     margin-top: 30px;
@@ -593,7 +593,7 @@ body {
     width: 100%;
     padding-left: 50px;
     .success-col {
-      height: 100%;
+      height: 200px;
       // border: 2px solid #e5e7e9;
     }
   }

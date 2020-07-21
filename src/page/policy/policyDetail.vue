@@ -154,21 +154,49 @@
       <el-card shadow="always" style="margin-top:20px">
         <div class="similar-policy">
           <el-row class="similar-policy-row" :gutter="40">
-            <el-col :span="2" class="similar-policy-col-1">
+            <el-col :span="3" class="similar-policy-col-1">
               <p>类似新闻：</p>
             </el-col>
-            <el-col :span="8" class="similar-policy-col-2">
+            <el-col :span="7" class="similar-policy-col-2">
               <p>软件开发云和智能制造云服务企业备案</p>
+            </el-col>
+            <el-col :span="14" class="similar-policy-col-3">
+              <p>2020/12/15~2020/12/20</p>
+            </el-col>
+          </el-row>
+
+          <el-row class="similar-policy-row" :gutter="40">
+            <el-col :span="3" class="similar-policy-col-1">
+              <p>&nbsp;</p>
+            </el-col>
+            <el-col :span="7" class="similar-policy-col-2">
               <p>2020年浙江省“专精特新”中小企业</p>
+            </el-col>
+            <el-col :span="14" class="similar-policy-col-3">
+              <p>2020/09/19~2020/12/15</p>
+            </el-col>
+          </el-row>
+
+          <el-row class="similar-policy-row" :gutter="40">
+            <el-col :span="3" class="similar-policy-col-1">
+              <p>&nbsp;</p>
+            </el-col>
+            <el-col :span="7" class="similar-policy-col-2">
               <p>2020年杭州市高新材料行业发展扶持资金</p>
-              <p>2020年杭州市制造业发展扶持资金</p>
-              <p>2020年杭州市通讯设备行业发展扶持资金</p>
             </el-col>
             <el-col :span="14" class="similar-policy-col-3">
               <p>2019/03/20~2019/04/20</p>
-              <p>2020/09/19~2020/12/15</p>
-              <p>2020/12/15~2020/12/20</p>
-              <p>2020/12/15~2020/12/20</p>
+            </el-col>
+          </el-row>
+
+          <el-row class="similar-policy-row" :gutter="40">
+            <el-col :span="3" class="similar-policy-col-1">
+              <p>&nbsp;</p>
+            </el-col>
+            <el-col :span="7" class="similar-policy-col-2">
+              <p>2020年杭州市制造业发展扶持资金</p>
+            </el-col>
+            <el-col :span="14" class="similar-policy-col-3">
               <p>2020/12/15~2020/12/20</p>
             </el-col>
           </el-row>
@@ -203,10 +231,10 @@ body {
   font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
 }
 .main {
-  height: 2400px;
+  height: 2300px;
   //padding: 20px;
   .breadcrumb {
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 10px;
     .el-breadcrumb {
       font-size: 15px;
@@ -267,12 +295,12 @@ body {
   }
   .sub-title {
     text-align: left;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
     .process {
       font-size: 25px;
       color: #fbc02d;
-      margin-top: 80px;
+      margin-top: 30px;
     }
   }
   .flow-chart {
@@ -363,10 +391,10 @@ body {
     // margin-top: 20px;
   }
   .similar-policy {
-    height: 8%;
+    height: 160px;
     margin-left: 10px;
     .similar-policy-row {
-      height: 100%;
+      height: 30px;
       .similar-policy-col-1 {
         height: 100%;
         text-align: right;
