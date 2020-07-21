@@ -110,8 +110,8 @@
         ></el-image>LBS服务
       </h2>
       <p>崇科科技平台内部嵌入LBS地图，加入用户所在城市当中科创园区的位置定位以及该科创园区包含的高新项目，基于海量现货地点(POI)数据，提供周边搜索，城市范围搜索，关键词输入提示，分类筛选等多种搜索能力，对于供需双方来说都可以做到一目了然。通过LBS，首先用户可利用定位技术确定自身的空间位置，然后用户可通过移动互联网来获取与位置相关资源和信息。</p>
-      <h2>以xx市经济开发区为例</h2>
-      <el-image></el-image>
+      <div style="text-align: left;">以xx市经济开发区为例</div>
+      <div class="map-container" id="map"></div>
     </div>
 
     <el-divider></el-divider>
@@ -124,7 +124,15 @@
         ></el-image>合作园区
       </h2>
       <el-tabs tab-position="left" style="height: 200px;">
-        <el-tab-pane label="杭州滨江金融科技小镇">杭州滨江金融科技小镇</el-tab-pane>
+        <el-tab-pane label="杭州滨江金融科技小镇">
+          <p>杭州滨江金融科技小镇位于滨江区中心位置，北至滨盛路，东至时代大道，西至东信大道，南至南环路，规划范围用地约4.4平方公里。小镇将形成“一心一带两点三区”的发展格局。</p>
+          <div class="conponents-image">
+            <el-image class="image-item" src="static/img/park/component-1.png"></el-image>
+            <el-image class="image-item" src="static/img/park/component-2.png"></el-image>
+            <el-image class="image-item" src="static/img/park/component-3.png"></el-image>
+          </div>
+          <p>杭州滨江金融科技小镇是以金融科技产业中心作为小镇的发展核心，一带为江南大道为轴线打造产城融合发展带，两点为小镇公共服务节点和科技金融服务节点，三区为小镇核心区、产业孵化集聚区、产业发展潜力区。</p>
+        </el-tab-pane>
         <el-tab-pane label="xx科技创业小镇">xx科技创业小镇</el-tab-pane>
       </el-tabs>
 
@@ -217,6 +225,7 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import BMap from "BMap";
 
 export default {
   name: "park",
@@ -239,6 +248,14 @@ export default {
       ],
       areaTags: ["浙江", "江苏", "上海", "湖南"]
     };
+  },
+  mounted() {
+    const map = new BMap.Map("map");
+    // 创建地图实例
+    const point = new BMap.Point(116.404, 39.915);
+    // 创建点坐标
+    map.centerAndZoom(point, 15);
+    // 初始化地图，设置中心点坐标和地图级别
   }
 };
 </script>
@@ -252,6 +269,10 @@ export default {
   }
   .lbs-container {
     padding: 10px 30px;
+    .map-container {
+      margin-top: 10px;
+      height: 300px;
+    }
   }
 }
 .conponents {
@@ -270,6 +291,13 @@ export default {
         border: 1px solid #ccc;
         background: rgb(244, 222, 222);
       }
+    }
+  }
+  .conponents-image {
+    display: flex;
+    .image-item {
+      margin-right: 10px;
+      width: 300px;
     }
   }
 }

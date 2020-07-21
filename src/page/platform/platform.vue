@@ -20,19 +20,19 @@
       <el-divider></el-divider>
       <div class="filter-domain">
         按照领域：
-        <el-tag class="domain-tag" v-for="tag in domainTag" :key="tag">{{tag}}</el-tag>
+        <el-tag class="domain-tag" v-for="tag in domainTag" :key="tag.index">{{tag}}</el-tag>
       </div>
 
       <div class="filter-area">
         按照地区：
-        <el-tag class="area-tag" type="warning" v-for="tag in domainTag" :key="tag">{{tag}}</el-tag>
+        <el-tag class="area-tag" type="warning" v-for="tag in domainTag" :key="tag.index">{{tag}}</el-tag>
       </div>
     </div>
 
     <el-divider></el-divider>
 
     <div class="content-container">
-      <div class="content-item" v-for="item in items" :key="item">
+      <div class="content-item" v-for="item in items" :key="item.index">
         <div class="content-main">
           <div class="content-image">
             <el-image style="width: 150px;height: 200px;" :src="item.image"></el-image>
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="find-more-container">
+    <div class="find-more-container" @click="findMore">
       <el-image class="find-more" src="static/img/icon/click2.png"></el-image>查看更多...
     </div>
     <end-of-page />
@@ -117,9 +117,28 @@ export default {
           text: "巴拉巴拉",
           tag: "专利转让",
           area: "北京"
+        },
+        {
+          title: "简易表带式温度测温仪",
+          image: "static/img/icon/AI.png",
+          text: "巴拉巴拉",
+          tag: "专利转让",
+          area: "北京"
+        },
+        {
+          title: "简易表带式温度测温仪",
+          image: "static/img/icon/AI.png",
+          text: "巴拉巴拉",
+          tag: "专利转让",
+          area: "北京"
         }
       ]
     };
+  },
+  methods: {
+    findMore() {
+      this.items = this.items.concat(this.items);
+    }
   }
 };
 </script>
@@ -128,7 +147,11 @@ export default {
 #platform {
   background: rgb(240, 232, 232);
   .head-image {
-    height: 200px;
+    padding: 10px;
+    height: 300px;
+    background: url(/static/img/banner-achievement.png) no-repeat center center;
+    background-size: 100% 100%;
+    color: #fff;
     .head-search {
       margin: 0 auto;
       width: 300px;
@@ -137,6 +160,7 @@ export default {
   }
   .filter-container {
     text-align: left;
+    padding: 0 20px;
     .filter-domain {
       margin-bottom: 10px;
       .domain-tag {
@@ -152,11 +176,11 @@ export default {
   .content-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     .content-item {
       margin: 10px;
       background: #fff;
-      width: 400px;
+      width: 22%;
       padding: 10px;
       text-align: left;
       .content-main {
@@ -174,6 +198,7 @@ export default {
   }
   .find-more-container {
     margin: 10px 0;
+    cursor: pointer;
     .find-more {
       vertical-align: middle;
     }

@@ -24,7 +24,6 @@
           :default-active="activeIndex"
           class="el-menu-demo"
           mode="horizontal"
-          @select="handleSelect"
           background-color="#1C2833"
           text-color="#fff"
           active-text-color="#fff"
@@ -35,12 +34,12 @@
           <el-submenu index="2" style="float:right">
             <template slot="title">服务</template>
             <el-menu-item index="2-1">技术猎头</el-menu-item>
-            <el-menu-item index="2-2">政策解读</el-menu-item>
-            <el-menu-item index="2-3">园区服务</el-menu-item>
+            <el-menu-item index="2-2" @click="goTo('policy')">政策解读</el-menu-item>
+            <el-menu-item index="2-3" @click="goTo('/park')">园区服务</el-menu-item>
           </el-submenu>
-          <el-menu-item index="3" style="float:right">需求库</el-menu-item>
-          <el-menu-item index="4" style="float:right">技术库</el-menu-item>
-          <el-menu-item index="5" style="float:right">首页</el-menu-item>
+          <el-menu-item index="3" style="float:right" @click="goTo('/platform')">需求库</el-menu-item>
+          <el-menu-item index="4" style="float:right" @click="goTo('/platform')">技术库</el-menu-item>
+          <el-menu-item index="5" style="float:right" @click="goTo('/index')">首页</el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
@@ -55,8 +54,8 @@ export default {
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    goTo(url) {
+      this.$router.push(url);
     }
   }
 };

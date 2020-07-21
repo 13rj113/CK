@@ -172,11 +172,6 @@
               </div>
             </el-col>
           </el-row>
-          <div class="technology-find-more-container">
-            <div class="technology-find-more">
-              <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
-            </div>
-          </div>
         </el-tab-pane>
         <el-tab-pane class="technology-tab-container" label="生物医疗">
           <el-row
@@ -242,7 +237,7 @@
         <el-tab-pane label="化学化工新能源材料"></el-tab-pane>
       </el-tabs>
       <div class="technology-find-more-container">
-        <div class="technology-find-more">
+        <div class="technology-find-more" @click="goTo('/platform')">
           <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
         </div>
       </div>
@@ -366,7 +361,7 @@
         <el-tab-pane label="高分子材料"></el-tab-pane>
       </el-tabs>
       <div class="technology-find-more-container">
-        <div class="technology-find-more">
+        <div class="technology-find-more" @click="goTo('/platform')">
           <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
         </div>
       </div>
@@ -445,10 +440,11 @@
               </el-row>
               <el-divider></el-divider>
               <el-row
-                style="height:100px;margin-bottom:20px"
+                style="height:100px;margin-bottom:20px;cursor:pointer"
                 :gutter="20"
                 v-for="policy in policy1"
                 :key="policy.index"
+                @click.native="goTo('/policy')"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -505,6 +501,7 @@
                 :gutter="20"
                 v-for="policy in policy1"
                 :key="policy.index"
+                @click.native="goTo('/policy')"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -561,6 +558,7 @@
                 :gutter="20"
                 v-for="policy in policy1"
                 :key="policy.index"
+                @click.native="goTo('/policy')"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -617,6 +615,7 @@
                 :gutter="20"
                 v-for="policy in policy1"
                 :key="policy.index"
+                @click.native="goTo('/policy')"
               >
                 <el-col :span="4" style="height:100px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
@@ -1899,6 +1898,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    goTo(url) {
+      this.$router.push(url);
+    }
   }
 };
 </script>
