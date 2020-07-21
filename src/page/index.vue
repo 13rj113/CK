@@ -14,7 +14,7 @@
         </el-input>
       </div>
     </div>
-    <div>
+    <el-card shadow="always" style="margin-top:20px">
       <el-row class="intro-pic">
         <el-row class="intro-first">
           <el-col class="intro-first-1" :span="8">
@@ -46,7 +46,8 @@
           </el-col>
         </el-row>
       </el-row>
-
+    </el-card>
+    <el-card shadow="always" style="margin-top:20px">
       <el-row class="intro-icon">
         <el-col :span="20" :offset="4">
           <div class="intro-detail">
@@ -104,533 +105,543 @@
           </div>
         </el-col>
       </el-row>
-    </div>
+    </el-card>
     <div style="margin-top:40px;margin-bottom:40px">
       <el-divider></el-divider>
     </div>
     <!-- 技术项目库 -->
-    <div class="technology-container">
-      <el-row class="sub-title">
-        <i class="el-icon-s-home"></i>
-        技术项目库
-      </el-row>
-      <el-tabs tab-position="left">
-        <el-tab-pane class="technology-tab-container" label="高端装备">
-          <el-row
-            class="technology-item"
-            v-for="technology in technologies.device"
-            :key="technology.index"
-          >
-            <el-col :span="6">
-              <div class="technology-title">{{technology.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in technology.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{technology.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
+    <el-card shadow="always" style="margin-top:20px">
+      <div class="technology-container">
+        <el-row class="sub-title">
+          <i class="el-icon-s-home"></i>
+          技术项目库
+        </el-row>
+        <el-tabs tab-position="left">
+          <el-tab-pane class="technology-tab-container" label="高端装备">
+            <el-row
+              class="technology-item"
+              v-for="technology in technologies.device"
+              :key="technology.index"
+            >
+              <el-col :span="6">
+                <div class="technology-title">{{technology.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in technology.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{technology.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane class="technology-tab-container" label="高新材料">
+            <el-row
+              class="technology-item"
+              v-for="technology in technologies.material"
+              :key="technology.index"
+            >
+              <el-col :span="6">
+                <div class="technology-title">{{technology.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in technology.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{technology.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+            <div class="technology-find-more-container">
+              <div class="technology-find-more">
+                <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
               </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane class="technology-tab-container" label="高新材料">
-          <el-row
-            class="technology-item"
-            v-for="technology in technologies.material"
-            :key="technology.index"
-          >
-            <el-col :span="6">
-              <div class="technology-title">{{technology.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in technology.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{technology.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-          <div class="technology-find-more-container">
-            <div class="technology-find-more">
-              <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
             </div>
+          </el-tab-pane>
+          <el-tab-pane class="technology-tab-container" label="生物医疗">
+            <el-row
+              class="technology-item"
+              v-for="technology in technologies.biomedical"
+              :key="technology.index"
+            >
+              <el-col :span="6">
+                <div class="technology-title">{{technology.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in technology.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{technology.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane class="technology-tab-container" label="人工智能">
+            <el-row
+              class="technology-item"
+              v-for="technology in technologies.artIntel"
+              :key="technology.index"
+            >
+              <el-col :span="6">
+                <div class="technology-title">{{technology.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in technology.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{technology.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane label="5G商用"></el-tab-pane>
+          <el-tab-pane label="水污染治理"></el-tab-pane>
+          <el-tab-pane label="信息技术"></el-tab-pane>
+          <el-tab-pane label="化学化工新能源材料"></el-tab-pane>
+        </el-tabs>
+        <div class="technology-find-more-container">
+          <div class="technology-find-more">
+            <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
           </div>
-        </el-tab-pane>
-        <el-tab-pane class="technology-tab-container" label="生物医疗">
-          <el-row
-            class="technology-item"
-            v-for="technology in technologies.biomedical"
-            :key="technology.index"
-          >
-            <el-col :span="6">
-              <div class="technology-title">{{technology.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in technology.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{technology.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane class="technology-tab-container" label="人工智能">
-          <el-row
-            class="technology-item"
-            v-for="technology in technologies.artIntel"
-            :key="technology.index"
-          >
-            <el-col :span="6">
-              <div class="technology-title">{{technology.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in technology.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{technology.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane label="5G商用"></el-tab-pane>
-        <el-tab-pane label="水污染治理"></el-tab-pane>
-        <el-tab-pane label="信息技术"></el-tab-pane>
-        <el-tab-pane label="化学化工新能源材料"></el-tab-pane>
-      </el-tabs>
-      <div class="technology-find-more-container">
-        <div class="technology-find-more">
-          <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
         </div>
       </div>
-    </div>
+    </el-card>
     <div style="margin-top:40px;margin-bottom:40px">
       <el-divider></el-divider>
     </div>
     <!-- 产业链需求库 -->
-    <div class="technology-container">
-      <el-row class="sub-title">
-        <el-image
-          src="static/img/icon/truck.png"
-          style="width: 50px;height:50px;vertical-align:middle"
-        ></el-image>产业链需求库
-      </el-row>
-      <el-tabs tab-position="left">
-        <el-tab-pane class="technology-tab-container" label="新能源">
-          <el-row class="technology-item" v-for="demand in demands.newEnergy" :key="demand.index">
-            <el-col :span="6">
-              <div class="technology-title">{{demand.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in demand.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{demand.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane class="technology-tab-container" label="高新技术材料">
-          <el-row class="technology-item" v-for="demand in demands.material" :key="demand.index">
-            <el-col :span="6">
-              <div class="technology-title">{{demand.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in demand.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{demand.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane class="technology-tab-container" label="信息技术">
-          <el-row class="technology-item" v-for="demand in demands.infoTech" :key="demand.index">
-            <el-col :span="6">
-              <div class="technology-title">{{demand.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in demand.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{demand.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane class="technology-tab-container" label="生物医疗">
-          <el-row class="technology-item" v-for="demand in demands.biomedical" :key="demand.index">
-            <el-col :span="6">
-              <div class="technology-title">{{demand.title}}</div>
-              <el-tag
-                class="technology-title-tag"
-                v-for="tag in demand.titleTag"
-                :key="tag.index"
-                :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-              >{{tag.name}}</el-tag>
-            </el-col>
-            <el-col :span="3">
-              <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
-            </el-col>
-            <el-col :span="14">
-              <div class="technology-content">{{demand.content}}</div>
-            </el-col>
-            <el-col :span="1">
-              <div class="content-more">
-                ...
-                <br />更多
-              </div>
-            </el-col>
-          </el-row>
-        </el-tab-pane>
-        <el-tab-pane label="5G商用"></el-tab-pane>
-        <el-tab-pane label="人工智能"></el-tab-pane>
-        <el-tab-pane label="污水治理"></el-tab-pane>
-        <el-tab-pane label="化学技术"></el-tab-pane>
-        <el-tab-pane label="高分子材料"></el-tab-pane>
-      </el-tabs>
-      <div class="technology-find-more-container">
-        <div class="technology-find-more">
-          <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
+    <el-card shadow="always" style="margin-top:20px">
+      <div class="technology-container">
+        <el-row class="sub-title">
+          <el-image
+            src="static/img/icon/truck.png"
+            style="width: 50px;height:50px;vertical-align:middle"
+          ></el-image>产业链需求库
+        </el-row>
+        <el-tabs tab-position="left">
+          <el-tab-pane class="technology-tab-container" label="新能源">
+            <el-row class="technology-item" v-for="demand in demands.newEnergy" :key="demand.index">
+              <el-col :span="6">
+                <div class="technology-title">{{demand.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in demand.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{demand.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane class="technology-tab-container" label="高新技术材料">
+            <el-row class="technology-item" v-for="demand in demands.material" :key="demand.index">
+              <el-col :span="6">
+                <div class="technology-title">{{demand.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in demand.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{demand.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane class="technology-tab-container" label="信息技术">
+            <el-row class="technology-item" v-for="demand in demands.infoTech" :key="demand.index">
+              <el-col :span="6">
+                <div class="technology-title">{{demand.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in demand.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{demand.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane class="technology-tab-container" label="生物医疗">
+            <el-row
+              class="technology-item"
+              v-for="demand in demands.biomedical"
+              :key="demand.index"
+            >
+              <el-col :span="6">
+                <div class="technology-title">{{demand.title}}</div>
+                <el-tag
+                  class="technology-title-tag"
+                  v-for="tag in demand.titleTag"
+                  :key="tag.index"
+                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
+                >{{tag.name}}</el-tag>
+              </el-col>
+              <el-col :span="3">
+                <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
+              </el-col>
+              <el-col :span="14">
+                <div class="technology-content">{{demand.content}}</div>
+              </el-col>
+              <el-col :span="1">
+                <div class="content-more">
+                  ...
+                  <br />更多
+                </div>
+              </el-col>
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane label="5G商用"></el-tab-pane>
+          <el-tab-pane label="人工智能"></el-tab-pane>
+          <el-tab-pane label="污水治理"></el-tab-pane>
+          <el-tab-pane label="化学技术"></el-tab-pane>
+          <el-tab-pane label="高分子材料"></el-tab-pane>
+        </el-tabs>
+        <div class="technology-find-more-container">
+          <div class="technology-find-more">
+            <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
+          </div>
         </div>
       </div>
-    </div>
+    </el-card>
 
     <el-divider></el-divider>
-    <div class="policy">
-      <el-row class="sub-title">
-        <i class="el-icon-document-copy"></i>
-        政策一览
-      </el-row>
-      <el-row class="policy-text">助力政府构建城市/园区科技创新生态体系</el-row>
-      <el-row :gutter="20" style="margin-left:10px;margin-right:10px">
-        <el-col :span="5">
-          <div class="policy-main policy-left">
-            <p class="left-title">区域技术市场</p>
-            <p class="left-content">构建全流程、全维度、全纵深的技术转移服务体系</p>
+    <el-card shadow="always" style="margin-top:20px">
+      <div class="policy">
+        <el-row class="sub-title">
+          <i class="el-icon-document-copy"></i>
+          政策一览
+        </el-row>
+        <el-row class="policy-text">助力政府构建城市/园区科技创新生态体系</el-row>
+        <el-row :gutter="20" style="margin-left:10px;margin-right:10px">
+          <el-col :span="5">
+            <div class="policy-main policy-left">
+              <p class="left-title">区域技术市场</p>
+              <p class="left-content">构建全流程、全维度、全纵深的技术转移服务体系</p>
 
-            <p class="left-title">产业大数据服务平台</p>
-            <p class="left-content">东西区域产业情况、精准配置资源，</p>
-            <p class="left-content">提供产业创新发展专业化服务</p>
+              <p class="left-title">产业大数据服务平台</p>
+              <p class="left-content">东西区域产业情况、精准配置资源，</p>
+              <p class="left-content">提供产业创新发展专业化服务</p>
 
-            <p class="left-title">园区创新管家</p>
-            <p class="left-content">为园区构建资源丰富、配置成效显著的创新体系</p>
+              <p class="left-title">园区创新管家</p>
+              <p class="left-content">为园区构建资源丰富、配置成效显著的创新体系</p>
 
-            <p class="left-title">高效技术转移管理运营中心</p>
-            <p class="left-content">全新的产学研合作模式，</p>
-            <p class="left-content">提升校地合作的效率和实效</p>
+              <p class="left-title">高效技术转移管理运营中心</p>
+              <p class="left-content">全新的产学研合作模式，</p>
+              <p class="left-content">提升校地合作的效率和实效</p>
 
-            <p class="left-title">崇科（国际）创新中心</p>
-            <p class="left-content">高端服务聚集与科技平台赋能</p>
-            <p class="left-content">的综合载体，主力城市发展</p>
-          </div>
-        </el-col>
-        <el-col :span="19">
-          <el-tabs type="border-card" style="height:480px;overflow-y:scroll">
-            <el-tab-pane label="科技部">
-              <el-row class="search-first" style="margin-bottom:15px">
-                <el-col :span="8">
-                  <div class="search-area">
-                    按区域检索：
-                    <el-select v-model="areaValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in areaOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-                <el-col :span="8">
-                  <div class="search-area">
-                    按领域检索：
-                    <el-select v-model="fieldValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in fieldOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-row class="search-second" style="margin-bottom:0px">
-                <el-col :span="24">
-                  <div class="search-area">
-                    政策时效性：
-                    <el-button plain>不限</el-button>
-                    <el-button plain>未开始</el-button>
-                    <el-button plain>申报中</el-button>
-                    <el-button plain>已过期</el-button>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-divider></el-divider>
-              <el-row
-                style="height:100px;margin-bottom:20px"
-                :gutter="20"
-                v-for="policy in policy1"
-                :key="policy.index"
-              >
-                <el-col :span="4" style="height:100px">
-                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                </el-col>
-                <el-col :span="20" style="height:100px">
-                  <div class="policy-search-title">{{policy.title}}</div>
-                  <div class="policy-search-content">{{policy.content}}</div>
-                </el-col>
-              </el-row>
-            </el-tab-pane>
-            <el-tab-pane label="发改委">
-              <el-row class="search-first" style="margin-bottom:15px">
-                <el-col :span="8">
-                  <div class="search-area">
-                    按区域检索：
-                    <el-select v-model="areaValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in areaOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-                <el-col :span="8">
-                  <div class="search-area">
-                    按领域检索：
-                    <el-select v-model="fieldValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in fieldOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-row class="search-second" style="margin-bottom:0px">
-                <el-col :span="24">
-                  <div class="search-area">
-                    政策时效性：
-                    <el-button plain>不限</el-button>
-                    <el-button plain>未开始</el-button>
-                    <el-button plain>申报中</el-button>
-                    <el-button plain>已过期</el-button>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-divider></el-divider>
-              <el-row
-                style="height:100px;margin-bottom:20px"
-                :gutter="20"
-                v-for="policy in policy1"
-                :key="policy.index"
-              >
-                <el-col :span="4" style="height:100px">
-                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                </el-col>
-                <el-col :span="20" style="height:100px">
-                  <div class="policy-search-title">{{policy.title}}</div>
-                  <div class="policy-search-content">{{policy.content}}</div>
-                </el-col>
-              </el-row>
-            </el-tab-pane>
-            <el-tab-pane label="组织部">
-              <el-row class="search-first" style="margin-bottom:15px">
-                <el-col :span="8">
-                  <div class="search-area">
-                    按区域检索：
-                    <el-select v-model="areaValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in areaOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-                <el-col :span="8">
-                  <div class="search-area">
-                    按领域检索：
-                    <el-select v-model="fieldValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in fieldOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-row class="search-second" style="margin-bottom:0px">
-                <el-col :span="24">
-                  <div class="search-area">
-                    政策时效性：
-                    <el-button plain>不限</el-button>
-                    <el-button plain>未开始</el-button>
-                    <el-button plain>申报中</el-button>
-                    <el-button plain>已过期</el-button>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-divider></el-divider>
-              <el-row
-                style="height:100px;margin-bottom:20px"
-                :gutter="20"
-                v-for="policy in policy1"
-                :key="policy.index"
-              >
-                <el-col :span="4" style="height:100px">
-                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                </el-col>
-                <el-col :span="20" style="height:100px">
-                  <div class="policy-search-title">{{policy.title}}</div>
-                  <div class="policy-search-content">{{policy.content}}</div>
-                </el-col>
-              </el-row>
-            </el-tab-pane>
-            <el-tab-pane label="经信局">
-              <el-row class="search-first" style="margin-bottom:15px">
-                <el-col :span="8">
-                  <div class="search-area">
-                    按区域检索：
-                    <el-select v-model="areaValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in areaOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-                <el-col :span="8">
-                  <div class="search-area">
-                    按领域检索：
-                    <el-select v-model="fieldValue" placeholder="请选择">
-                      <el-option
-                        v-for="item in fieldOptions"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value"
-                      ></el-option>
-                    </el-select>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-row class="search-second" style="margin-bottom:0px">
-                <el-col :span="24">
-                  <div class="search-area">
-                    政策时效性：
-                    <el-button plain>不限</el-button>
-                    <el-button plain>未开始</el-button>
-                    <el-button plain>申报中</el-button>
-                    <el-button plain>已过期</el-button>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-divider></el-divider>
-              <el-row
-                style="height:100px;margin-bottom:20px"
-                :gutter="20"
-                v-for="policy in policy1"
-                :key="policy.index"
-              >
-                <el-col :span="4" style="height:100px">
-                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                </el-col>
-                <el-col :span="20" style="height:100px">
-                  <div class="policy-search-title">{{policy.title}}</div>
-                  <div class="policy-search-content">{{policy.content}}</div>
-                </el-col>
-              </el-row>
-            </el-tab-pane>
-          </el-tabs>
-        </el-col>
-      </el-row>
-    </div>
+              <p class="left-title">崇科（国际）创新中心</p>
+              <p class="left-content">高端服务聚集与科技平台赋能</p>
+              <p class="left-content">的综合载体，主力城市发展</p>
+            </div>
+          </el-col>
+          <el-col :span="19">
+            <el-tabs type="border-card" style="height:500px;overflow-y:scroll">
+              <el-tab-pane label="科技部">
+                <el-row class="search-first" style="margin-bottom:15px">
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按区域检索：
+                      <el-select v-model="areaValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in areaOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按领域检索：
+                      <el-select v-model="fieldValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in fieldOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-row class="search-second" style="margin-bottom:0px">
+                  <el-col :span="24">
+                    <div class="search-area">
+                      政策时效性：
+                      <el-button plain>不限</el-button>
+                      <el-button plain>未开始</el-button>
+                      <el-button plain>申报中</el-button>
+                      <el-button plain>已过期</el-button>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row
+                  style="height:100px;margin-bottom:20px"
+                  :gutter="20"
+                  v-for="policy in policy1"
+                  :key="policy.index"
+                >
+                  <el-col :span="4" style="height:100px">
+                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                  </el-col>
+                  <el-col :span="20" style="height:100px">
+                    <div class="policy-search-title">{{policy.title}}</div>
+                    <div class="policy-search-content">{{policy.content}}</div>
+                  </el-col>
+                </el-row>
+              </el-tab-pane>
+              <el-tab-pane label="发改委">
+                <el-row class="search-first" style="margin-bottom:15px">
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按区域检索：
+                      <el-select v-model="areaValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in areaOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按领域检索：
+                      <el-select v-model="fieldValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in fieldOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-row class="search-second" style="margin-bottom:0px">
+                  <el-col :span="24">
+                    <div class="search-area">
+                      政策时效性：
+                      <el-button plain>不限</el-button>
+                      <el-button plain>未开始</el-button>
+                      <el-button plain>申报中</el-button>
+                      <el-button plain>已过期</el-button>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row
+                  style="height:100px;margin-bottom:20px"
+                  :gutter="20"
+                  v-for="policy in policy1"
+                  :key="policy.index"
+                >
+                  <el-col :span="4" style="height:100px">
+                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                  </el-col>
+                  <el-col :span="20" style="height:100px">
+                    <div class="policy-search-title">{{policy.title}}</div>
+                    <div class="policy-search-content">{{policy.content}}</div>
+                  </el-col>
+                </el-row>
+              </el-tab-pane>
+              <el-tab-pane label="组织部">
+                <el-row class="search-first" style="margin-bottom:15px">
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按区域检索：
+                      <el-select v-model="areaValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in areaOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按领域检索：
+                      <el-select v-model="fieldValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in fieldOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-row class="search-second" style="margin-bottom:0px">
+                  <el-col :span="24">
+                    <div class="search-area">
+                      政策时效性：
+                      <el-button plain>不限</el-button>
+                      <el-button plain>未开始</el-button>
+                      <el-button plain>申报中</el-button>
+                      <el-button plain>已过期</el-button>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row
+                  style="height:100px;margin-bottom:20px"
+                  :gutter="20"
+                  v-for="policy in policy1"
+                  :key="policy.index"
+                >
+                  <el-col :span="4" style="height:100px">
+                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                  </el-col>
+                  <el-col :span="20" style="height:100px">
+                    <div class="policy-search-title">{{policy.title}}</div>
+                    <div class="policy-search-content">{{policy.content}}</div>
+                  </el-col>
+                </el-row>
+              </el-tab-pane>
+              <el-tab-pane label="经信局">
+                <el-row class="search-first" style="margin-bottom:15px">
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按区域检索：
+                      <el-select v-model="areaValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in areaOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <div class="search-area">
+                      按领域检索：
+                      <el-select v-model="fieldValue" placeholder="请选择">
+                        <el-option
+                          v-for="item in fieldOptions"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value"
+                        ></el-option>
+                      </el-select>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-row class="search-second" style="margin-bottom:0px">
+                  <el-col :span="24">
+                    <div class="search-area">
+                      政策时效性：
+                      <el-button plain>不限</el-button>
+                      <el-button plain>未开始</el-button>
+                      <el-button plain>申报中</el-button>
+                      <el-button plain>已过期</el-button>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row
+                  style="height:100px;margin-bottom:20px"
+                  :gutter="20"
+                  v-for="policy in policy1"
+                  :key="policy.index"
+                >
+                  <el-col :span="4" style="height:100px">
+                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                  </el-col>
+                  <el-col :span="20" style="height:100px">
+                    <div class="policy-search-title">{{policy.title}}</div>
+                    <div class="policy-search-content">{{policy.content}}</div>
+                  </el-col>
+                </el-row>
+              </el-tab-pane>
+            </el-tabs>
+          </el-col>
+        </el-row>
+      </div>
+    </el-card>
 
     <el-row class="bottom-container">
       <el-col :span="8">
@@ -1938,14 +1949,14 @@ main .el-menu {
   background-color: transparent !important;
 }
 .intro-pic {
-  height: 400px;
+  height: 300px;
   width: 100%;
   padding-top: 10px;
   padding-left: 50px;
   padding-right: 100px;
   background-image: url(/static/img/service.png);
   background-repeat: no-repeat;
-  background-size: 26% 100%;
+  background-size: 26% 135%;
   -moz-background-size: 100% 100%;
   background-position: center;
   .intro-sub-title {
@@ -1960,29 +1971,29 @@ main .el-menu {
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   }
   .intro-first {
-    height: 45%;
+    height: 30%;
     width: 100%;
     .intro-first-1 {
       height: 100%;
       .intro-first-technology {
         text-align: right;
-        margin-top: 100px;
+        margin-top: 50px;
       }
     }
     .intro-first-2 {
       height: 100%;
       .intro-first-policy {
         text-align: left;
-        margin-top: 100px;
+        margin-top: 50px;
       }
     }
   }
   .intro-second {
-    height: 10%;
+    height: 25%;
     width: 100%;
   }
   .intro-third {
-    height: 45%;
+    height: 30%;
     width: 100%;
     .intro-third-2 {
       height: 100%;
@@ -2158,10 +2169,10 @@ main .el-menu {
   margin-bottom: 30px;
 }
 .policy {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   .policy-main {
-    height: 480px;
+    height: 500px;
     border: 1px solid #ccc;
     .left-title {
       font-size: 18px;

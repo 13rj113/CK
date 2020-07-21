@@ -10,163 +10,182 @@
           <el-breadcrumb-item>政策解读</el-breadcrumb-item>
         </el-breadcrumb>
       </div>-->
-      <div class="sub-title">
-        <el-row class="show-policy">
-          <i class="el-icon-document-copy"></i>
-          政策一览
-        </el-row>
-      </div>
-      <div class="policy">
-        <el-row :gutter="20" class="policy-detail">
-          <el-col :span="9" class="policy-image">
-            <el-image style=" height: 100%;width:100%" src="/static/img/policy/net.png" fit="fill"></el-image>
-          </el-col>
-          <el-col :span="15" class="policy-content" style="overflow-y:scroll">
+      <el-card shadow="always" style="margin-top:20px">
+        <div class="sub-title">
+          <el-row class="show-policy">
+            <i class="el-icon-document-copy"></i>
+            政策一览
+          </el-row>
+        </div>
+        <div class="policy">
+          <el-row :gutter="20" class="policy-detail">
+            <el-col :span="9" class="policy-image">
+              <el-image
+                style=" height: 100%;width:100%"
+                src="/static/img/policy/net.png"
+                fit="fill"
+              ></el-image>
+            </el-col>
+            <el-col :span="15" class="policy-content" style="overflow-y:scroll">
+              <el-row
+                style="height:90px;margin-bottom:20px"
+                :gutter="20"
+                v-for="policy in policy1"
+                :key="policy.index"
+              >
+                <el-col :span="4" style="height:90px">
+                  <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
+                </el-col>
+                <el-col :span="20" style="height:90px">
+                  <div class="policy-search-title" style="font-weight:bold">{{policy.title}}</div>
+                  <div class="policy-search-content">{{policy.content}}</div>
+                </el-col>
+              </el-row>
+            </el-col>
+          </el-row>
+        </div>
+        <el-button class="declare" type="danger" icon="el-icon-office-building" round plain>跳转到崇科政策网</el-button>
+      </el-card>
+      <el-divider class="divider"></el-divider>
+
+      <el-card shadow="always" style="margin-top:20px">
+        <div class="sub-title">
+          <el-row class="show-service">
+            <i class="el-icon-cloudy"></i>
+            服务模式
+          </el-row>
+        </div>
+        <div class="service-1">
+          <el-row class="service-image">
+            <el-col>
+              <div class="intro-detail">
+                <el-row style="height:60%">
+                  <el-col :span="4" style="height:100%">
+                    <div class="intro-detail-img">
+                      <el-image style=" width: 70%" src="static/img/icon/AI.png" fit="fill"></el-image>
+                      <div style="margin-top:15px">分析公司概况</div>
+                    </div>
+                  </el-col>
+                  <el-col :span="4" style="height:100%">
+                    <div class="intro-detail-img">
+                      <el-image style=" width: 70%" src="static/img/icon/Internet.png" fit="fill"></el-image>
+                      <div style="margin-top:15px">诊断公司需求</div>
+                    </div>
+                  </el-col>
+                  <el-col :span="4" style="height:100%">
+                    <div class="intro-detail-img">
+                      <el-image
+                        style=" width: 70%"
+                        src="static/img/icon/Manufacture.png"
+                        fit="fill"
+                      ></el-image>
+                      <div style="margin-top:15px">需求问题界定</div>
+                    </div>
+                  </el-col>
+                  <el-col :span="4" style="height:100%">
+                    <div class="intro-detail-img">
+                      <el-image style=" width: 70%" src="static/img/icon/Material.png" fit="fill"></el-image>
+                      <div style="margin-top:15px">解读方案搜寻</div>
+                    </div>
+                  </el-col>
+                  <el-col :span="4" style="height:100%">
+                    <div class="intro-detail-img">
+                      <el-image style=" width: 70%" src="static/img/icon/Medical.png" fit="fill"></el-image>
+                      <div style="margin-top:15px">未来阶段预测</div>
+                    </div>
+                  </el-col>
+                  <el-col :span="4" style="height:100%">
+                    <div class="intro-detail-img">
+                      <el-image style=" width: 70%" src="static/img/icon/Car.png" fit="fill"></el-image>
+                      <div style="margin-top:15px">最终结果评估</div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </div>
+            </el-col>
+          </el-row>
+        </div>
+      </el-card>
+
+      <el-card shadow="always" style="margin-top:20px">
+        <div class="sub-title">
+          <el-row class="show-service">
+            <i class="el-icon-position"></i>
+            我们的理念
+          </el-row>
+        </div>
+        <div class="service-2">
+          <el-row class="service-content">
+            <p>崇科拥有专业的政策分析团队，每日搜寻最新的政策指示，形成了庞大的政策数据库，能更好的从企业的角度匹配到最佳的政策需求，对于一些新规和试行规定，我们的专业团队抱着谨慎的态度去分析实施的可行性，用最独到的眼光捕捉机会，解读政策，对企业给予最大限度的帮助。</p>
+          </el-row>
+        </div>
+      </el-card>
+
+      <el-card shadow="always" style="margin-top:20px">
+        <div class="sub-title">
+          <el-row class="show-science">
+            <i class="el-icon-view"></i>
+            科技行业区域政策
+          </el-row>
+        </div>
+        <div class="science-policy">
+          <el-row class="science-policy-area-1">
+            <el-col :span="2" class="science-policy-title">地区：&nbsp;&nbsp;</el-col>
+            <el-col :span="2" class="science-policy-content" v-for="area in area1" :key="area">
+              <el-button plain>{{area}}</el-button>
+            </el-col>
+          </el-row>
+          <el-row class="science-policy-area-2">
+            <el-col :span="2" class="science-policy-title">&nbsp;</el-col>
+            <el-col :span="2" class="science-policy-content" v-for="area in area2" :key="area">
+              <el-button plain>{{area}}</el-button>
+            </el-col>
+          </el-row>
+          <el-row class="science-policy-department">
+            <el-col :span="2" class="science-policy-title">部门：&nbsp;&nbsp;</el-col>
+            <el-col
+              :span="2"
+              class="science-policy-content"
+              v-for="iteam in department"
+              :key="iteam"
+            >
+              <el-button plain>{{iteam}}</el-button>
+            </el-col>
+          </el-row>
+          <el-row class="science-policy-effective" style="margin-bottom:0px">
+            <el-col :span="2" class="science-policy-title">政策时效性：&nbsp;&nbsp;</el-col>
+            <el-col :span="2" class="science-policy-content">
+              <el-button plain>不限</el-button>
+            </el-col>
+            <el-col :span="2" class="science-policy-content">
+              <el-button plain>未开始</el-button>
+            </el-col>
+            <el-col :span="2" class="science-policy-content">
+              <el-button plain>申报中</el-button>
+            </el-col>
+            <el-col :span="2" class="science-policy-content">
+              <el-button plain>已过期</el-button>
+            </el-col>
+          </el-row>
+          <el-tabs type="border-card" class="science-policy-border">
             <el-row
-              style="height:90px;margin-bottom:20px"
+              style="height:100px;margin-bottom:20px"
               :gutter="20"
-              v-for="policy in policy1"
+              v-for="policy in policy2"
               :key="policy.index"
             >
-              <el-col :span="4" style="height:90px">
+              <el-col :span="4" style="height:100px">
                 <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
               </el-col>
-              <el-col :span="20" style="height:90px">
-                <div class="policy-search-title" style="font-weight:bold">{{policy.title}}</div>
+              <el-col :span="20" style="height:100px">
+                <div class="policy-search-title">{{policy.title}}</div>
                 <div class="policy-search-content">{{policy.content}}</div>
               </el-col>
             </el-row>
-          </el-col>
-        </el-row>
-      </div>
-      <el-button class="declare" type="danger" icon="el-icon-office-building" round plain>跳转到崇科政策网</el-button>
-      <el-divider class="divider"></el-divider>
-
-      <div class="sub-title">
-        <el-row class="show-service">
-          <i class="el-icon-cloudy"></i>
-          服务模式
-        </el-row>
-      </div>
-      <div class="service-1">
-        <el-row class="service-image">
-          <el-col>
-            <div class="intro-detail">
-              <el-row style="height:60%">
-                <el-col :span="4" style="height:100%">
-                  <div class="intro-detail-img">
-                    <el-image style=" width: 50%" src="static/img/icon/AI.png" fit="fill"></el-image>
-                    <div style="margin-top:15px">分析公司概况</div>
-                  </div>
-                </el-col>
-                <el-col :span="4" style="height:100%">
-                  <div class="intro-detail-img">
-                    <el-image style=" width: 50%" src="static/img/icon/Internet.png" fit="fill"></el-image>
-                    <div style="margin-top:15px">诊断公司需求</div>
-                  </div>
-                </el-col>
-                <el-col :span="4" style="height:100%">
-                  <div class="intro-detail-img">
-                    <el-image style=" width: 50%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
-                    <div style="margin-top:15px">需求问题界定</div>
-                  </div>
-                </el-col>
-                <el-col :span="4" style="height:100%">
-                  <div class="intro-detail-img">
-                    <el-image style=" width: 50%" src="static/img/icon/Material.png" fit="fill"></el-image>
-                    <div style="margin-top:15px">解读方案搜寻</div>
-                  </div>
-                </el-col>
-                <el-col :span="4" style="height:100%">
-                  <div class="intro-detail-img">
-                    <el-image style=" width: 50%" src="static/img/icon/Medical.png" fit="fill"></el-image>
-                    <div style="margin-top:15px">未来阶段预测</div>
-                  </div>
-                </el-col>
-                <el-col :span="4" style="height:100%">
-                  <div class="intro-detail-img">
-                    <el-image style=" width: 50%" src="static/img/icon/Car.png" fit="fill"></el-image>
-                    <div style="margin-top:15px">最终结果评估</div>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
-          </el-col>
-        </el-row>
-      </div>
-      <div class="sub-title">
-        <el-row class="show-service">
-          <i class="el-icon-position"></i>
-          我们的理念
-        </el-row>
-      </div>
-      <div class="service-2">
-        <el-row class="service-content">
-          <p>崇科拥有专业的政策分析团队，每日搜寻最新的政策指示，形成了庞大的政策数据库，能更好的从企业的角度匹配到最佳的政策需求，对于一些新规和试行规定，我们的专业团队抱着谨慎的态度去分析实施的可行性，用最独到的眼光捕捉机会，解读政策，对企业给予最大限度的帮助。</p>
-        </el-row>
-      </div>
-
-      <el-divider class="divider"></el-divider>
-
-      <div class="sub-title">
-        <el-row class="show-science">
-          <i class="el-icon-view"></i>
-          科技行业区域政策
-        </el-row>
-      </div>
-      <div class="science-policy">
-        <el-row class="science-policy-area-1">
-          <el-col :span="2" class="science-policy-title">地区：&nbsp;&nbsp;</el-col>
-          <el-col :span="2" class="science-policy-content" v-for="area in area1" :key="area">
-            <el-button plain>{{area}}</el-button>
-          </el-col>
-        </el-row>
-        <el-row class="science-policy-area-2">
-          <el-col :span="2" class="science-policy-title">&nbsp;</el-col>
-          <el-col :span="2" class="science-policy-content" v-for="area in area2" :key="area">
-            <el-button plain>{{area}}</el-button>
-          </el-col>
-        </el-row>
-        <el-row class="science-policy-department">
-          <el-col :span="2" class="science-policy-title">部门：&nbsp;&nbsp;</el-col>
-          <el-col :span="2" class="science-policy-content" v-for="iteam in department" :key="iteam">
-            <el-button plain>{{iteam}}</el-button>
-          </el-col>
-        </el-row>
-        <el-row class="science-policy-effective" style="margin-bottom:0px">
-          <el-col :span="2" class="science-policy-title">政策时效性：&nbsp;&nbsp;</el-col>
-          <el-col :span="2" class="science-policy-content">
-            <el-button plain>不限</el-button>
-          </el-col>
-          <el-col :span="2" class="science-policy-content">
-            <el-button plain>未开始</el-button>
-          </el-col>
-          <el-col :span="2" class="science-policy-content">
-            <el-button plain>申报中</el-button>
-          </el-col>
-          <el-col :span="2" class="science-policy-content">
-            <el-button plain>已过期</el-button>
-          </el-col>
-        </el-row>
-        <el-tabs type="border-card" class="science-policy-border">
-          <el-row
-            style="height:100px;margin-bottom:20px"
-            :gutter="20"
-            v-for="policy in policy2"
-            :key="policy.index"
-          >
-            <el-col :span="4" style="height:100px">
-              <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-            </el-col>
-            <el-col :span="20" style="height:100px">
-              <div class="policy-search-title">{{policy.title}}</div>
-              <div class="policy-search-content">{{policy.content}}</div>
-            </el-col>
-          </el-row>
-        </el-tabs>
-
-        <el-divider class="divider"></el-divider>
-
+          </el-tabs>
+        </div>
+      </el-card>
+      <el-card shadow="always" style="margin-top:20px">
         <div class="sub-title">
           <el-row class="show-success">
             <i class="el-icon-magic-stick"></i>
@@ -206,7 +225,7 @@
             </el-col>
           </el-row>
         </div>
-      </div>
+      </el-card>
     </div>
     <!-- 尾部导航 -->
     <end-of-page />
@@ -331,7 +350,7 @@ body {
   }
 }
 .main {
-  height: 2300px;
+  height: 2700px;
   padding: 20px;
   .breadcrumb {
     margin-top: 5px;
@@ -342,7 +361,7 @@ body {
   }
   .sub-title {
     text-align: left;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 15px;
     .show-policy {
       font-size: 25px;
@@ -392,7 +411,7 @@ body {
   }
   .service-1 {
     height: 150px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 5px;
     .service-image {
       height: 100%;
@@ -415,6 +434,7 @@ body {
     }
   }
   .science-policy {
+    margin-top: 50px;
     .science-policy-title {
       margin-top: 7px;
       text-align: right;
