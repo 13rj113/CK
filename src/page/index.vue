@@ -1943,17 +1943,18 @@ main .el-menu {
   background-color: transparent !important;
 }
 .intro-pic {
-  height: 400px;
+  height: 280px;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 50px;
   padding-right: 100px;
   background-image: url(/static/img/service.png);
   background-repeat: no-repeat;
-  background-size: 26% 100%;
+  background-size: 26% 130%;
   -moz-background-size: 100% 100%;
   background-position: center;
   .intro-sub-title {
+    font-weight: bold;
     font-size: 20px;
     color: #3498db;
     margin-bottom: 0px;
@@ -1965,13 +1966,13 @@ main .el-menu {
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   }
   .intro-first {
-    height: 45%;
+    height: 20%;
     width: 100%;
     .intro-first-1 {
       height: 100%;
       .intro-first-technology {
         text-align: right;
-        margin-top: 100px;
+        margin-top: 50px;
       }
     }
     .intro-first-2 {
@@ -1983,7 +1984,7 @@ main .el-menu {
     }
   }
   .intro-second {
-    height: 25%;
+    height: 35%;
     width: 100%;
   }
   .intro-third {
