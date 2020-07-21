@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="policy-detail">
     <!-- 头部导航 -->
     <header-tittle />
     <div class="main">
@@ -190,7 +190,7 @@ export default {
 body {
   margin: 0;
 }
-#app {
+#policy-detail {
   min-width: 1200px;
   margin: 0 auto;
   font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;

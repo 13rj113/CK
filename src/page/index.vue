@@ -253,8 +253,10 @@
     <!-- 产业链需求库 -->
     <div class="technology-container">
       <el-row class="sub-title">
-        <i class="el-icon-s-home"></i>
-        技术项目库
+        <el-image
+          src="static/img/icon/truck.png"
+          style="width: 50px;height:50px;vertical-align:middle"
+        ></el-image>产业链需求库
       </el-row>
       <el-tabs tab-position="left">
         <el-tab-pane class="technology-tab-container" label="新能源">
