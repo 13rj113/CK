@@ -46,7 +46,6 @@
         </div>
         <el-button class="declare" type="danger" icon="el-icon-office-building" round plain>跳转到崇科政策网</el-button>
       </el-card>
-      <el-divider class="divider"></el-divider>
 
       <el-card shadow="always" style="margin-top:20px">
         <div class="sub-title">
