@@ -8,6 +8,7 @@ import platform from '@/page/platform/platform'
 import park from '@/page/park/park'
 import headhunting from '@/page/technology/headhunting'
 import achievement from '@/page/achievement/achievement'
+import demandDetail from '@/page/demand/demandDetail'
 
 Vue.use(Router)
 
@@ -66,6 +67,13 @@ export default new Router({
       path: '/achievement',
       name: 'achievement',
       component: achievement,
+      meta: {
+        keepalive: true
+      }
+    }, {
+      path: '/demandDetail',
+      name: 'demandDetail',
+      component: demandDetail,
       meta: {
         keepalive: true
       }
