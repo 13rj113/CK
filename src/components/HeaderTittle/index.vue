@@ -30,7 +30,11 @@
           :collapse-transition="true"
           style="height:60px"
         >
-          <el-menu-item index="1" style="float:right">登录</el-menu-item>
+          <el-menu-item v-show="!loginFlag" index="1" style="float:right" @click="login">登录</el-menu-item>
+          <el-submenu index="1" style="float:right" v-show="loginFlag">
+            <template slot="title">{{username}}</template>
+            <el-menu-item index="1-1" @click="logOut">退出登录</el-menu-item>
+          </el-submenu>
           <el-submenu index="2" style="float:right">
             <template slot="title">服务</template>
             <el-menu-item index="2-1">技术猎头</el-menu-item>
@@ -43,17 +47,69 @@
         </el-menu>
       </el-col>
     </el-row>
+    <!-- 登录 -->
+    <el-dialog :visible.sync="dialogLoginVisible" width="30%">
+      <el-form ref="loginForm" :model="loginForm" label-width="80px" style="padding-right: 50px">
+        <el-form-item label="用户名">
+          <el-input v-model="loginForm.username"></el-input>
+        </el-form-item>
+        <el-form-item label="密码">
+          <el-input type="password" v-model="loginForm.password"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-button type="primary" @click="onLogin">登录</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      dialogLoginVisible: false,
+      loginFlag: false,
+      username: "",
+      loginForm: {
+        username: "",
+        password: ""
+      },
       activeIndex: "",
       input: ""
     };
   },
+  created() {
+    if (sessionStorage.getItem("username")) {
+      this.loginFlag = true;
+      this.username = sessionStorage.getItem("username");
+    } else {
+      this.loginFlag = false;
+    }
+  },
   methods: {
+    login() {
+      this.dialogLoginVisible = true;
+    },
+    onLogin() {
+      if (
+        this.loginForm.username === "admin" &&
+        this.loginForm.password === "123456"
+      ) {
+        this.dialogLoginVisible = false;
+        sessionStorage.setItem("username", this.loginForm.username);
+        this.loginFlag = true;
+        this.$router.push({
+          name: "index"
+        });
+      } else {
+        alert("账户或密码有误，请重新输入。");
+      }
+    },
+    logOut() {
+      this.loginFlag = false;
+      sessionStorage.removeItem("username");
+    },
     goTo(url) {
       this.$router.push(url);
     }
