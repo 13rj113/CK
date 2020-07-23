@@ -1,656 +1,198 @@
 <template>
-  <div id="app">
+  <div class="achievement">
     <!-- 头部导航 -->
     <header-tittle />
-    <div class="header-image">
-      <div class="header-select">
-        <el-input
-          v-model="input1"
-          placeholder="请输入搜索内容"
-          suffix-icon="el-icon-search"
-          style="height:50px"
-        >
-          <!-- <el-button slot="append" icon="el-icon-search"></el-button> -->
-        </el-input>
-      </div>
-    </div>
+    <div class="header-image"></div>
 
     <el-card shadow="always" style="margin-top:20px">
-      <el-row class="intro-pic">
-        <el-row class="intro-first">
-          <el-col class="intro-first-1" :span="8">
-            <div class="intro-first-technology">
-              <p class="intro-sub-title">技术猎头</p>
-              <p class="intro-sub-content">打破企业寻找高新技术困难的壁垒</p>
-            </div>
-          </el-col>
-          <el-col class="intro-first-2" :span="8" :offset="8">
-            <div class="intro-first-policy">
-              <p class="intro-sub-title">政策解读</p>
-              <p class="intro-sub-content">帮助科创企业争取到最大的政策扶持</p>
-            </div>
-          </el-col>
-        </el-row>
-        <el-row class="intro-second"></el-row>
-        <el-row class="intro-third">
-          <el-col class="intro-third-2" :span="8">
-            <div class="intro-third-service">
-              <p class="intro-sub-title">园区服务</p>
-              <p class="intro-sub-content">实现科创公司与政府科创园区之间的对接</p>
-            </div>
-          </el-col>
-          <el-col class="intro-third-2" :span="8" :offset="8">
-            <div class="intro-third-science">
-              <p class="intro-sub-title">科技成果转化</p>
-              <p class="intro-sub-content">实现科学研究与技术开发的进一步推广实践</p>
-            </div>
-          </el-col>
-        </el-row>
-      </el-row>
+      <div class="intro-detail">
+        <div class="intro-detail-img">
+          <el-image style=" width: 50%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">科技成果评价</div>
+        </div>
+
+        <div class="intro-detail-img">
+          <el-image style=" width: 50%" src="static/img/icon/5G.png" fit="fill"></el-image>
+          <div style="margin-top:15px">诊断市场需求</div>
+        </div>
+
+        <div class="intro-detail-img">
+          <el-image style=" width: 50%" src="static/img/icon/Internet.png" fit="fill"></el-image>
+          <div style="margin-top:15px">精准匹配市场</div>
+        </div>
+
+        <div class="intro-detail-img">
+          <el-image style=" width: 50%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
+          <div style="margin-top:15px">科技成果转化</div>
+        </div>
+
+        <div class="intro-detail-img">
+          <el-image style=" width: 50%" src="static/img/icon/Material.png" fit="fill"></el-image>
+          <div style="margin-top:15px">优选匹配买家</div>
+        </div>
+
+        <div class="intro-detail-img">
+          <el-image style=" width: 50%" src="static/img/icon/Medical.png" fit="fill"></el-image>
+          <div style="margin-top:15px">适当规避风险</div>
+        </div>
+      </div>
     </el-card>
-    <el-card shadow="always" style="margin-top:20px">
-      <el-row class="intro-icon">
-        <el-col :span="20" :offset="4">
-          <div class="intro-detail">
-            <el-row style="height:100%">
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/AI.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">人工智能</div>
-                  <div style="margin-top:10px;color:#ABB2B9">AI</div>
-                </div>
-              </el-col>
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/5G.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">5G商用</div>
-                  <div style="margin-top:10px;color:#ABB2B9">5G</div>
-                </div>
-              </el-col>
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/Internet.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">物联网</div>
-                  <div style="margin-top:10px;color:#ABB2B9">IOT</div>
-                </div>
-              </el-col>
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">高端制造</div>
-                  <div style="margin-top:10px;color:#ABB2B9">Advanced Manufacture</div>
-                </div>
-              </el-col>
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/Material.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">新材料</div>
-                  <div style="margin-top:10px;color:#ABB2B9">New Meterial</div>
-                </div>
-              </el-col>
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/Medical.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">大健康</div>
-                  <div style="margin-top:10px;color:#ABB2B9">Healthcare</div>
-                </div>
-              </el-col>
-              <el-col :span="3" style="height:100%">
-                <div class="intro-detail-img">
-                  <el-image style=" width: 50%" src="static/img/icon/Car.png" fit="fill"></el-image>
-                  <div style="margin-top:15px">车联网</div>
-                  <div style="margin-top:10px;color:#ABB2B9">ICV</div>
-                </div>
-              </el-col>
-            </el-row>
+    <!-- 技术成果转化 -->
+    <el-card class="transform" shadow="always" style="margin-top:20px">
+      <h3>技术成果转化</h3>
+      <p>崇科科技成果推广转化，是指为提高生产力水平而对科学研究与技术开发所产生的具有实用价值的科技成果所进行的后续试验、开发、应用、推广直至形成新产品、新工艺、新材料、发展新产业等活动。</p>
+      <div class="transform-main">
+        <div class="transform-main-left">
+          <p>促进科技成果转化、加速科技成果产业化，已经成为世界各国科技政策的新趋势</p>
+          <p>科技成果转化的途径，主要有直接和间接两种转化方式</p>
+          <p>我国科技成果转化率不足30%，先进国家这一指标为60%至70%</p>
+          <p>提高科技成果转化率才能转化出高附加值的产品</p>
+        </div>
+        <div class="transform-main-right">
+          <div>
+            <h3>技术转移平台</h3>
+            <p>平台级服务，为成果转化保驾护航</p>
           </div>
-        </el-col>
-      </el-row>
-    </el-card>
-    <!-- 技术项目库 -->
-    <el-card shadow="always" style="margin-top:20px">
-      <div class="technology-container">
-        <el-row class="sub-title">
-          <i class="el-icon-s-home"></i>
-          技术项目库
-        </el-row>
-        <el-tabs tab-position="left">
-          <el-tab-pane class="technology-tab-container" label="高端装备">
-            <el-row
-              class="technology-item"
-              v-for="technology in technologies.device"
-              :key="technology.index"
-            >
-              <el-col :span="6">
-                <div class="technology-title">{{technology.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in technology.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-              <el-col :span="3">
-                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-              </el-col>
-              <el-col :span="14">
-                <div class="technology-content">{{technology.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="高新材料">
-            <el-row
-              class="technology-item"
-              v-for="technology in technologies.material"
-              :key="technology.index"
-            >
-              <el-col :span="6">
-                <div class="technology-title">{{technology.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in technology.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-              <el-col :span="3">
-                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-              </el-col>
-              <el-col :span="14">
-                <div class="technology-content">{{technology.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="生物医疗">
-            <el-row
-              class="technology-item"
-              v-for="technology in technologies.biomedical"
-              :key="technology.index"
-            >
-              <el-col :span="6">
-                <div class="technology-title">{{technology.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in technology.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-              <el-col :span="3">
-                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-              </el-col>
-              <el-col :span="14">
-                <div class="technology-content">{{technology.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="人工智能">
-            <el-row
-              class="technology-item"
-              v-for="technology in technologies.artIntel"
-              :key="technology.index"
-            >
-              <el-col :span="6">
-                <div class="technology-title">{{technology.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in technology.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-              <el-col :span="3">
-                <div class="technology-tags" v-for="tag in technology.tags" :key="tag.index">{{tag}}</div>
-              </el-col>
-              <el-col :span="14">
-                <div class="technology-content">{{technology.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane label="5G商用" disabled></el-tab-pane>
-          <el-tab-pane label="水污染治理" disabled></el-tab-pane>
-          <el-tab-pane label="信息技术" disabled></el-tab-pane>
-          <el-tab-pane label="化学化工新能源材料" disabled></el-tab-pane>
-        </el-tabs>
-        <div class="technology-find-more-container">
-          <div class="technology-find-more" @click="goTo('/platform')">
-            <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
+          <div>
+            <h3>技术通</h3>
+            <p>会员级服务，成果推广转让更快捷</p>
+          </div>
+          <div>
+            <h3>产学研活动</h3>
+            <p>对接会、项目路演、创新企业院所行</p>
+          </div>
+          <div>
+            <h3>成果-企业对点对点</h3>
+            <p>精准匹配、意向确认、直接对接</p>
           </div>
         </div>
       </div>
     </el-card>
-    <!-- 产业链需求库 -->
+    <!-- 技术转移服务流程 -->
+    <el-card class="step" shadow="always" style="margin-top:20px">
+      <h3>技术转移服务流程</h3>
+      <div class="step-detail">
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">成果项目推介</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">技术对接</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">技术定价</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">技术合同把关</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">商务谈判</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">指导交易签约</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">推动交易履行</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">项目产业化跟进</div>
+        </div>
+        <div class="step-detail-item">
+          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <div style="margin-top:15px">政策奖励申报</div>
+        </div>
+      </div>
+      <div class="report">实时对接播报：</div>
+    </el-card>
+
     <el-card shadow="always" style="margin-top:20px">
-      <div class="technology-container">
-        <el-row class="sub-title">
-          <el-image
-            src="static/img/icon/truck.png"
-            style="width: 50px;height:50px;vertical-align:middle;margin-right:10px;"
-          ></el-image>产业链需求库
-        </el-row>
-        <el-tabs tab-position="left">
-          <el-tab-pane class="technology-tab-container" label="新能源">
-            <el-row class="technology-item" v-for="demand in demands.newEnergy" :key="demand.index">
-              <el-col :span="8">
-                <div class="technology-title">{{demand.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in demand.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-              <!-- <el-col :span="3">
-                <div class="technology-tags" v-for="tag in demand.tags" :key="tag.index">{{tag}}</div>
-              </el-col>-->
-              <el-col :span="15">
-                <div class="technology-content">{{demand.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="高新技术材料">
-            <el-row class="technology-item" v-for="demand in demands.material" :key="demand.index">
-              <el-col :span="8">
-                <div class="technology-title">{{demand.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in demand.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-
-              <el-col :span="15">
-                <div class="technology-content">{{demand.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="信息技术">
-            <el-row class="technology-item" v-for="demand in demands.infoTech" :key="demand.index">
-              <el-col :span="8">
-                <div class="technology-title">{{demand.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in demand.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-
-              <el-col :span="15">
-                <div class="technology-content">{{demand.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="生物医疗">
-            <el-row
-              class="technology-item"
-              v-for="demand in demands.biomedical"
-              :key="demand.index"
-            >
-              <el-col :span="8">
-                <div class="technology-title">{{demand.title}}</div>
-                <el-tag
-                  class="technology-title-tag"
-                  v-for="tag in demand.titleTag"
-                  :key="tag.index"
-                  :style="{'color' : tag.color,'background-color' : tag.backgroundColor}"
-                >{{tag.name}}</el-tag>
-              </el-col>
-
-              <el-col :span="15">
-                <div class="technology-content">{{demand.content}}</div>
-              </el-col>
-              <el-col :span="1">
-                <div class="content-more">
-                  ...
-                  <br />更多
-                </div>
-              </el-col>
-            </el-row>
-          </el-tab-pane>
-          <el-tab-pane label="5G商用" disabled></el-tab-pane>
-          <el-tab-pane label="人工智能" disabled></el-tab-pane>
-          <el-tab-pane label="污水治理" disabled></el-tab-pane>
-          <el-tab-pane label="化学技术" disabled></el-tab-pane>
-          <el-tab-pane label="高分子材料" disabled></el-tab-pane>
-        </el-tabs>
-        <div class="technology-find-more-container">
-          <div class="technology-find-more" @click="goTo('/platform')">
-            <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
+      <h3>专家咨询</h3>
+      <div class="consult">
+        <div class="consult-left">
+          <div>
+            <span>高分子化学领域</span>
+            <span>新能源领域</span>
+            <span>动力学领域</span>
+            <span>更多 >></span>
           </div>
+          <div class="expert-container">
+            <div class="expert-item" v-for="expert in experts" :key="expert.index">
+              <el-image :src="expert.avatar"></el-image>
+              <div>{{expert.name}}</div>
+              <div>领域: {{expert.domain}}</div>
+              <div>任职于：{{expert.college}}</div>
+              <div class="consulting">咨询</div>
+            </div>
+          </div>
+        </div>
+        <div class="consult-right">
+          <h3>合作院校</h3>
+          <div class="college-container">
+            <div class="college-item" v-for="college in colleges" :key="college.index">
+              <div>
+                <el-image :src="college.avatar"></el-image>
+              </div>
+              <div>
+                <div>{{college.name}}</div>
+                <div>{{college.place}}</div>
+                <div>重点学科：{{college.subjects}}</div>
+              </div>
+            </div>
+          </div>
+          <span>更多院校</span>
         </div>
       </div>
     </el-card>
 
-    <el-card shadow="always" style="margin-top:20px">
-      <div class="policy">
-        <el-row class="sub-title">
-          <i class="el-icon-document-copy"></i>
-          政策一览
-        </el-row>
-        <el-row class="policy-text">助力政府构建城市/园区科技创新生态体系</el-row>
-        <el-row :gutter="20" style="margin-left:10px;margin-right:10px">
-          <el-col :span="5">
-            <div class="policy-main policy-left">
-              <p class="left-title">区域技术市场</p>
-              <p class="left-content">构建全流程、全维度、全纵深的技术转移服务体系</p>
-
-              <p class="left-title">产业大数据服务平台</p>
-              <p class="left-content">东西区域产业情况、精准配置资源，</p>
-              <p class="left-content">提供产业创新发展专业化服务</p>
-
-              <p class="left-title">园区创新管家</p>
-              <p class="left-content">为园区构建资源丰富、配置成效显著的创新体系</p>
-
-              <p class="left-title">高效技术转移管理运营中心</p>
-              <p class="left-content">全新的产学研合作模式，</p>
-              <p class="left-content">提升校地合作的效率和实效</p>
-
-              <p class="left-title">崇科（国际）创新中心</p>
-              <p class="left-content">高端服务聚集与科技平台赋能</p>
-              <p class="left-content">的综合载体，主力城市发展</p>
-            </div>
-          </el-col>
-          <el-col :span="19">
-            <el-tabs type="border-card" style="height:480px;overflow-y:scroll">
-              <el-tab-pane label="科技部">
-                <el-row class="search-first" style="margin-bottom:15px">
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按区域检索：
-                      <el-select v-model="areaValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in areaOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按领域检索：
-                      <el-select v-model="fieldValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in fieldOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row class="search-second" style="margin-bottom:0px">
-                  <el-col :span="24">
-                    <div class="search-area">
-                      政策时效性：
-                      <el-button plain>不限</el-button>
-                      <el-button plain>未开始</el-button>
-                      <el-button plain>申报中</el-button>
-                      <el-button plain>已过期</el-button>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-divider></el-divider>
-                <el-row
-                  style="height:100px;margin-bottom:20px;cursor:pointer"
-                  :gutter="20"
-                  v-for="policy in policy1"
-                  :key="policy.index"
-                  @click.native="goTo('/policy')"
-                >
-                  <el-col :span="4" style="height:100px">
-                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                  </el-col>
-                  <el-col :span="20" style="height:100px">
-                    <div class="policy-search-title">{{policy.title}}</div>
-                    <div class="policy-search-content">{{policy.content}}</div>
-                  </el-col>
-                </el-row>
-              </el-tab-pane>
-              <el-tab-pane label="发改委">
-                <el-row class="search-first" style="margin-bottom:15px">
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按区域检索：
-                      <el-select v-model="areaValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in areaOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按领域检索：
-                      <el-select v-model="fieldValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in fieldOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row class="search-second" style="margin-bottom:0px">
-                  <el-col :span="24">
-                    <div class="search-area">
-                      政策时效性：
-                      <el-button plain>不限</el-button>
-                      <el-button plain>未开始</el-button>
-                      <el-button plain>申报中</el-button>
-                      <el-button plain>已过期</el-button>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-divider></el-divider>
-                <el-row
-                  style="height:100px;margin-bottom:20px"
-                  :gutter="20"
-                  v-for="policy in policy1"
-                  :key="policy.index"
-                  @click.native="goTo('/policy')"
-                >
-                  <el-col :span="4" style="height:100px">
-                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                  </el-col>
-                  <el-col :span="20" style="height:100px">
-                    <div class="policy-search-title">{{policy.title}}</div>
-                    <div class="policy-search-content">{{policy.content}}</div>
-                  </el-col>
-                </el-row>
-              </el-tab-pane>
-              <el-tab-pane label="组织部">
-                <el-row class="search-first" style="margin-bottom:15px">
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按区域检索：
-                      <el-select v-model="areaValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in areaOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按领域检索：
-                      <el-select v-model="fieldValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in fieldOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row class="search-second" style="margin-bottom:0px">
-                  <el-col :span="24">
-                    <div class="search-area">
-                      政策时效性：
-                      <el-button plain>不限</el-button>
-                      <el-button plain>未开始</el-button>
-                      <el-button plain>申报中</el-button>
-                      <el-button plain>已过期</el-button>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-divider></el-divider>
-                <el-row
-                  style="height:100px;margin-bottom:20px"
-                  :gutter="20"
-                  v-for="policy in policy1"
-                  :key="policy.index"
-                  @click.native="goTo('/policy')"
-                >
-                  <el-col :span="4" style="height:100px">
-                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                  </el-col>
-                  <el-col :span="20" style="height:100px">
-                    <div class="policy-search-title">{{policy.title}}</div>
-                    <div class="policy-search-content">{{policy.content}}</div>
-                  </el-col>
-                </el-row>
-              </el-tab-pane>
-              <el-tab-pane label="经信局">
-                <el-row class="search-first" style="margin-bottom:15px">
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按区域检索：
-                      <el-select v-model="areaValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in areaOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                  <el-col :span="8">
-                    <div class="search-area">
-                      按领域检索：
-                      <el-select v-model="fieldValue" placeholder="请选择">
-                        <el-option
-                          v-for="item in fieldOptions"
-                          :key="item.value"
-                          :label="item.label"
-                          :value="item.value"
-                        ></el-option>
-                      </el-select>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row class="search-second" style="margin-bottom:0px">
-                  <el-col :span="24">
-                    <div class="search-area">
-                      政策时效性：
-                      <el-button plain>不限</el-button>
-                      <el-button plain>未开始</el-button>
-                      <el-button plain>申报中</el-button>
-                      <el-button plain>已过期</el-button>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-divider></el-divider>
-                <el-row
-                  style="height:100px;margin-bottom:20px"
-                  :gutter="20"
-                  v-for="policy in policy1"
-                  :key="policy.index"
-                  @click.native="goTo('/policy')"
-                >
-                  <el-col :span="4" style="height:100px">
-                    <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                  </el-col>
-                  <el-col :span="20" style="height:100px">
-                    <div class="policy-search-title">{{policy.title}}</div>
-                    <div class="policy-search-content">{{policy.content}}</div>
-                  </el-col>
-                </el-row>
-              </el-tab-pane>
-            </el-tabs>
-          </el-col>
-        </el-row>
-      </div>
+    <el-card class="comments" shadow="always" style="margin-top:20px;margin-bottom:20px">
+      <h3>科技成果评价</h3>
+      <p>崇科网络科技有限公司按照委托者的要求，由具有评价资质的第三方专业机构聘请专家，坚持实事求是、科学民主、注重质量、讲求实效的原则，依照规定的程序和标准，对被评价科技成果进行审查与辨别，对其科学性、创造性、先进性、可行性和应用前景等进行评价并作出相应结论。</p>
+      <h3 class="title">科技成果评价的重要性</h3>
+      <p>国家科技成果等级和推荐国家科技奖励的重要佐证材料；</p>
+      <p>有利减少技术交易中买卖双方的沟通和谈判成本，提高交易效率；</p>
+      <p>有利于获取政府财政资金支持，国务院印发的《“十三五”国家科技创新规划的通知》种把第三方的评价结果作为财政科技经费支持的重要依据。</p>
     </el-card>
 
     <el-card shadow="always" style="margin-top:20px;margin-bottom:20px">
-      <el-row class="bottom-container">
-        <el-col :span="8">
-          <div class="bottom-item">
-            <el-image src="static/img/icon/analyse.png" style="width: 100px;height:100px;"></el-image>
-            <div class="item-text">海量政策采集分析</div>
-          </div>
-        </el-col>
-        <el-col :span="8">
-          <div class="bottom-item">
-            <el-image src="static/img/icon/match.png" style="width: 100px;height:100px;"></el-image>
-            <div class="item-text">政策精准匹配</div>
-          </div>
-        </el-col>
-        <el-col :span="8">
-          <div class="bottom-item">
-            <el-image src="static/img/icon/data.png" style="width: 100px;height:100px;"></el-image>
-            <div class="item-text">数据公开可视化</div>
-          </div>
-        </el-col>
-      </el-row>
+      <h3>科技成果评价的流程</h3>
+      <div class="comment-step">
+        <div class="step-item">
+          <h3>咨询申请</h3>
+          <p>委托方了解评价内容与流程，向崇科投研部提交申请</p>
+        </div>
+        <div class="step-item">
+          <h3>初步审查</h3>
+          <p>崇科评价机构对委托者的评价资料进行形式审查</p>
+        </div>
+        <div class="step-item">
+          <h3>签订合同</h3>
+          <p>接受委托后，双方商定评价时间和评价要求，并缴纳服务费用</p>
+        </div>
+        <div class="step-item">
+          <h3>组织评价</h3>
+          <p>崇科组织专业团队进行评价，方式有会议，网络和通讯评价等方式</p>
+        </div>
+        <div class="step-item">
+          <h3>做出结论</h3>
+          <p>按照科技部《科学技术评价方法》进行打分，综合所有专家意见做出结论</p>
+        </div>
+        <div class="step-item">
+          <h3>交付报告</h3>
+          <p>按照规定时间、方式和份数向评价委托方交付评价报告</p>
+        </div>
+      </div>
+      <p>查看更多科技成果评价内容</p>
+    </el-card>
+
+    <el-card shadow="always" style="margin-top:20px;margin-bottom:20px">
+      <div class="example">成功案例</div>
     </el-card>
     <el-row>
       <end-of-page />
@@ -668,7 +210,6 @@ export default {
   data: function() {
     return {
       input1: "",
-
       areaOptions: [
         {
           value: "1",
@@ -684,6 +225,52 @@ export default {
         }
       ],
       areaValue: "",
+      experts: [
+        {
+          avatar: "",
+          name: "大棍子",
+          domain: "流体力学",
+          college: "中科院"
+        },
+        {
+          avatar: "",
+          name: "大背头",
+          domain: "流体力学",
+          college: "中科院"
+        },
+        {
+          avatar: "",
+          name: "大喷子",
+          domain: "流体力学",
+          college: "中科院"
+        }
+      ],
+      colleges: [
+        {
+          avatar: "",
+          name: "浙江大学",
+          place: "杭州市",
+          subjects: "管理科学与工程"
+        },
+        {
+          avatar: "",
+          name: "浙江大学",
+          place: "杭州市",
+          subjects: "管理科学与工程"
+        },
+        {
+          avatar: "",
+          name: "浙江大学",
+          place: "杭州市",
+          subjects: "管理科学与工程"
+        },
+        {
+          avatar: "",
+          name: "浙江大学",
+          place: "杭州市",
+          subjects: "管理科学与工程"
+        }
+      ],
       fieldOptions: [
         {
           value: "1",
@@ -1463,11 +1050,12 @@ export default {
                 name: "柔性"
               },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
+                backgroundColor: "#fef9e7",
+                color: "#f4d03f",
                 name: "期望解决时间：2020年底"
               }
             ],
+            tags: ["大批量销售阶段", "地区：广东 深圳"],
             content:
               "团队从核心上完全掌握了染料敏化和有机钙钛矿太阳电池的制备工艺，通过对其工作电极半导体材料的研究，拓展了该电池在可见光区域的响应，并通过真空建筑玻璃封装技术的引入，制备了新型节能玻璃基薄膜太阳电池。"
           },
@@ -1485,11 +1073,12 @@ export default {
                 name: "新能源"
               },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
+                backgroundColor: "#fef9e7",
+                color: "#f4d03f",
                 name: "期望解决时间：2020年底"
               }
             ],
+            tags: ["研发阶段", "地区：江苏 南京"],
             content:
               "EVA热熔胶是护贝膜产品的主要原材料，目前市面上的EVA粘性一般，需要通过改性来增加其热熔时的粘性。在保证EVA热熔挤出时无晶点的前提下，通过对EVA胶粒进行改性，增强其热熔状态的粘性、而降低常温状态的自粘性。"
           },
@@ -1505,13 +1094,9 @@ export default {
                 backgroundColor: "#fdedec",
                 color: "#ec7063",
                 name: "烘干采暖"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2020年底"
               }
             ],
+            tags: ["测试验证阶段", "地区：日本"],
             content:
               "太阳能在烘干采暖方面的利用，目前太阳能产品大多局限于热转化这块，对于烘干、采暖功能开发使用的较少，公司目前自主研发了一些技术，想与高校有这块研究方向的老师合作对技术进行深入的研究开发，整体项目投入预算暂定50万，具体可详谈。"
           },
@@ -1527,13 +1112,9 @@ export default {
                 backgroundColor: "#f2f4f4",
                 color: "#99a3a4",
                 name: " 医疗器械"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2020年底"
               }
             ],
+            tags: ["市场推广阶段", "地区：辽宁 大连"],
             content:
               "公司主营非动力核技术民用化的应用与开发。高温蒸汽灭菌对精密医疗器械及锐器的损伤，没有一种检测设备，希望发明一种检测装置，能检测出高温蒸汽灭菌对精密医疗器械及锐器的损伤程度，出具检测报告。"
           },
@@ -1546,14 +1127,9 @@ export default {
                 name: "导热材料间匹配性问题"
               },
               {
-                backgroundColor: "#f2f4f4",
+                backgroundColor: "#ebedef",
                 color: "#5d6d7e",
                 name: "贴片式Vcsel激光"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2020年6月"
               }
             ],
             tags: ["研发阶段", "地区：浙江杭州"],
@@ -1574,11 +1150,6 @@ export default {
                 backgroundColor: "#fef9e7",
                 color: "#f4d03f",
                 name: "热处理"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2021年6月"
               }
             ],
             tags: ["市场研发阶段", "地区：浙江嘉兴"],
@@ -1597,11 +1168,6 @@ export default {
                 backgroundColor: "#ebf5fb",
                 color: "#5dade2",
                 name: "吸附式干燥机"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2021年6月"
               }
             ],
             tags: ["市场推广阶段", "地区：黑龙江哈尔滨"],
@@ -1620,11 +1186,6 @@ export default {
                 backgroundColor: "#fdedec",
                 color: "#ec7063",
                 name: "橡胶过滤"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2021年6月"
               }
             ],
             tags: ["大批量销售阶段", "地区：上海"],
@@ -1668,9 +1229,9 @@ export default {
                 name: "电焊"
               },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: "期望解决时间：2021年6月"
+                backgroundColor: "#f5eef8",
+                color: "#af7ac5",
+                name: "期望解决时间：2021年底"
               }
             ],
             tags: ["市场推广阶段", "地区：浙江杭州"],
@@ -1693,9 +1254,9 @@ export default {
                 name: "软件系统"
               },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年底"
+                backgroundColor: "#fef9e7",
+                color: "#f4d03f",
+                name: "期望解决时间：2021年底"
               }
             ],
             tags: ["测试验证阶段", "地区：韩国"],
@@ -1716,9 +1277,9 @@ export default {
                 name: "软件系统"
               },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年底"
+                backgroundColor: "#ebf5fb",
+                color: "#5dade2",
+                name: "期望解决时间：2021年底"
               }
             ],
             tags: ["市场推广阶段", "地区：浙江杭州"],
@@ -1760,14 +1321,9 @@ export default {
                 backgroundColor: "#f2f4f4",
                 color: "#99a3a4",
                 name: " 微电子"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年底"
               }
             ],
-
+            // 缺少阶段
             tags: ["阶段", "地区：广东 深圳"],
             content:
               "公司拟定在智能穿戴上开发监测血糖功能，通过智能穿戴设备对收集到的心率信息处理，完成此项工作。 项目主要需求： 1、监测血糖的算法，可实现在智能穿戴设备（手环）上完成监测功能 2、研发周期一年。"
@@ -1784,11 +1340,6 @@ export default {
                 backgroundColor: "#ebedef",
                 color: "#5d6d7e",
                 name: "电子信息"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年底"
               }
             ],
             tags: ["测试阶段", "地区：浙江杭州"],
@@ -1809,11 +1360,6 @@ export default {
                 backgroundColor: "#fef9e7",
                 color: "#f4d03f",
                 name: "壳聚糖"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年6月"
               }
             ],
             tags: ["市场推广阶段", "地区：杭州"],
@@ -1834,9 +1380,9 @@ export default {
                 name: "生物医药"
               },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年6月"
+                backgroundColor: "#ebf5fb",
+                color: "#5dade2",
+                name: "期望解决时间：2021年6月"
               }
             ],
             tags: ["市场推广阶段", "地区：广东中山"],
@@ -1856,20 +1402,20 @@ export default {
                 color: "#58d68d",
                 name: "一次性使用针灸针"
               },
-              // {
-              //   backgroundColor: "#eafaf1",
-              //   color: "#58d68d",
-              //   name: "一次性心电电极片"
-              // },
-              // {
-              //   backgroundColor: "#eafaf1",
-              //   color: "#58d68d",
-              //   name: "兽用金属注射针头"
-              // },
               {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年底"
+                backgroundColor: "#eafaf1",
+                color: "#58d68d",
+                name: "一次性心电电极片"
+              },
+              {
+                backgroundColor: "#eafaf1",
+                color: "#58d68d",
+                name: "兽用金属注射针头"
+              },
+              {
+                backgroundColor: "#eafaf1",
+                color: "#58d68d",
+                name: "期望解决时间：2021年底"
               }
             ],
             tags: ["测试验证阶段", "地区：上海"],
@@ -1906,11 +1452,6 @@ export default {
                 backgroundColor: "#f5eef8",
                 color: "#af7ac5",
                 name: "生物医药"
-              },
-              {
-                backgroundColor: "#f2f4f4",
-                color: "#99a3a4",
-                name: " 期望解决时间：2021年底"
               }
             ],
             tags: ["研发阶段", "地区：上海"],
@@ -1959,130 +1500,96 @@ export default {
 body {
   margin: 0;
 }
-#app {
-  min-width: 1200px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+.achievement {
+  .intro-detail {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    .intro-detail-img {
+      padding: 5px;
+      //   border: 1px solid #ccc;
+    }
+  }
+  .transform {
+    text-align: left;
+    .transform-main {
+      display: flex;
+      .transform-main-left {
+        margin-right: 20px;
+      }
+    }
+  }
+  .step {
+    .step-detail {
+      display: flex;
+    }
+  }
+  .consult {
+    display: flex;
+    .consult-left {
+      flex: 1;
+      text-align: left;
+      .expert-container {
+        display: flex;
+        .expert-item {
+          flex: 1;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid #ccc;
+        }
+      }
+      .consulting {
+        margin-top: 10px;
+        text-align: center;
+        color: red;
+        font-weight: bold;
+      }
+    }
+    .consult-right {
+      flex: 1;
+      .college-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .college-item {
+        width: 50%;
+      }
+    }
+  }
+  .comments {
+    text-align: left;
+    .title {
+      text-align: center;
+      color: red;
+    }
+  }
+  .comment-step {
+    display: flex;
+    flex-wrap: wrap;
+    .step-item {
+      padding: 10px;
+      margin: 20px;
+      width: 25%;
+      border: 1px solid #fff;
+      border-radius: 100px;
+      background: rgb(244, 222, 222);
+    }
+  }
+  .example {
+    text-align: left;
+  }
 }
 
-/* 主内容区 */
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 500px;
-  border: solid 40px #e9ecf1;
-  background-color: #fcfcfc;
-}
-main .main-left {
-  text-align: center;
-  width: 200px;
-  float: left;
-}
-main .main-right {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background-color: #fff;
-  padding: 50px 70px;
-}
-main .el-menu {
-  background-color: transparent !important;
-}
-.intro-pic {
-  height: 280px;
-  width: 100%;
-  padding-top: 5px;
-  padding-left: 50px;
-  padding-right: 100px;
-  background-image: url(/static/img/service.png);
-  background-repeat: no-repeat;
-  background-size: 26% 130%;
-  -moz-background-size: 100% 100%;
-  background-position: center;
-  .intro-sub-title {
-    font-weight: bold;
-    font-size: 20px;
-    color: #3498db;
-    margin-bottom: 0px;
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
-  }
-  .intro-sub-content {
-    font-size: 15px;
-    margin-top: 10px;
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
-  }
-  .intro-first {
-    height: 20%;
-    width: 100%;
-    .intro-first-1 {
-      height: 100%;
-      .intro-first-technology {
-        text-align: right;
-        margin-top: 50px;
-      }
-    }
-    .intro-first-2 {
-      height: 100%;
-      .intro-first-policy {
-        text-align: left;
-        margin-top: 50px;
-      }
-    }
-  }
-  .intro-second {
-    height: 35%;
-    width: 100%;
-  }
-  .intro-third {
-    height: 30%;
-    width: 100%;
-    .intro-third-2 {
-      height: 100%;
-      .intro-third-service {
-        text-align: right;
-        margin-top: 0px;
-      }
-    }
-    .intro-third-2 {
-      height: 100%;
-      .intro-third-science {
-        text-align: left;
-        margin-top: 0px;
-      }
-    }
-  }
-}
-.intro-icon {
-  padding-top: 30px;
-  padding-left: 50px;
-  padding-right: 100px;
-}
 .header-image {
+  position: relative;
   height: 430px;
   width: 100%;
   margin-top: 0px;
-  background-image: url(/static/img/banner-overview.png);
+  background-image: url(/static/img/banner-achievement.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-position: center;
-  .header-select {
-    line-height: 500px;
-    // background-color: #1c2833;
-  }
-  .header-select input.el-input__inner {
-    height: 80%;
-    border-radius: 15px;
-    opacity: 0.65;
-  }
-  .header-select .el-input--suffix {
-    width: 30%;
-    .el-input__icon {
-      color: black;
-      width: 50px;
-    }
-  }
 }
 .intro {
   height: 200px;
@@ -2100,35 +1607,6 @@ main .el-menu {
   }
   .intro-text-top {
     // border-bottom: none;
-  }
-  .intro-detail {
-    height: 200px;
-    .intro-detail-idea {
-      height: 43%;
-      width: 90%;
-      margin: 0 auto;
-      position: relative;
-      top: 22%;
-      border: 2px solid #e5e7e9;
-      border-radius: 20px;
-      padding: 10px;
-    }
-    .intro-detail-arrow {
-      height: 55%;
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
-      top: 22%;
-      border-radius: 20px;
-    }
-    .intro-detail-img {
-      height: 55%;
-      width: 55%;
-      margin: 0 auto;
-      position: relative;
-      top: 15%;
-      cursor: pointer;
-    }
   }
 }
 .technology-container {

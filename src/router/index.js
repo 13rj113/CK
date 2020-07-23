@@ -7,6 +7,7 @@ import policy from '@/page/policy/policy'
 import platform from '@/page/platform/platform'
 import park from '@/page/park/park'
 import headhunting from '@/page/technology/headhunting'
+import achievement from '@/page/achievement/achievement'
 
 Vue.use(Router)
 
@@ -58,6 +59,13 @@ export default new Router({
       path: '/headhunting',
       name: 'headhunting',
       component: headhunting,
+      meta: {
+        keepalive: true
+      }
+    }, {
+      path: '/achievement',
+      name: 'achievement',
+      component: achievement,
       meta: {
         keepalive: true
       }
