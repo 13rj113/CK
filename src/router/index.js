@@ -9,6 +9,7 @@ import park from '@/page/park/park'
 import headhunting from '@/page/technology/headhunting'
 import achievement from '@/page/achievement/achievement'
 import demandDetail from '@/page/demand/demandDetail'
+import technologyDetail from '@/page/technology/technologyDetail'
 
 Vue.use(Router)
 
@@ -74,6 +75,13 @@ export default new Router({
       path: '/demandDetail',
       name: 'demandDetail',
       component: demandDetail,
+      meta: {
+        keepalive: true
+      }
+    }, {
+      path: '/technologyDetail',
+      name: 'technologyDetail',
+      component: technologyDetail,
       meta: {
         keepalive: true
       }

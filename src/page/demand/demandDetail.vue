@@ -6,7 +6,11 @@
       <el-card shadow="always" style="margin-top:20px">
         <el-row class="demand" :gutter="50">
           <el-col class="demand-image" :span="8">
-            <el-image style=" height: 100%;width:100%" src="/static/img/policy/net.png" fit="fill"></el-image>
+            <el-image
+              style=" height: 100%;width:100%"
+              src="/static/img/demand/image-1.png"
+              fit="fill"
+            ></el-image>
           </el-col>
           <el-col class="demand-text" :span="16">
             <el-row class="demand-text-title-row">质谱仪温控系统开发</el-row>
