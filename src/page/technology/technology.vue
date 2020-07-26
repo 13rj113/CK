@@ -13,43 +13,52 @@
 
     <div class="filter-container">
       <div class="filter-type">
-        <span>已关注</span>
-        <span>热点推荐</span>
-        <span>最新发布</span>
+        <el-button plain>已关注</el-button>
+        <el-button plain>热点推荐</el-button>
+        <el-button plain>最新发布</el-button>
       </div>
       <el-divider></el-divider>
       <div class="filter-domain">
-        按照领域：
-        <el-tag class="domain-tag" v-for="tag in domainTag" :key="tag.index">{{tag}}</el-tag>
+        <div class="filter-label">按照领域：</div>
+        <div><el-tag class="domain-tag" :effect="tag.effect" v-for="tag in domainTag" :key="tag.index" @click="changeTag(tag)">{{tag.name}}</el-tag></div>
       </div>
 
       <div class="filter-area">
-        按照地区：
-        <el-tag class="area-tag" type="warning" v-for="tag in areaTag" :key="tag.index">{{tag}}</el-tag>
+        <div class="filter-label">按照地区：</div>
+        <div><el-tag class="area-tag" :effect="tag.effect" type="warning" v-for="tag in areaTag" :key="tag.index" @click="changeTag(tag)">{{tag.name}}</el-tag></div>
       </div>
     </div>
 
     <el-divider></el-divider>
 
+    <div class="btn-container">
+        <el-button class="time" type="info" plain>按照发布时间<i class="arrow-up el-icon-arrow-up"></i><i class="arrow-down el-icon-arrow-down"></i></el-button>
+        <el-button type="info" plain>最热</el-button>
+    </div>
     <div class="content-container">
-      <div class="content-item" v-for="item in items" :key="item.index">
+      <div class="content-item" @click="goToDetail" v-for="item in items" :key="item.index">
+        <h2 class="content-title">{{item.title}}</h2>
         <div class="content-main">
           <div class="content-image">
             <el-image style="width: 150px;height: 150px;" :src="item.image"></el-image>
           </div>
-          <div class="content-text">
-            <h2>{{item.title}}</h2>
-            <div>{{item.text}}</div>
+          <div class="content-text"> 
+            <div class="content-para">{{item.text}}</div>
           </div>
         </div>
+        <div class="content-tag">
         <div>技术阶段：{{item.tag}}</div>
-        <div>项目地区: {{item.area}}</div>
+        <div>项目地区：{{item.area}}</div>
+        </div>
       </div>
     </div>
 
     <div class="find-more-container" @click="findMore">
       <el-image class="find-more" src="static/img/icon/click2.png"></el-image>查看更多...
     </div>
+
+    <customer-service></customer-service>
+
     <end-of-page />
   </div>
 </template>
@@ -57,46 +66,76 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import customerService from "@/components/customerService";
 
 export default {
   name: "platform",
-  components: { HeaderTittle, EndOfPage },
+  components: { HeaderTittle, EndOfPage, customerService },
   data: function() {
     return {
       domainTag: [
-        "5G",
-        "商用",
-        "新能源",
-        "化学化工",
-        "电气自动化",
-        "高分子材料",
-        "人工智能",
-        "生物医药",
-        "航空航天",
-        "信息技术",
-        "海洋开发",
-        "农林牧业",
-        "污水处理",
-        "仪器仪表"
+        {name: "5G商用",
+        effect: 'plain'},
+        {
+        name: "新能源",
+        effect: 'plain'},
+        {name: "化学化工",
+        effect: 'plain'},
+        {name: "电气自动化",
+        effect: 'plain'},
+        {name: "高分子材料",
+        effect: 'plain'},
+        {name: "人工智能",
+effect: 'plain'},
+        {name:"生物医药",
+        effect: 'plain'},
+        {name: "航空航天",
+          effect: 'plain'},
+        {name: "信息技术",
+        effect: 'plain'},
+        {name: "海洋开发",
+        effect: 'plain'},
+        {name: "农林牧业",
+        effect: 'plain'},
+        {name: "污水处理",
+        effect: 'plain'},
+        {name: "仪器仪表",effect: 'plain'}
       ],
       areaTag: [
-        "北京",
-        "天津",
-        "上海",
-        "重庆",
-        "河北",
-        "山西",
-        "辽宁",
-        "黑龙江",
-        "江苏",
-        "浙江",
-        "安徽",
-        "福建",
-        "山东",
-        "湖北",
-        "广东",
-        "海南",
-        "四川"
+        {name: "北京",
+        effect: 'plain'},
+        {name: "天津",
+        effect: 'plain'},
+        {name: "上海",
+        effect: 'plain'},
+        {name: "重庆",
+        effect: 'plain'},
+        {name: "河北",
+        effect: 'plain'},
+        {name: "山西",
+        effect: 'plain'},
+        {name: "辽宁",
+        effect: 'plain'},
+        {name: "黑龙江",
+        effect: 'plain'},
+        {name: "江苏",
+        effect: 'plain'},
+        {name: "浙江",
+        effect: 'plain'},
+        {name: "安徽",
+        effect: 'plain'},
+        {name: "福建",
+        effect: 'plain'},
+        {name: "山东",
+        effect: 'plain'},
+        {name: "湖北",
+        effect: 'plain'},
+        {name: "广东",
+        effect: 'plain'},
+        {name :"海南",
+        effect: 'plain'},
+        {name: "四川",
+        effect: 'plain'}
       ],
       items: [
         {
@@ -153,6 +192,12 @@ export default {
   methods: {
     findMore() {
       this.items = this.items.concat(this.items);
+    },
+    changeTag(tag) {
+      tag.effect = tag.effect == 'plain' ? 'dark' : 'plain'
+    },
+    goToDetail() {
+      this.$router.push('/technologyDetail')
     }
   }
 };
@@ -160,13 +205,15 @@ export default {
 
 <style lang="scss" scoped>
 #platform {
+  position: relative;
   background: rgb(240, 232, 232);
   .head-image {
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 50px;
     height: 300px;
-    // background: url(/static/img/banner-achievement.png) no-repeat center center;
-    // background-size: 100% 100%;
-    // color: #fff;
+    background: url(/static/img/banner-technology.jpeg) no-repeat center center;
+    background-size: 100% 100%;
+    color: #fff;
     .head-search {
       margin: 0 auto;
       width: 300px;
@@ -177,38 +224,79 @@ export default {
     text-align: left;
     padding: 0 20px;
     .filter-domain {
+      display: flex;
       margin-bottom: 10px;
       .domain-tag {
-        margin-right: 10px;
+        margin: 5px;
+        cursor: pointer;
       }
     }
     .filter-area {
+      display: flex;
       .area-tag {
-        margin-right: 10px;
+        margin: 5px;
+        cursor: pointer;
       }
     }
+    .filter-label{
+        width: 90px;
+        padding-top: 10px;
+      }
+  }
+  .btn-container{
+      padding-left: 20px;
+      text-align: left;
+      .time{
+        position: relative;
+      .arrow-up {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+      }
+      .arrow-down {
+          position: absolute;
+          right: 5px;
+          bottom: 5px;
+      }
+      }
   }
   .content-container {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
+    justify-content: space-around;
     .content-item {
+      position: relative;
       margin: 10px;
       background: #fff;
-      width: 22%;
+      width: 28%;
       padding: 10px;
+      padding-bottom: 60px;
       text-align: left;
+      cursor: pointer;
+      .content-title{
+        text-align: center;
+font-size: 1.2rem;
+      }
       .content-main {
-        // display: flex;
+        display: flex;
         .content-image {
-          float: left;
+          // float: left;
           margin-right: 10px;
         }
         .content-text {
-          h2 {
-            font-size: 1rem;
+          .content-para{
+            text-indent: 2rem;
+            overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
           }
         }
+      }
+      .content-tag{
+        position: absolute;
+        bottom: 10px;
       }
     }
   }

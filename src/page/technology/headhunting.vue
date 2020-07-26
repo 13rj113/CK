@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="head-hunting">
     <!-- 头部导航 -->
     <header-tittle />
     <div class="header-image"></div>
@@ -279,6 +279,9 @@
         </el-row>
       </el-card>
     </div>
+
+    <customer-service></customer-service>
+
     <!-- 尾部导航 -->
     <end-of-page />
   </div>
@@ -287,10 +290,11 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import customerService from "@/components/customerService";
 
 export default {
   name: "headhunting",
-  components: { HeaderTittle, EndOfPage },
+  components: { HeaderTittle, EndOfPage, customerService },
   data: function() {
     return {};
   }
@@ -300,10 +304,8 @@ export default {
 body {
   margin: 0;
 }
-#app {
-  min-width: 1200px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+.head-hunting {
+  position: relative;
 }
 .header-image {
   height: 400px;

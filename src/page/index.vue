@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="index">
     <!-- 头部导航 -->
     <header-tittle />
     <div class="header-image">
@@ -137,7 +137,7 @@
                 <div class="technology-content">{{technology.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/technologyDetail')">
                   ...
                   <br />更多
                 </div>
@@ -166,7 +166,7 @@
                 <div class="technology-content">{{technology.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/technologyDetail')">
                   ...
                   <br />更多
                 </div>
@@ -195,7 +195,7 @@
                 <div class="technology-content">{{technology.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/technologyDetail')">
                   ...
                   <br />更多
                 </div>
@@ -224,7 +224,7 @@
                 <div class="technology-content">{{technology.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/technologyDetail')">
                   ...
                   <br />更多
                 </div>
@@ -237,7 +237,7 @@
           <el-tab-pane label="化学化工新能源材料" disabled></el-tab-pane>
         </el-tabs>
         <div class="technology-find-more-container">
-          <div class="technology-find-more" @click="goTo('/platform')">
+          <div class="technology-find-more" @click="goTo('/technology')">
             <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
           </div>
         </div>
@@ -254,7 +254,7 @@
         </el-row>
         <el-tabs tab-position="left">
           <el-tab-pane class="technology-tab-container" label="新能源">
-            <el-row class="technology-item" v-for="demand in demands.newEnergy" :key="demand.index">
+            <el-row :gutter="10" class="technology-item" v-for="demand in demands.newEnergy" :key="demand.index">
               <el-col :span="8">
                 <div class="technology-title">{{demand.title}}</div>
                 <el-tag
@@ -271,7 +271,7 @@
                 <div class="technology-content">{{demand.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/demandDetail')">
                   ...
                   <br />更多
                 </div>
@@ -279,7 +279,7 @@
             </el-row>
           </el-tab-pane>
           <el-tab-pane class="technology-tab-container" label="高新技术材料">
-            <el-row class="technology-item" v-for="demand in demands.material" :key="demand.index">
+            <el-row :gutter="10" class="technology-item" v-for="demand in demands.material" :key="demand.index">
               <el-col :span="8">
                 <div class="technology-title">{{demand.title}}</div>
                 <el-tag
@@ -294,7 +294,7 @@
                 <div class="technology-content">{{demand.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/demandDetail')">
                   ...
                   <br />更多
                 </div>
@@ -302,7 +302,7 @@
             </el-row>
           </el-tab-pane>
           <el-tab-pane class="technology-tab-container" label="信息技术">
-            <el-row class="technology-item" v-for="demand in demands.infoTech" :key="demand.index">
+            <el-row :gutter="10" class="technology-item" v-for="demand in demands.infoTech" :key="demand.index">
               <el-col :span="8">
                 <div class="technology-title">{{demand.title}}</div>
                 <el-tag
@@ -317,7 +317,7 @@
                 <div class="technology-content">{{demand.content}}</div>
               </el-col>
               <el-col :span="1">
-                <div class="content-more">
+                <div class="content-more" @click="goTo('/demandDetail')">
                   ...
                   <br />更多
                 </div>
@@ -326,6 +326,7 @@
           </el-tab-pane>
           <el-tab-pane class="technology-tab-container" label="生物医疗">
             <el-row
+            :gutter="10"
               class="technology-item"
               v-for="demand in demands.biomedical"
               :key="demand.index"
@@ -340,11 +341,11 @@
                 >{{tag.name}}</el-tag>
               </el-col>
 
-              <el-col :span="15">
+              <el-col :span="14">
                 <div class="technology-content">{{demand.content}}</div>
               </el-col>
-              <el-col :span="1">
-                <div class="content-more">
+              <el-col :span="2">
+                <div class="content-more" @click="goTo('/demandDetail')">
                   ...
                   <br />更多
                 </div>
@@ -358,7 +359,7 @@
           <el-tab-pane label="高分子材料" disabled></el-tab-pane>
         </el-tabs>
         <div class="technology-find-more-container">
-          <div class="technology-find-more" @click="goTo('/platform')">
+          <div class="technology-find-more" @click="goTo('/demand')">
             <el-image class="find-more-icon" src="static/img/icon/click.png" fit="fill"></el-image>发现更多
           </div>
         </div>
@@ -438,16 +439,16 @@
                 </el-row>
                 <el-divider></el-divider>
                 <el-row
-                  style="height:100px;margin-bottom:20px;cursor:pointer"
+                  style="margin-bottom:20px;cursor:pointer"
                   :gutter="20"
                   v-for="policy in policy1"
                   :key="policy.index"
                   @click.native="goTo('/policy')"
                 >
-                  <el-col :span="4" style="height:100px">
+                  <el-col :span="4" style="height: 100px;">
                     <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
                   </el-col>
-                  <el-col :span="20" style="height:100px">
+                  <el-col :span="20">
                     <div class="policy-search-title">{{policy.title}}</div>
                     <div class="policy-search-content">{{policy.content}}</div>
                   </el-col>
@@ -495,16 +496,16 @@
                 </el-row>
                 <el-divider></el-divider>
                 <el-row
-                  style="height:100px;margin-bottom:20px"
+                  style="margin-bottom:20px"
                   :gutter="20"
                   v-for="policy in policy1"
                   :key="policy.index"
                   @click.native="goTo('/policy')"
                 >
-                  <el-col :span="4" style="height:100px">
+                  <el-col :span="4" style="height: 100px;">
                     <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
                   </el-col>
-                  <el-col :span="20" style="height:100px">
+                  <el-col :span="20">
                     <div class="policy-search-title">{{policy.title}}</div>
                     <div class="policy-search-content">{{policy.content}}</div>
                   </el-col>
@@ -552,16 +553,16 @@
                 </el-row>
                 <el-divider></el-divider>
                 <el-row
-                  style="height:100px;margin-bottom:20px"
+                  style="margin-bottom:20px"
                   :gutter="20"
                   v-for="policy in policy1"
                   :key="policy.index"
                   @click.native="goTo('/policy')"
                 >
-                  <el-col :span="4" style="height:100px">
+                  <el-col :span="4" style="height: 100px;">
                     <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
                   </el-col>
-                  <el-col :span="20" style="height:100px">
+                  <el-col :span="20">
                     <div class="policy-search-title">{{policy.title}}</div>
                     <div class="policy-search-content">{{policy.content}}</div>
                   </el-col>
@@ -609,16 +610,16 @@
                 </el-row>
                 <el-divider></el-divider>
                 <el-row
-                  style="height:100px;margin-bottom:20px"
+                  style="margin-bottom:20px"
                   :gutter="20"
                   v-for="policy in policy1"
                   :key="policy.index"
                   @click.native="goTo('/policy')"
                 >
-                  <el-col :span="4" style="height:100px">
+                  <el-col :span="4" style="height: 100px;">
                     <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
                   </el-col>
-                  <el-col :span="20" style="height:100px">
+                  <el-col :span="20">
                     <div class="policy-search-title">{{policy.title}}</div>
                     <div class="policy-search-content">{{policy.content}}</div>
                   </el-col>
@@ -652,6 +653,7 @@
         </el-col>
       </el-row>
     </el-card>
+    <customer-service></customer-service>
     <el-row>
       <end-of-page />
     </el-row>
@@ -661,10 +663,11 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import customerService from "@/components/customerService";
 
 export default {
   name: "index",
-  components: { HeaderTittle, EndOfPage },
+  components: { HeaderTittle, EndOfPage, customerService },
   data: function() {
     return {
       input1: "",
@@ -1959,10 +1962,8 @@ export default {
 body {
   margin: 0;
 }
-#app {
-  min-width: 1200px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+.index {
+  position: relative;
 }
 
 /* 主内容区 */
@@ -2214,7 +2215,7 @@ main .el-menu {
   margin-top: 10px;
   margin-bottom: 50px;
   .policy-main {
-    height: 500px;
+    // height: 500px;
     border: 1px solid #ccc;
     .left-title {
       font-size: 18px;

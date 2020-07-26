@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="demand-detail">
     <!-- 头部导航 -->
     <header-tittle />
     <div class="main">
@@ -81,6 +81,9 @@
         <el-button class="declare" type="info" icon="el-icon-message" round plain>点击崇科小助手获取联系方式</el-button>
       </el-card>
     </div>
+
+    <customer-service></customer-service>
+
     <!-- 尾部导航 -->
     <end-of-page />
   </div>
@@ -89,10 +92,11 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import customerService from "@/components/customerService";
 
 export default {
   name: "demandDetail",
-  components: { HeaderTittle, EndOfPage },
+  components: { HeaderTittle, EndOfPage, customerService },
   data: function() {
     return {};
   }
@@ -103,10 +107,8 @@ export default {
 body {
   margin: 0;
 }
-#app {
-  min-width: 1200px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+.demand-detail {
+  position: relative;
 }
 .main {
   height: 1500px;
@@ -165,7 +167,6 @@ body {
     margin-top: 5px;
   }
   .demand {
-    height: 310px;
     //border: 2px solid #e5e7e9;
     .demand-image {
       height: 100%;

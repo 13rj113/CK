@@ -203,7 +203,7 @@
         </div>
       </el-card>
     </div>
-
+<customer-service></customer-service>
     <!-- 尾部导航 -->
     <end-of-page />
   </div>
@@ -212,10 +212,11 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import customerService from "@/components/customerService";
 
 export default {
   name: "policyDetail",
-  components: { HeaderTittle, EndOfPage },
+  components: { HeaderTittle, EndOfPage, customerService },
   data: function() {
     return {};
   }
@@ -226,9 +227,7 @@ body {
   margin: 0;
 }
 #policy-detail {
-  min-width: 1200px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+  position: relative;
 }
 .main {
   height: 2300px;

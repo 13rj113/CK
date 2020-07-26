@@ -4,12 +4,13 @@ import index from '@/page/index'
 import login from '@/page/login'
 import policyDetail from '@/page/policy/policyDetail'
 import policy from '@/page/policy/policy'
-import platform from '@/page/platform/platform'
+import technology from '@/page/technology/technology'
 import park from '@/page/park/park'
 import headhunting from '@/page/technology/headhunting'
 import achievement from '@/page/achievement/achievement'
 import demandDetail from '@/page/demand/demandDetail'
 import technologyDetail from '@/page/technology/technologyDetail'
+import demand from '@/page/demand/demand'
 
 Vue.use(Router)
 
@@ -44,9 +45,9 @@ export default new Router({
         keepalive: true
       }
     }, {
-      path: '/platform',
-      name: 'platform',
-      component: platform,
+      path: '/technology',
+      name: 'technology',
+      component: technology,
       meta: {
         keepalive: true
       }
@@ -85,6 +86,14 @@ export default new Router({
       meta: {
         keepalive: true
       }
+    },{
+      path: '/demand',
+      name: 'demand',
+      component: demand,
+      meta: {
+        keepalive: true
+      }
     }
+
   ]
 })

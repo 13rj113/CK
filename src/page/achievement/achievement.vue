@@ -7,61 +7,61 @@
     <el-card shadow="always" style="margin-top:20px">
       <div class="intro-detail">
         <div class="intro-detail-img">
-          <el-image style=" width: 50%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image src="static/img/achievement/icon-1.png" fit="fill"></el-image>
           <div style="margin-top:15px">科技成果评价</div>
         </div>
 
         <div class="intro-detail-img">
-          <el-image style=" width: 50%" src="static/img/icon/5G.png" fit="fill"></el-image>
+          <el-image src="static/img/achievement/icon-2.png" fit="fill"></el-image>
           <div style="margin-top:15px">诊断市场需求</div>
         </div>
 
         <div class="intro-detail-img">
-          <el-image style=" width: 50%" src="static/img/icon/Internet.png" fit="fill"></el-image>
+          <el-image src="static/img/achievement/icon-3.png" fit="fill"></el-image>
           <div style="margin-top:15px">精准匹配市场</div>
         </div>
 
         <div class="intro-detail-img">
-          <el-image style=" width: 50%" src="static/img/icon/Manufacture.png" fit="fill"></el-image>
+          <el-image src="static/img/achievement/icon-4.png" fit="fill"></el-image>
           <div style="margin-top:15px">科技成果转化</div>
         </div>
 
         <div class="intro-detail-img">
-          <el-image style=" width: 50%" src="static/img/icon/Material.png" fit="fill"></el-image>
+          <el-image src="static/img/achievement/icon-5.png" fit="fill"></el-image>
           <div style="margin-top:15px">优选匹配买家</div>
         </div>
 
         <div class="intro-detail-img">
-          <el-image style=" width: 50%" src="static/img/icon/Medical.png" fit="fill"></el-image>
+          <el-image src="static/img/achievement/icon-6.png" fit="fill"></el-image>
           <div style="margin-top:15px">适当规避风险</div>
         </div>
       </div>
     </el-card>
     <!-- 技术成果转化 -->
     <el-card class="transform" shadow="always" style="margin-top:20px">
-      <h3>技术成果转化</h3>
+      <h3><el-image src="static/img/achievement/transform.png" style="width: 30px;height: 20px;vertical-align:middle"></el-image> 技术成果转化</h3>
       <p>崇科科技成果推广转化，是指为提高生产力水平而对科学研究与技术开发所产生的具有实用价值的科技成果所进行的后续试验、开发、应用、推广直至形成新产品、新工艺、新材料、发展新产业等活动。</p>
       <div class="transform-main">
         <div class="transform-main-left">
-          <p>促进科技成果转化、加速科技成果产业化，已经成为世界各国科技政策的新趋势</p>
-          <p>科技成果转化的途径，主要有直接和间接两种转化方式</p>
-          <p>我国科技成果转化率不足30%，先进国家这一指标为60%至70%</p>
-          <p>提高科技成果转化率才能转化出高附加值的产品</p>
+          <div><el-image style="margin: 0 10px;width:30px;height:30px;" src="static/img/achievement/right-arrow.png"></el-image><p>促进科技成果转化、加速科技成果产业化，已经成为世界各国科技政策的新趋势</p></div>
+          <div><el-image style="margin: 0 10px;width:30px;height:30px;" src="static/img/achievement/right-arrow.png"></el-image><p>科技成果转化的途径，主要有直接和间接两种转化方式</p></div>
+          <div><el-image style="margin: 0 10px;width:30px;height:30px;" src="static/img/achievement/right-arrow.png"></el-image><p>我国科技成果转化率不足30%，先进国家这一指标为60%至70%</p></div>
+          <div><el-image style="margin: 0 10px;width:30px;height:30px;" src="static/img/achievement/right-arrow.png"></el-image><p>提高科技成果转化率才能转化出高附加值的产品</p></div>
         </div>
         <div class="transform-main-right">
           <div>
             <h3>技术转移平台</h3>
             <p>平台级服务，为成果转化保驾护航</p>
           </div>
-          <div>
+          <div style="margin-left:30px;">
             <h3>技术通</h3>
             <p>会员级服务，成果推广转让更快捷</p>
           </div>
-          <div>
+          <div style="margin-left: 60px;">
             <h3>产学研活动</h3>
             <p>对接会、项目路演、创新企业院所行</p>
           </div>
-          <div>
+          <div style="margin-left: 90px;">
             <h3>成果-企业对点对点</h3>
             <p>精准匹配、意向确认、直接对接</p>
           </div>
@@ -70,50 +70,60 @@
     </el-card>
     <!-- 技术转移服务流程 -->
     <el-card class="step" shadow="always" style="margin-top:20px">
-      <h3>技术转移服务流程</h3>
+      <h2>技术转移服务流程</h2>
       <div class="step-detail">
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-1.png" fit="fill"></el-image>
           <div style="margin-top:15px">成果项目推介</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-2.png" fit="fill"></el-image>
           <div style="margin-top:15px">技术对接</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-3.png" fit="fill"></el-image>
           <div style="margin-top:15px">技术定价</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-4.png" fit="fill"></el-image>
           <div style="margin-top:15px">技术合同把关</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-5.png" fit="fill"></el-image>
           <div style="margin-top:15px">商务谈判</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-6.png" fit="fill"></el-image>
           <div style="margin-top:15px">指导交易签约</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-7.png" fit="fill"></el-image>
           <div style="margin-top:15px">推动交易履行</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-8.png" fit="fill"></el-image>
           <div style="margin-top:15px">项目产业化跟进</div>
         </div>
         <div class="step-detail-item">
-          <el-image style=" width: 30%" src="static/img/icon/AI.png" fit="fill"></el-image>
+          <el-image style="width: 50px;height: 50px;" src="static/img/achievement/step-9.png" fit="fill"></el-image>
           <div style="margin-top:15px">政策奖励申报</div>
         </div>
       </div>
-      <div class="report">实时对接播报：</div>
+      <div class="report">
+        <div class="report-title">
+          <el-image src="static/img/achievement/speaker.png" style="width: 50px;height: 50px;vertical-align: middle"></el-image> 实时对接播报：</div>
+        <div class="report-content">
+        <el-carousel height="50px" direction="vertical" :interval="1000">
+            <el-carousel-item v-for="item in reports" :key="item.index">
+            <p>{{ item }}</p>
+            </el-carousel-item>
+        </el-carousel>
+        </div>
+      </div>
     </el-card>
 
     <el-card shadow="always" style="margin-top:20px">
-      <h3>专家咨询</h3>
+      <h3 style="text-align: left;">专家咨询</h3>
       <div class="consult">
         <div class="consult-left">
           <div>
@@ -124,76 +134,94 @@
           </div>
           <div class="expert-container">
             <div class="expert-item" v-for="expert in experts" :key="expert.index">
-              <el-image :src="expert.avatar"></el-image>
-              <div>{{expert.name}}</div>
-              <div>领域: {{expert.domain}}</div>
-              <div>任职于：{{expert.college}}</div>
+              <el-image style="height: 80px;" :src="expert.avatar"></el-image>
+              <div class="expert-name">教授：{{expert.name}}</div>
+              <div class="detail-container"><div class="expert-area">领域: {{expert.domain}}</div>
+              <div class="expert-college">任职于:{{expert.college}}</div>
+              </div>
               <div class="consulting">咨询</div>
             </div>
           </div>
+          <span class="more">更多专家</span>
         </div>
         <div class="consult-right">
-          <h3>合作院校</h3>
+          <h3><el-image src="static/img/achievement/study.png" style="width: 50px;height: 50px;vertical-align: middle;"></el-image> 合作院校</h3>
           <div class="college-container">
             <div class="college-item" v-for="college in colleges" :key="college.index">
-              <div>
-                <el-image :src="college.avatar"></el-image>
+              <div class="item-avatar">
+                <el-image style="width: 80px;height: 80px;" :src="college.avatar"></el-image>
               </div>
-              <div>
-                <div>{{college.name}}</div>
-                <div>{{college.place}}</div>
-                <div>重点学科：{{college.subjects}}</div>
+              <div class="item-info">
+                <h4>{{college.name}}</h4>
+                <p>{{college.place}}</p>
+                <p>重点学科：{{college.subjects}}</p>
               </div>
             </div>
           </div>
-          <span>更多院校</span>
+          <span class="more">更多院校</span>
         </div>
       </div>
     </el-card>
 
     <el-card class="comments" shadow="always" style="margin-top:20px;margin-bottom:20px">
-      <h3>科技成果评价</h3>
-      <p>崇科网络科技有限公司按照委托者的要求，由具有评价资质的第三方专业机构聘请专家，坚持实事求是、科学民主、注重质量、讲求实效的原则，依照规定的程序和标准，对被评价科技成果进行审查与辨别，对其科学性、创造性、先进性、可行性和应用前景等进行评价并作出相应结论。</p>
-      <h3 class="title">科技成果评价的重要性</h3>
-      <p>国家科技成果等级和推荐国家科技奖励的重要佐证材料；</p>
-      <p>有利减少技术交易中买卖双方的沟通和谈判成本，提高交易效率；</p>
-      <p>有利于获取政府财政资金支持，国务院印发的《“十三五”国家科技创新规划的通知》种把第三方的评价结果作为财政科技经费支持的重要依据。</p>
+      <h3><el-image src="static/img/achievement/complete.png" style="display:inline-block;width: 30px;height: 30px;vertical-align:middle"></el-image> 科技成果评价</h3>
+      <p style="text-indent: 2rem;">崇科网络科技有限公司按照委托者的要求，由具有评价资质的第三方专业机构聘请专家，坚持实事求是、科学民主、注重质量、讲求实效的原则，依照规定的程序和标准，对被评价科技成果进行审查与辨别，对其科学性、创造性、先进性、可行性和应用前景等进行评价并作出相应结论。</p>
+      <h3 class="title"><el-image src="static/img/achievement/judge.png" style="display:inline-block;width: 30px;height: 30px;vertical-align:middle"></el-image> 科技成果评价的重要性</h3>
+      <div><i class="el-icon-caret-right"></i><p>国家科技成果等级和推荐国家科技奖励的重要佐证材料；</p></div>
+      <div><i class="el-icon-caret-right"></i><p>有利减少技术交易中买卖双方的沟通和谈判成本，提高交易效率；</p></div>
+      <div><i class="el-icon-caret-right"></i><p>有利于获得投资方和合作方的认可，是在获取投资、许可、转让、合作中对成果价值的重要评判依据；</p></div>
+      <div><i class="el-icon-caret-right"></i><p>有利于获取政府财政资金支持，国务院印发的《“十三五”国家科技创新规划的通知》种把第三方的评价结果作为财政科技经费支持的重要依据。</p></div>
     </el-card>
 
-    <el-card shadow="always" style="margin-top:20px;margin-bottom:20px">
-      <h3>科技成果评价的流程</h3>
+    <el-card class="step" shadow="always" style="margin-top:20px;margin-bottom:20px">
+      <h3><el-image src="static/img/achievement/comment.png" style="width: 30px;height: 30px;vertical-align:middle"></el-image> 科技成果评价的流程</h3>
       <div class="comment-step">
         <div class="step-item">
           <h3>咨询申请</h3>
           <p>委托方了解评价内容与流程，向崇科投研部提交申请</p>
         </div>
+        <div style="padding: 50px 0;font-size: 1.2rem;">>></div>
         <div class="step-item">
           <h3>初步审查</h3>
           <p>崇科评价机构对委托者的评价资料进行形式审查</p>
         </div>
-        <div class="step-item">
+        <div style="padding: 50px 0;font-size: 1.2rem;">>></div>
+        <div class="step-item" style="position: relative;">
           <h3>签订合同</h3>
           <p>接受委托后，双方商定评价时间和评价要求，并缴纳服务费用</p>
+          <div style="position: absolute;left: 50%; bottom:-30px;font-size: 1.2rem;">v</div>
+          <div style="position: absolute;left: 50%; bottom:-40px;font-size: 1.2rem;">v</div>
         </div>
         <div class="step-item">
           <h3>组织评价</h3>
           <p>崇科组织专业团队进行评价，方式有会议，网络和通讯评价等方式</p>
         </div>
+        <div style="padding: 50px 0;font-size: 1.2rem;">>></div>
         <div class="step-item">
           <h3>做出结论</h3>
           <p>按照科技部《科学技术评价方法》进行打分，综合所有专家意见做出结论</p>
         </div>
+        <div style="padding: 50px 0;font-size: 1.2rem;">>></div>
         <div class="step-item">
           <h3>交付报告</h3>
           <p>按照规定时间、方式和份数向评价委托方交付评价报告</p>
         </div>
       </div>
-      <p>查看更多科技成果评价内容</p>
+      <div class="find-more"><i class="el-icon-phone"></i> 联系我们</div>
     </el-card>
 
-    <el-card shadow="always" style="margin-top:20px;margin-bottom:20px">
-      <div class="example">成功案例</div>
+    <el-card class="example" shadow="always" style="margin-top:20px;margin-bottom:20px">
+      <div style="font-size: 1.2rem">成功案例</div>
+      <div class="example-more">更多案例 >></div>
+      <div class="example-item-container">
+        <div class="example-item" v-for="example in sucessExamplea" :key="example.index">
+          <el-image :src="example.image" style="margin-left: 10%;width: 80%;height: 100px;"></el-image>
+          <p>{{example.detail}}</p>
+        </div>
+      </div>
     </el-card>
+
+    <customer-service></customer-service>
     <el-row>
       <end-of-page />
     </el-row>
@@ -203,10 +231,11 @@
 <script>
 import HeaderTittle from "@/components/HeaderTittle";
 import EndOfPage from "@/components/EndOfPage";
+import customerService from "@/components/customerService";
 
 export default {
   name: "index",
-  components: { HeaderTittle, EndOfPage },
+  components: { HeaderTittle, EndOfPage, customerService },
   data: function() {
     return {
       input1: "",
@@ -247,28 +276,28 @@ export default {
       ],
       colleges: [
         {
-          avatar: "",
+          avatar: "static/img/achievement/zj.jpeg",
           name: "浙江大学",
           place: "杭州市",
           subjects: "管理科学与工程"
         },
         {
-          avatar: "",
-          name: "浙江大学",
-          place: "杭州市",
+          avatar: "static/img/achievement/shjt.jpg",
+          name: "上海交通大学",
+          place: "上海市",
           subjects: "管理科学与工程"
         },
         {
-          avatar: "",
-          name: "浙江大学",
-          place: "杭州市",
-          subjects: "管理科学与工程"
+          avatar: "static/img/achievement/fd.jpeg",
+          name: "复旦大学",
+          place: "上海市",
+          subjects: "中西医结合"
         },
         {
-          avatar: "",
-          name: "浙江大学",
-          place: "杭州市",
-          subjects: "管理科学与工程"
+          avatar: "static/img/achievement/sc.jpg",
+          name: "四川大学",
+          place: "成都市",
+          subjects: "口腔医学"
         }
       ],
       fieldOptions: [
@@ -1460,30 +1489,27 @@ export default {
           }
         ]
       },
-      policy1: [
+      reports: [
+        '****科技有限公司与***技术玩具厂于刚刚签署了对接合同',
+        '泰兴***公司与江苏***公司的交易履行完成 01/02/2020',
+        '江苏***学院邀请****公司签约 12/12/2019'
+      ],
+      sucessExamplea: [
         {
-          title: "2020年智能制造云和软件开发云上云补贴",
-          content:
-            "使用软件开发云的企业：对于上云费用在10万元及以下的部分按照60%予以补贴，10万元以上的部分按照40%给予补贴，每家企业每年最高20万；使用智能制造云的企业：对其上云费用的40%给予补贴，每家企业每年最高50万元。",
-          image: "static/img/policy-1.jpg"
+          image: 'static/img/achievement/example-1.png',
+          detail: '帮助“奥视景”软件解决了一体化拍摄、编辑与制作、展示等难点，使得产品信息传递更为全面、用户体验更加自然，快速的将物品数字化，进而通过互联网在另一地点创建一个虚拟的物品，并提供直观、灵活的交互方式，让使用者如同身临其境一般，从而达到实物或实景展示的效果和目的。'
         },
         {
-          title: "浙江省2020年度人工智能百项应用示范项目",
-          content:
-            "围绕经济社会发展重大需求，针对现实生产生活中的痛点难点，推动人工智能技术服务提供企业与行业应用单位开展“1+1”深度合作，提出有效的应用解决方案，打造形成人工智能应用示范项目。",
-          image: "static/img/policy-2.jpg"
+          image: 'static/img/achievement/example-2.png',
+          detail: '成功对接太阳能光伏汽车玻璃技术，包括有作为衬底的钢化玻璃基层，设在该钢化玻璃基层上的薄膜光伏电池层，以及在薄膜电池层上、其与钢化玻璃基层相接触的相反面覆盖有透明树脂材料层'
         },
         {
-          title: "浙江省杭州市经济技术开发区2020年度高新技术企业认定",
-          content:
-            "（一）企业申请认定时须注册成立一年以上；（二）对企业主要产品（服务）发挥核心支持作用的技术属于《国家重点支持的高新技术领域目录》规定的范围；（三）在中国境内（不含港、澳、台地区）注册的企业，通过自主研发、受让、受赠、并购等方式，或通过5年以上的独占许可方式。",
-          image: "static/img/policy-3.jpg"
+          image: 'static/img/achievement/example-3.png',
+          detail: '帮助高性能分布式驱动电动汽车实现参数辨识功能、驱动防滑功能、制动防抱死功能、复合制动功能、差动助力转向功能、转矩矢量控制功能以及电子稳定性控制功能等提高车辆主动安全和高效节能的高性能控制功能。'
         },
         {
-          title: "2020年科学仪器设备资源共享优惠补贴",
-          content:
-            "根据《厦门市科学仪器设备资源共享管理办法》，现开展2019年科学仪器设备资源共享优惠补贴经费申报工作，单台（套）价值在30万元及以上的科学仪器设备，已经纳入厦门市科学仪器设备资源共享网，并对外提供共享服务。",
-          image: "static/img/policy-4.jpg"
+          image: 'static/img/achievement/example-4.png',
+          detail: '成功将种遥感图像的主动谱聚类方法，首先选取典型类别目标的遥感图像构建训练集；接着从训练集中分别提取目标图像的尺度不变特征转换(简称“SIFT”)特征；然后利用谱聚类算法生成视觉词典'
         }
       ]
     };
@@ -1501,34 +1527,90 @@ body {
   margin: 0;
 }
 .achievement {
+  position: relative;
   .intro-detail {
     display: flex;
     height: 150px;
     justify-content: center;
     .intro-detail-img {
+      margin: 0 15px;
       padding: 5px;
       //   border: 1px solid #ccc;
     }
   }
   .transform {
     text-align: left;
+    p {
+      text-indent: 2rem;
+    }
     .transform-main {
       display: flex;
       .transform-main-left {
+        flex: 1;
         margin-right: 20px;
+        div{
+          display: flex;
+          margin: 20px 0;
+          p{
+            margin-top: 0;
+          }
+        }
+      }
+      .transform-main-right {
+        flex: 1;
+        div{
+          margin: 5px;
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 80%;
+          text-align: center;
+          h3{
+          margin: 0;
+          color: #570000;
+        }
+        p {
+          margin: 0;
+        }
+        }
       }
     }
   }
   .step {
     .step-detail {
       display: flex;
+      justify-content: space-between;
+      color: #000;
+    }
+  }
+  .step {
+    .report {
+      display: flex;
+      margin-top: 30px;
+      .report-title {
+        width: 200px;
+        color: #aca1fb;
+        text-shadow: 3px 3px 3px #ccc;
+      }
+      .report-content{
+        flex: 1;
+        color: #000;
+        text-align: left;
+        .el-carousel__item {
+          background: #fff;
+        }
+      }
     }
   }
   .consult {
     display: flex;
     .consult-left {
+      position: relative;
       flex: 1;
       text-align: left;
+      span{
+        margin-right: 15px;
+      }
       .expert-container {
         display: flex;
         .expert-item {
@@ -1536,44 +1618,130 @@ body {
           margin: 10px;
           padding: 10px;
           border: 1px solid #ccc;
+          text-align: center;
+          .expert-name {
+            font-size: 1rem;
+          }
+          .detail-container{
+            margin: 0 auto;
+            border: 1px solid #ccc;
+          width: 90px;
+          .expert-area {
+            padding: 5px 0;
+            background: #ccc;
+            font-size: 0.8rem;
+          }
+          .expert-college {
+            padding: 5px 0;
+            font-size: 0.8rem;
+          }
+          }
+          .consulting {
+        margin-top: 10px;
+        color: #570000;
+        font-weight: bold;
+      }
         }
       }
-      .consulting {
-        margin-top: 10px;
-        text-align: center;
-        color: red;
-        font-weight: bold;
+.more {
+        position: absolute;
+        top :-5px;
+        right: 0;
+        background: #ccc;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
       }
     }
     .consult-right {
+      position: relative;
       flex: 1;
+      padding-bottom: 40px;
+      h3 {
+        margin: 0;
+      }
       .college-container {
         display: flex;
         flex-wrap: wrap;
       }
       .college-item {
-        width: 50%;
+        display: flex;
+        border: 1px solid #ccc;
+        margin: 5px;
+        padding: 5px;
+        width: 45%;
+        text-align: left;
+        .item-avatar {
+          box-sizing: border-box;
+          margin-right: 10px;
+          padding-top: 10px;
+        }
+        .item-info {
+          h4, p{
+            margin: 5px 0;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .more {
+        position: absolute;
+        bottom :0;
+        right: 10px;
+        background: #ccc;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
       }
     }
+    
   }
   .comments {
     text-align: left;
+    h3 {
+      color: #570000
+    }
     .title {
       text-align: center;
-      color: red;
+      color: #570000;
     }
+    div {
+      display: flex;
+      margin: 10px 0;
+        p {
+          margin: 0;
+          margin-top: -5px;
+        }
+    }
+    
   }
+  .step{
+    color: #570000;
+    .find-more {
+      width: 400px;
+      margin: 0 auto;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
   .comment-step {
     display: flex;
     flex-wrap: wrap;
     .step-item {
-      padding: 10px;
+      padding: 0 10px;
       margin: 20px;
       width: 25%;
       border: 1px solid #fff;
-      border-radius: 100px;
+      border-radius: 50%;
       background: rgb(244, 222, 222);
+      h3 {
+        margin: 5px;
+      }
+      p {
+        margin: 5px;
+      }
     }
+  }
   }
   .example {
     text-align: left;
@@ -1582,7 +1750,7 @@ body {
 
 .header-image {
   position: relative;
-  height: 430px;
+  height: 400px;
   width: 100%;
   margin-top: 0px;
   background-image: url(/static/img/banner-achievement.png);
@@ -1682,6 +1850,28 @@ body {
       margin-top: 10px;
     }
   }
+}
+.example{
+  .example-more {
+    text-align: right;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+.example-item-container {
+  display: flex;
+  .example-item{
+    flex: 1;
+    margin: 0 10px;
+  p {
+    text-indent: 2rem;
+    overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+  }
+  }
+}
 }
 .sub-title {
   font-size: 30px;

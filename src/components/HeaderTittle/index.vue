@@ -40,9 +40,10 @@
             <el-menu-item index="2-1" @click="goTo('/headhunting')">技术猎头</el-menu-item>
             <el-menu-item index="2-2" @click="goTo('/policy')">政策解读</el-menu-item>
             <el-menu-item index="2-3" @click="goTo('/park')">园区服务</el-menu-item>
+            <el-menu-item index="2-4" @click="goTo('/achievement')">科技成果转化</el-menu-item>
           </el-submenu>
-          <el-menu-item index="3" style="float:right" @click="goTo('/demandDetail')">需求库</el-menu-item>
-          <el-menu-item index="4" style="float:right" @click="goTo('/platform')">技术库</el-menu-item>
+          <el-menu-item index="3" style="float:right" @click="goTo('/demand')">需求库</el-menu-item>
+          <el-menu-item index="4" style="float:right" @click="goTo('/technology')">技术库</el-menu-item>
           <el-menu-item index="5" style="float:right" @click="goTo('/index')">首页</el-menu-item>
         </el-menu>
       </el-col>
