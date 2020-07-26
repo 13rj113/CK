@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <!-- 头部导航 -->
-    <header-tittle />
+    <header-tittle /> 
     <div class="header-image">
       <div class="header-select">
         <el-input
