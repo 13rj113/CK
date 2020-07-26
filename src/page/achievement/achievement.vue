@@ -40,7 +40,7 @@
     <!-- 技术成果转化 -->
     <el-card class="transform" shadow="always" style="margin-top:20px">
       <h3><el-image src="static/img/achievement/transform.png" style="width: 30px;height: 20px;vertical-align:middle"></el-image> 技术成果转化</h3>
-      <p>崇科科技成果推广转化，是指为提高生产力水平而对科学研究与技术开发所产生的具有实用价值的科技成果所进行的后续试验、开发、应用、推广直至形成新产品、新工艺、新材料、发展新产业等活动。</p>
+      <p style="text-indent: 2rem;">崇科科技成果推广转化，是指为提高生产力水平而对科学研究与技术开发所产生的具有实用价值的科技成果所进行的后续试验、开发、应用、推广直至形成新产品、新工艺、新材料、发展新产业等活动。</p>
       <div class="transform-main">
         <div class="transform-main-left">
           <div><el-image style="margin: 0 10px;width:30px;height:30px;" src="static/img/achievement/right-arrow.png"></el-image><p>促进科技成果转化、加速科技成果产业化，已经成为世界各国科技政策的新趋势</p></div>
@@ -1540,9 +1540,6 @@ body {
   }
   .transform {
     text-align: left;
-    p {
-      text-indent: 2rem;
-    }
     .transform-main {
       display: flex;
       .transform-main-left {
@@ -1753,7 +1750,7 @@ body {
   height: 400px;
   width: 100%;
   margin-top: 0px;
-  background-image: url(/static/img/banner-achievement.png);
+  background-image: url(../../../static/img/banner-achievement.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;

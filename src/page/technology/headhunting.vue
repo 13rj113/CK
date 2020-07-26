@@ -311,7 +311,7 @@ body {
   height: 400px;
   width: 100%;
   margin-top: 0px;
-  background-image: url(/static/img/banner-headhunting.png);
+  background-image: url(../../../static/img/banner-headhunting.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -350,7 +350,7 @@ body {
     width: 100%;
     //border: 1px solid #e5e7e9;
     margin-top: 0px;
-    background-image: url(/static/img/earth.png);
+    background-image: url(../../../static/img/earth.png);
     background-repeat: no-repeat;
     background-size: 25% 120%;
     -moz-background-size: 100% 100%;
@@ -427,7 +427,7 @@ body {
     width: 100%;
     //border: 2px solid #e5e7e9;
     margin-top: 0px;
-    background-image: url(/static/img/advantage.png);
+    background-image: url(../../../static/img/advantage.png);
     background-repeat: no-repeat;
     background-size: 25% 100%;
     -moz-background-size: 100% 100%;

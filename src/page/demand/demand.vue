@@ -2,7 +2,7 @@
   <div id="platform">
     <header-tittle />
     <div class="head-image">
-      <h1>科学技术成果展示平台</h1>
+      <h1>产业上下游技术需求平台</h1>
       <div class="head-search">
         <el-input v-model="input" placeholder="请输入内容" suffix-icon="el-icon-search"></el-input>
       </div>
@@ -211,7 +211,7 @@ effect: 'plain'},
     box-sizing: border-box;
     padding: 50px;
     height: 300px;
-    background: url(/static/img/banner-technology.jpeg) no-repeat center center;
+    background: url(../../../static/img/banner-technology.jpeg) no-repeat center center;
     background-size: 100% 100%;
     color: #fff;
     .head-search {

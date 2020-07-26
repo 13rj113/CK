@@ -22,7 +22,7 @@
             <el-col :span="9" class="policy-image">
               <el-image
                 style=" height: 100%;width:100%"
-                src="/static/img/policy/net.png"
+                src="static/img/policy/net.png"
                 fit="fill"
               ></el-image>
             </el-col>
@@ -328,7 +328,7 @@ body {
   height: 400px;
   width: 100%;
   margin-top: 0px;
-  background-image: url(/static/img/banner-policy.png);
+  background-image: url(../../../static/img/banner-policy.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;

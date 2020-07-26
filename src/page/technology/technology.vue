@@ -211,7 +211,7 @@ effect: 'plain'},
     box-sizing: border-box;
     padding: 50px;
     height: 300px;
-    background: url(/static/img/banner-technology.jpeg) no-repeat center center;
+    background: url(../../../static/img/banner-technology.jpeg) no-repeat center center;
     background-size: 100% 100%;
     color: #fff;
     .head-search {

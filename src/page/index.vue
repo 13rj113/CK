@@ -1996,7 +1996,7 @@ main .el-menu {
   padding-top: 5px;
   padding-left: 50px;
   padding-right: 100px;
-  background-image: url(/static/img/service.png);
+  background-image: url(../../static/img/service.png);
   background-repeat: no-repeat;
   background-size: 26% 130%;
   -moz-background-size: 100% 100%;
@@ -2063,7 +2063,7 @@ main .el-menu {
   height: 430px;
   width: 100%;
   margin-top: 0px;
-  background-image: url(/static/img/banner-overview.png);
+  background-image: url(../../static/img/banner-overview.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;

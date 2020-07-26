@@ -18,8 +18,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: login,
+      name: 'index',
+      component: index,
       meta: {
         keepalive: false
       }
