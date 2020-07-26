@@ -8,7 +8,7 @@
           <el-col class="demand-image" :span="8">
             <el-image
               style=" height: 100%;width:100%"
-              src="/static/img/demand/image-1.png"
+              src="static/img/demand/image-1.png"
               fit="fill"
             ></el-image>
           </el-col>
@@ -97,7 +97,7 @@ import customerService from "@/components/customerService";
 export default {
   name: "demandDetail",
   components: { HeaderTittle, EndOfPage, customerService },
-  data: function() {
+  data: function () {
     return {};
   }
 };

@@ -8,7 +8,7 @@
           <el-col class="technology-image" :span="8">
             <el-image
               style="height: 90%;width:90%;margin-top:30px;"
-              src="/static/img/technology/technologyDetail/image-1.png"
+              src="static/img/technology/technologyDetail/image-1.png"
               fit="fill"
             ></el-image>
           </el-col>
@@ -58,14 +58,14 @@
               <el-row class="sub-row-image-1">
                 <el-image
                   style=" height: 90%;width:90%;margin-top:30px;"
-                  src="/static/img/technology/technologyDetail/image-2.png"
+                  src="static/img/technology/technologyDetail/image-2.png"
                   fit="fill"
                 ></el-image>
               </el-row>
               <el-row class="sub-row-image-2">
                 <el-image
                   style=" height: 90%;width:90%;margin-top:55px"
-                  src="/static/img/technology/technologyDetail/image-3.png"
+                  src="static/img/technology/technologyDetail/image-3.png"
                   fit="fill"
                 ></el-image>
               </el-row>
@@ -152,7 +152,7 @@ import customerService from "@/components/customerService";
 export default {
   name: "technologyDetail",
   components: { HeaderTittle, EndOfPage, customerService },
-  data: function() {
+  data: function () {
     return {};
   }
 };
@@ -162,7 +162,7 @@ export default {
 body {
   margin: 0;
 }
-.technology-detail{
+.technology-detail {
   position: relative;
 }
 .main {
