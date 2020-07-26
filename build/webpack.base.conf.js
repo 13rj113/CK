@@ -5,7 +5,7 @@ const config = require('../config')
 const { VueLoaderPlugin } = require('vue-loader')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve(dir) {
+function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -38,6 +38,12 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minChunks: 2,
+    },
   },
   module: {
     rules: [

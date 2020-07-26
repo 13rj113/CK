@@ -668,7 +668,7 @@ import customerService from "@/components/customerService";
 export default {
   name: "index",
   components: { HeaderTittle, EndOfPage, customerService },
-  data: function() {
+  data: function () {
     return {
       input1: "",
 
@@ -1951,7 +1951,7 @@ export default {
     };
   },
   methods: {
-    goTo(url) {
+    goTo (url) {
       this.$router.push(url);
     }
   }
@@ -2006,12 +2006,12 @@ main .el-menu {
     font-size: 20px;
     color: #3498db;
     margin-bottom: 0px;
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
   }
   .intro-sub-content {
     font-size: 15px;
     margin-top: 10px;
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-family: 'Arial', 'Microsoft YaHei', '黑体', '宋体', sans-serif;
   }
   .intro-first {
     height: 20%;
@@ -2165,7 +2165,7 @@ main .el-menu {
       .content-more {
         padding: 10px 0;
         text-align: center;
-        font-family: "微软雅黑";
+        font-family: '微软雅黑';
         cursor: pointer;
       }
     }
