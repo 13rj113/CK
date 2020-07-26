@@ -28,14 +28,15 @@
             </el-col>
             <el-col :span="15" class="policy-content" style="overflow-y:scroll">
               <el-row
-                style="height:90px;margin-bottom:20px"
+                style="height:90px;margin-bottom:20px;cursor:pointer"
                 :gutter="20"
                 v-for="policy in policy1"
                 :key="policy.index"
+                @click.native="goTo('/policyDetail')"
               >
                 <el-col :span="4" style="height:90px">
                   <el-image style=" height: 100%" :src="policy.image" fit="fill"></el-image>
-                </el-col>
+                </el-col>cursor:pointer
                 <el-col :span="20" style="height:90px">
                   <div class="policy-search-title" style="font-weight:bold">{{policy.title}}</div>
                   <div class="policy-search-content">{{policy.content}}</div>
@@ -242,7 +243,7 @@ import customerService from "@/components/customerService";
 export default {
   name: "policy",
   components: { HeaderTittle, EndOfPage, customerService },
-  data: function() {
+  data: function () {
     return {
       area1: [
         "北京",
@@ -313,6 +314,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    goTo (url) {
+      this.$router.push(url);
+    }
   }
 };
 </script>
