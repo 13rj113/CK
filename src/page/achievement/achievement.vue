@@ -38,11 +38,11 @@
       </div>
     </el-card>
     <!-- 技术成果转化 -->
-    <el-card class="transform" shadow="always" style="margin-top:20px">
+    <el-card class="transform bgc-gray" shadow="always" style="margin-top:20px">
       <h3>
         <el-image
           src="static/img/achievement/transform.png"
-          style="width: 30px;height: 20px;vertical-align:middle"
+          style="margin-right: 10px;width: 30px;height: 20px;vertical-align:middle"
         ></el-image>技术成果转化
       </h3>
       <p
@@ -80,27 +80,67 @@
           </div>
         </div>
         <div class="transform-main-right">
-          <div>
-            <h3>技术转移平台</h3>
-            <p>平台级服务，为成果转化保驾护航</p>
+          <div class="flex-container">
+            <div class="flex-item">
+              <div class="item-avatar">
+                <el-image
+                  style="width: 60px;height: 60px;"
+                  src="static/img/achievement/transform-1.png"
+                ></el-image>
+              </div>
+              <div class="item-info">
+                <h3>技术转移平台</h3>
+                <p>平台级服务，为成果转化保驾护航</p>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="item-avatar">
+                <el-image
+                  style="width: 60px;height: 60px;"
+                  src="static/img/achievement/transform-2.png"
+                ></el-image>
+              </div>
+              <div class="item-info">
+                <h3>技术通</h3>
+                <p>会员级服务，成果推广转让更快捷</p>
+              </div>
+            </div>
           </div>
-          <div style="margin-left:30px;">
-            <h3>技术通</h3>
-            <p>会员级服务，成果推广转让更快捷</p>
-          </div>
-          <div style="margin-left: 60px;">
-            <h3>产学研活动</h3>
-            <p>对接会、项目路演、创新企业院所行</p>
-          </div>
-          <div style="margin-left: 90px;">
-            <h3>成果-企业对点对点</h3>
-            <p>精准匹配、意向确认、直接对接</p>
+          <div class="flex-container">
+            <div class="flex-item">
+              <div class="item-avatar">
+                <el-image
+                  style="width: 60px;height: 60px;"
+                  src="static/img/achievement/transform-3.png"
+                ></el-image>
+              </div>
+              <div class="item-info">
+                <div>
+                  <h3>产学研活动</h3>
+                  <p>对接会、项目路演、创新企业院所行</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="item-avatar">
+                <el-image
+                  style="width: 60px;height: 60px;"
+                  src="static/img/achievement/transform-4.png"
+                ></el-image>
+              </div>
+              <div class="item-info">
+                <div>
+                  <h3>成果-企业对点对点</h3>
+                  <p>精准匹配、意向确认、直接对接</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </el-card>
     <!-- 技术转移服务流程 -->
-    <el-card class="step" shadow="always" style="margin-top:20px">
+    <el-card class="service-flow" shadow="always" style="margin-top:20px">
       <h2>技术转移服务流程</h2>
       <div class="step-detail">
         <div class="step-detail-item">
@@ -193,7 +233,7 @@
       </div>
     </el-card>
 
-    <el-card shadow="always" style="margin-top:20px">
+    <el-card shadow="always" class="bgc-gray" style="margin-top:20px">
       <div class="consult">
         <div class="consult-left">
           <h3 style="text-align: center;">专家咨询</h3>
@@ -245,19 +285,13 @@
 
     <el-card class="comments" shadow="always" style="margin-top:20px;margin-bottom:20px">
       <h3>
-        <el-image
-          src="static/img/achievement/complete.png"
-          style="display:inline-block;width: 30px;height: 30px;vertical-align:middle"
-        ></el-image>科技成果评价
+        <el-image src="static/img/achievement/complete.png" class="comments-image"></el-image>科技成果评价
       </h3>
       <p
         style="text-indent: 2rem;"
       >崇科网络科技有限公司按照委托者的要求，由具有评价资质的第三方专业机构聘请专家，坚持实事求是、科学民主、注重质量、讲求实效的原则，依照规定的程序和标准，对被评价科技成果进行审查与辨别，对其科学性、创造性、先进性、可行性和应用前景等进行评价并作出相应结论。</p>
       <h3 class="title">
-        <el-image
-          src="static/img/achievement/judge.png"
-          style="display:inline-block;width: 30px;height: 30px;vertical-align:middle"
-        ></el-image>科技成果评价的重要性
+        <el-image src="static/img/achievement/judge.png" class="comments-image"></el-image>科技成果评价的重要性
       </h3>
       <div>
         <i class="el-icon-caret-right"></i>
@@ -277,7 +311,7 @@
       </div>
     </el-card>
 
-    <el-card class="step" shadow="always" style="margin-top:20px;margin-bottom:20px">
+    <el-card class="step bgc-gray" shadow="always" style="margin-top:20px;margin-bottom:20px">
       <h3>
         <el-image
           src="static/img/achievement/comment.png"
@@ -1654,9 +1688,8 @@ body {
     }
   }
   .transform {
-    background: rgb(33, 135, 165);
     text-align: left;
-    color: #fff;
+    // color: #fff;
     .transform-main {
       display: flex;
       .transform-main-left {
@@ -1672,32 +1705,44 @@ body {
       }
       .transform-main-right {
         flex: 1;
-        div {
-          margin: 5px;
-          padding: 5px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          width: 80%;
-          text-align: center;
-          h3 {
-            margin: 0;
-            color: #570000;
-          }
-          p {
-            margin: 0;
+        .flex-container {
+          margin: 15px;
+          display: flex;
+          .flex-item {
+            display: flex;
+            border: 1px solid #ccc;
+            margin: 5px;
+            padding: 5px;
+            width: 45%;
+            text-align: left;
+            .item-avatar {
+              box-sizing: border-box;
+              margin-right: 10px;
+              padding-top: 10px;
+            }
+            .item-info {
+              h3 {
+                margin: 10px 0;
+                text-align: center;
+                color: rgb(89, 89, 97);
+              }
+              p {
+                margin: 5px 0;
+                font-size: 0.8rem;
+              }
+            }
           }
         }
       }
     }
   }
-  .step {
+  .service-flow {
     .step-detail {
+      margin-top: 30px;
       display: flex;
       justify-content: space-between;
       color: #000;
     }
-  }
-  .step {
     .report {
       display: flex;
       margin-top: 30px;
@@ -1726,6 +1771,9 @@ body {
       }
       .consult-domain {
         position: relative;
+        span {
+          cursor: pointer;
+        }
         .more {
           position: absolute;
           top: -5px;
@@ -1807,8 +1855,6 @@ body {
           h4,
           p {
             margin: 5px 0;
-          }
-          p {
             font-size: 0.8rem;
           }
         }
@@ -1817,6 +1863,13 @@ body {
   }
   .comments {
     text-align: left;
+    .comments-image {
+      margin-right: 10px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
     h3 {
       color: #570000;
     }
@@ -1834,25 +1887,29 @@ body {
     }
   }
   .step {
-    color: #570000;
     .contact-us {
       margin: 30px auto;
-      background: rgb(186, 226, 230);
-      padding: 10px;
+      background: #517bfc;
+      padding: 15px 0;
+      border-radius: 5px;
       width: 300px;
       text-align: center;
+      color: #fff;
       cursor: pointer;
     }
     .comment-step {
       display: flex;
       flex-wrap: wrap;
+      // color: #bf3030;
+      color: #517bfc;
       .step-item {
-        padding: 0 10px;
+        padding: 10px;
         margin: 20px;
         width: 25%;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        background: rgb(244, 222, 222);
+        border: 5px solid #fff;
+        border-radius: 10px;
+        // background: #ffaa00;
+        background: #ffdd00;
         h3 {
           margin: 5px;
         }
