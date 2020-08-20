@@ -1,0 +1,26 @@
+body {
+    margin: 0 60px;
+    font-family: Helvetica,"Pingfang SC","Microsoft YaHei",STHeiti,Verdana,Arial,Tahoma,sans-serif;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-family: '微软雅黑';
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.title-left {
+    margin-bottom: 20px;
+    font-family: '微软雅黑';
+    font-size: 2rem;
+    font-weight: 550;
+    text-align: left;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.bgc-gray {
+    background: rgb(243, 243, 251) !important;
+}
