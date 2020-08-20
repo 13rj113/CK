@@ -42,13 +42,13 @@
         <div class="sub-title">
           <el-row class="show-technology">
             <el-col :span="3">
-              <a href="#technology">技术介绍</a>
+              <a href="#technology" style="text-decoration: none;color:#2196F3 ">技术介绍</a>
             </el-col>
             <el-col :span="3">
-              <a href="#application">应用情况</a>
+              <a href="#application" style="text-decoration: none;color:#2196F3">应用情况</a>
             </el-col>
             <el-col :span="3">
-              <a href="#market">市场前景</a>
+              <a href="#market" style="text-decoration: none;color:#2196F3">市场前景</a>
             </el-col>
           </el-row>
         </div>
@@ -154,7 +154,7 @@ export default {
   components: { HeaderTittle, EndOfPage, customerService },
   data: function () {
     return {};
-  }
+  },
 };
 </script>
 
@@ -169,11 +169,14 @@ body {
   //height: 1000px;
   //padding: 20px;
   .sub-title {
+    margin-bottom: 10px;
+    font-family: "微软雅黑";
+    font-size: 2rem;
+    font-weight: 550;
     text-align: left;
     margin-top: 0px;
-    margin-bottom: 10px;
     .show-technology {
-      font-size: 25px;
+      // font-size: 25px;
       color: black;
       .sub-title-button {
         font-size: 18px;

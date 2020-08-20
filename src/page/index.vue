@@ -254,7 +254,7 @@
     <!-- 产业链需求库 -->
     <el-card shadow="always" style="margin-top:20px">
       <div class="technology-container">
-        <el-row class="sub-title">
+        <el-row class="title">
           <el-image
             src="static/img/icon/truck.png"
             style="width: 50px;height:50px;vertical-align:middle;margin-right:10px;"
@@ -391,7 +391,7 @@
 
     <el-card shadow="always" style="margin-top:20px">
       <div class="policy">
-        <el-row class="sub-title">
+        <el-row class="title">
           <i class="el-icon-document-copy"></i>
           政策一览
         </el-row>
