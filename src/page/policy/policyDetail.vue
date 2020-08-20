@@ -63,8 +63,8 @@
         </div>
       </el-card>
 
-      <el-card shadow="always" style="margin-top:20px">
-        <div class="sub-title">
+      <el-card shadow="always" style="margin-top:20px ;background: rgb(243, 243, 251)">
+        <div class="title">
           <el-row class="process">
             <i class="el-icon-document-copy"></i>
             申报流程
@@ -203,7 +203,7 @@
         </div>
       </el-card>
     </div>
-<customer-service></customer-service>
+    <customer-service></customer-service>
     <!-- 尾部导航 -->
     <end-of-page />
   </div>
@@ -217,9 +217,9 @@ import customerService from "@/components/customerService";
 export default {
   name: "policyDetail",
   components: { HeaderTittle, EndOfPage, customerService },
-  data: function() {
+  data: function () {
     return {};
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -230,7 +230,7 @@ body {
   position: relative;
 }
 .main {
-  height: 2300px;
+  height: 2400px;
   //padding: 20px;
   .breadcrumb {
     margin-top: 15px;

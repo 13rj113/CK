@@ -4,13 +4,13 @@
     <header-tittle />
     <div class="header-image"></div>
     <div class="main">
-      <div class="sub-title">
-        <el-row class="show-headhunting">
-          <i class="el-icon-view"></i>
-          什么是技术猎头
-        </el-row>
-      </div>
       <el-card shadow="always" style="margin-top:20px">
+        <div class="title">
+          <el-row class="show-headhunting">
+            <i class="el-icon-view"></i>
+            什么是技术猎头
+          </el-row>
+        </div>
         <div class="headhunting-image-1">
           <el-row class="headhunting-first">
             <el-col class="headhunting-first-1" :span="8">
@@ -44,7 +44,7 @@
         </div>
       </el-card>
 
-      <el-card shadow="always" style="margin-top:20px">
+      <el-card shadow="always" style="margin-top:20px;background: rgb(243, 243, 251)">
         <el-row class="process">
           <el-col class="process-text" :span="4">资源整合</el-col>
           <el-col class="process-text" :span="1">>></el-col>
@@ -66,13 +66,13 @@
         </el-row>
       </el-card>
 
-      <div class="sub-title">
-        <el-row class="show-headhunting">
-          <i class="el-icon-data-line"></i>
-          技术猎头的优势
-        </el-row>
-      </div>
-      <el-card shadow="always">
+      <el-card shadow="always" style="margin-top:20px;">
+        <div class="title">
+          <el-row class="show-headhunting">
+            <i class="el-icon-data-line"></i>
+            技术猎头的优势
+          </el-row>
+        </div>
         <div class="headhunting-image-2">
           <el-row class="headhunting-first">
             <el-col class="headhunting-first-1" :span="8">
@@ -108,33 +108,35 @@
       </el-card>
       <el-divider></el-divider>
 
-      <div class="sub-title">
-        <el-row class="show-headhunting">
-          <i class="el-icon-magic-stick"></i>
-          崇科技术猎头的社会价值
+      <el-card shadow="always" class="bgc-gray">
+        <div class="title">
+          <el-row class="show-headhunting">
+            <i class="el-icon-magic-stick"></i>
+            崇科技术猎头的社会价值
+          </el-row>
+        </div>
+        <el-row class="social-value" :gutter="50">
+          <el-col class="social-value-col" :span="6" style="background-color:#F2F3F4">
+            <p class="social-value-title">推动技术发展</p>
+            <p class="social-value-text">为中小型企业构建技术转移绿色通道，从市场出发寻求技术突破口，推动科技成果转化为现实生产力。</p>
+          </el-col>
+          <el-col class="social-value-col" :span="6" style="background-color:#FAE5D3">
+            <p class="social-value-title">促进产业链整合</p>
+            <p class="social-value-text">为中大型企业在产业上下游搭建桥梁，争取做科创市场的捕猎人，帮助企业攻破技术壁垒，实现技术创新。</p>
+          </el-col>
+          <el-col class="social-value-col" :span="6" style="background-color:#F2F3F4">
+            <p class="social-value-title">发展新产业</p>
+            <p class="social-value-text">发展以技术交易为核心内容的科技服务业行业，广泛服务于全国各地技术市场和各类技术交易主体。</p>
+          </el-col>
+          <el-col class="social-value-col" :span="6" style="background-color:#FAE5D3">
+            <p class="social-value-title">助力科技进步</p>
+            <p class="social-value-text">优化科技资源配置，助力国家产业升级及结构调整，构建公平、公正、安全、规范的全国性技术交易中心平台。</p>
+          </el-col>
         </el-row>
-      </div>
-      <el-row class="social-value" :gutter="50">
-        <el-col class="social-value-col" :span="6" style="background-color:#F2F3F4">
-          <p class="social-value-title">推动技术发展</p>
-          <p class="social-value-text">为中小型企业构建技术转移绿色通道，从市场出发寻求技术突破口，推动科技成果转化为现实生产力，实现技术发展。</p>
-        </el-col>
-        <el-col class="social-value-col" :span="6" style="background-color:#FAE5D3">
-          <p class="social-value-title">促进产业链整合</p>
-          <p class="social-value-text">为中大型企业在产业上下游搭建桥梁，争取做科创市场的捕猎人，帮助企业攻破技术壁垒，实现技术创新。</p>
-        </el-col>
-        <el-col class="social-value-col" :span="6" style="background-color:#F2F3F4">
-          <p class="social-value-title">发展新产业</p>
-          <p class="social-value-text">发展以技术交易为核心内容的科技服务业行业，广泛服务于全国各地技术市场和各类技术交易主体。</p>
-        </el-col>
-        <el-col class="social-value-col" :span="6" style="background-color:#FAE5D3">
-          <p class="social-value-title">助力科技进步</p>
-          <p class="social-value-text">优化科技资源配置，助力国家产业升级及结构调整，构建公平、公正、安全、规范的全国性技术交易中心平台。</p>
-        </el-col>
-      </el-row>
+      </el-card>
       <el-divider></el-divider>
 
-      <div class="sub-title">
+      <div class="title">
         <el-row class="show-headhunting">
           <i class="el-icon-tickets"></i>
           应用示意图
@@ -148,7 +150,7 @@
         </el-card>
       </div>
       <div class="application-process">
-        <el-card shadow="always">
+        <el-card shadow="always" style="margin-top:20px;background: rgb(243, 243, 251)">
           <el-row class="flow-chart-row">
             <el-col :span="1" class="flow-chart-col-1"></el-col>
             <el-col :span="4" class="flow-chart-col-1">
@@ -230,13 +232,13 @@
         </el-card>
       </div>
 
-      <div class="sub-title">
-        <el-row class="show-headhunting">
-          <i class="el-icon-office-building"></i>
-          成功案例
-        </el-row>
-      </div>
       <el-card shadow="always">
+        <div class="title">
+          <el-row class="show-headhunting">
+            <i class="el-icon-office-building"></i>
+            成功案例
+          </el-row>
+        </div>
         <el-row class="success-img" :gutter="50">
           <el-col class="success-col" :span="6">
             <el-image
@@ -295,9 +297,9 @@ import customerService from "@/components/customerService";
 export default {
   name: "headhunting",
   components: { HeaderTittle, EndOfPage, customerService },
-  data: function() {
+  data: function () {
     return {};
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>

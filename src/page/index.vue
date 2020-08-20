@@ -52,7 +52,7 @@
         </el-row>
       </el-row>
     </el-card>
-    <el-card shadow="always" style="margin-top:20px">
+    <el-card shadow="always" style="margin-top:20px;background: rgb(243, 243, 251)">
       <el-row class="title">
         <i class="el-icon-s-home"></i>
         聚焦领域
@@ -122,9 +122,9 @@
           <i class="el-icon-s-home"></i>
           技术项目库
         </el-row>
-        <el-tabs tab-position="left">
+        <el-tabs tab-position="left" v-model="activeTab">
           <el-tab-pane label="5G商用" disabled></el-tab-pane>
-          <el-tab-pane class="technology-tab-container" label="人工智能">
+          <el-tab-pane class="technology-tab-container" name="first" label="人工智能">
             <el-row
               class="technology-item"
               v-for="technology in technologies.artIntel"
@@ -252,7 +252,7 @@
       </div>
     </el-card>
     <!-- 产业链需求库 -->
-    <el-card shadow="always" style="margin-top:20px">
+    <el-card shadow="always" style="margin-top:20px;background: rgb(243, 243, 251)">
       <div class="technology-container">
         <el-row class="title">
           <el-image
@@ -692,7 +692,7 @@ export default {
   data: function () {
     return {
       input1: "",
-
+      activeTab: "first",
       areaOptions: [
         {
           value: "1",

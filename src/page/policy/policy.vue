@@ -11,7 +11,7 @@
         </el-breadcrumb>
       </div>-->
       <el-card shadow="always" style="margin-top:20px">
-        <div class="sub-title">
+        <div class="title">
           <el-row class="show-policy">
             <i class="el-icon-document-copy"></i>
             政策一览
@@ -20,11 +20,7 @@
         <div class="policy">
           <el-row :gutter="20" class="policy-detail">
             <el-col :span="9" class="policy-image">
-              <el-image
-                style=" height: 100%;width:100%"
-                src="static/img/policy/net.png"
-                fit="fill"
-              ></el-image>
+              <el-image style=" height: 100%;width:100%" src="static/img/policy/net.png" fit="fill"></el-image>
             </el-col>
             <el-col :span="15" class="policy-content" style="overflow-y:scroll">
               <el-row
@@ -48,8 +44,8 @@
         <el-button class="declare" type="danger" icon="el-icon-office-building" round plain>跳转到崇科政策网</el-button>
       </el-card>
 
-      <el-card shadow="always" style="margin-top:20px">
-        <div class="sub-title">
+      <el-card shadow="always" style="margin-top:20px;background: rgb(243, 243, 251)">
+        <div class="title">
           <el-row class="show-service">
             <i class="el-icon-cloudy"></i>
             服务模式
@@ -108,7 +104,7 @@
       </el-card>
 
       <el-card shadow="always" style="margin-top:20px">
-        <div class="sub-title">
+        <div class="title">
           <el-row class="show-service">
             <i class="el-icon-position"></i>
             我们的理念
@@ -121,8 +117,8 @@
         </div>
       </el-card>
 
-      <el-card shadow="always" style="margin-top:20px">
-        <div class="sub-title">
+      <el-card shadow="always" style="margin-top:20px;background: rgb(243, 243, 251)">
+        <div class="title">
           <el-row class="show-science">
             <i class="el-icon-view"></i>
             科技行业区域政策
@@ -186,7 +182,7 @@
         </div>
       </el-card>
       <el-card shadow="always" style="margin-top:20px">
-        <div class="sub-title">
+        <div class="title">
           <el-row class="show-success">
             <i class="el-icon-magic-stick"></i>
             成功案例
@@ -256,7 +252,7 @@ export default {
         "河北",
         "安徽",
         "福建",
-        "陕西"
+        "陕西",
       ],
       area2: ["河南", "山东", "辽宁", "湖北", "湖南", "山西", "黑龙江"],
       department: ["国务院", "科技局", "知识产权局", "组织部"],
@@ -266,60 +262,60 @@ export default {
             "工业和信息化部 财政部关于举办2020年“创客中国”中小企业创新创业大赛的通知",
           content:
             "为深入贯彻习近平总书记关于坚决打赢新冠肺炎疫情防控阻击战的重要指示精神，进一步激发创业创新活力，推动中小企业高质量发展，工业和信息化部、财政部将共同举办2020年“创客中国”...",
-          image: "static/img/policy/policy-1.png"
+          image: "static/img/policy/policy-1.png",
         },
         {
           title: "国务院关于促进国家高新技术产业开发区高质量发展的若干意见",
           content:
             "国家高新技术产业开发区（以下简称国家高新区）经过30多年发展，已经成为我国实施创新驱动发展战略的重要载体，在转变发展方式、优化产业结构、增强国际竞争力等方面发挥了重要作用，走出...",
-          image: "static/img/policy/policy-2.png"
+          image: "static/img/policy/policy-2.png",
         },
         {
           title: "闵行区关于推进科技创新创业和成果转化的政策意见的通知",
           content:
             "现将《闵行区关于推进科技创新创业和成果转化的政策意见》印发给你们，请认真遵照执行。特此通知 2019年3月1日 闵行区关于推进科技创新创业和成果转化的政策意见 为贯彻落实市委、市政府创新...",
-          image: "static/img/policy/policy-3.png"
+          image: "static/img/policy/policy-3.png",
         },
         {
           title: "关于科技企业孵化器 大学科技园和众创空间税收政策的通知",
           content:
             "为进一步鼓励创业创新，现就科技企业孵化器、大学科技园、众创空间有关税收政策通知如下：一、自2019年1月1日至2021年12月31日，对其向孵化企业出租场地、房屋以及提供孵化服务的收入，免征...",
-          image: "static/img/policy/policy-4.png"
-        }
+          image: "static/img/policy/policy-4.png",
+        },
       ],
       policy2: [
         {
           title: "2020年智能制造云和软件开发云上云补贴",
           content:
             "使用软件开发云的企业：对于上云费用在10万元及以下的部分按照60%予以补贴，10万元以上的部分按照40%给予补贴，每家企业每年最高20万；使用智能制造云的企业：对其上云费用的40%给予补贴，每家企业每年最高50万元。",
-          image: "static/img/policy-1.jpg"
+          image: "static/img/policy-1.jpg",
         },
         {
           title: "浙江省2020年度人工智能百项应用示范项目",
           content:
             "围绕经济社会发展重大需求，针对现实生产生活中的痛点难点，推动人工智能技术服务提供企业与行业应用单位开展“1+1”深度合作，提出有效的应用解决方案，打造形成人工智能应用示范项目。",
-          image: "static/img/policy-2.jpg"
+          image: "static/img/policy-2.jpg",
         },
         {
           title: "浙江省杭州市经济技术开发区2020年度高新技术企业认定",
           content:
             "（一）企业申请认定时须注册成立一年以上；（二）对企业主要产品（服务）发挥核心支持作用的技术属于《国家重点支持的高新技术领域目录》规定的范围；（三）在中国境内（不含港、澳、台地区）注册的企业，通过自主研发、受让、受赠、并购等方式，或通过5年以上的独占许可方式。",
-          image: "static/img/policy-3.jpg"
+          image: "static/img/policy-3.jpg",
         },
         {
           title: "2020年科学仪器设备资源共享优惠补贴",
           content:
             "根据《厦门市科学仪器设备资源共享管理办法》，现开展2019年科学仪器设备资源共享优惠补贴经费申报工作，单台（套）价值在30万元及以上的科学仪器设备，已经纳入厦门市科学仪器设备资源共享网，并对外提供共享服务。",
-          image: "static/img/policy-4.jpg"
-        }
-      ]
+          image: "static/img/policy-4.jpg",
+        },
+      ],
     };
   },
   methods: {
-    goTo (url) {
+    goTo(url) {
       this.$router.push(url);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -393,7 +389,7 @@ body {
     margin-bottom: 5px;
     .policy-detail {
       height: 100%;
-      padding: 20px;
+      padding: 10px;
       .policy-image {
         height: 100%;
         padding: 10px;
