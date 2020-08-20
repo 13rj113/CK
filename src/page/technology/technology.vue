@@ -69,8 +69,14 @@
             </div>
           </div>
           <div class="content-tag">
-            <div>技术阶段：{{item.tag}}</div>
-            <div>项目地区：{{item.area}}</div>
+            <div>
+              需求领域：
+              <span class="domain">{{item.tag}}</span>
+            </div>
+            <div>
+              项目地区：
+              <span class="deadline">{{item.area}}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -300,6 +306,12 @@ export default {
         .content-tag {
           position: absolute;
           bottom: 10px;
+          .domain {
+            color: rgb(64, 158, 255);
+          }
+          .deadline {
+            color: #ff9900;
+          }
         }
       }
     }

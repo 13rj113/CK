@@ -35,12 +35,12 @@
             <template slot="title">{{username}}</template>
             <el-menu-item index="1-1" @click="logOut">退出登录</el-menu-item>
           </el-submenu>
-          <el-submenu index="2" style="float:right">
+          <el-submenu style="float:right" index="2">
             <template slot="title">服务</template>
-            <el-menu-item index="2-1" @click="goTo('/headhunting')">技术猎头</el-menu-item>
-            <el-menu-item index="2-2" @click="goTo('/policy')">政策解读</el-menu-item>
-            <el-menu-item index="2-3" @click="goTo('/park')">园区服务</el-menu-item>
-            <el-menu-item index="2-4" @click="goTo('/achievement')">科技成果转化</el-menu-item>
+            <el-menu-item style="text-align:left;" index="2-1" @click="goTo('/headhunting')">技术猎头</el-menu-item>
+            <el-menu-item style="text-align:left;" index="2-2" @click="goTo('/policy')">政策解读</el-menu-item>
+            <el-menu-item style="text-align:left;" index="2-3" @click="goTo('/park')">园区服务</el-menu-item>
+            <el-menu-item style="text-align:left;" index="2-4" @click="goTo('/achievement')">科技成果转化</el-menu-item>
           </el-submenu>
           <el-menu-item index="3" style="float:right" @click="goTo('/demand')">需求库</el-menu-item>
           <el-menu-item index="4" style="float:right" @click="goTo('/technology')">技术库</el-menu-item>
@@ -74,10 +74,10 @@ export default {
       username: "",
       loginForm: {
         username: "",
-        password: ""
+        password: "",
       },
       activeIndex: "",
-      input: ""
+      input: "",
     };
   },
   created() {
@@ -101,7 +101,7 @@ export default {
         sessionStorage.setItem("username", this.loginForm.username);
         this.loginFlag = true;
         this.$router.push({
-          name: "index"
+          name: "index",
         });
       } else {
         alert("账户或密码有误，请重新输入。");
@@ -113,8 +113,8 @@ export default {
     },
     goTo(url) {
       this.$router.push(url);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss">

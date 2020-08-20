@@ -183,17 +183,17 @@
     </el-card>
 
     <el-card class="bgc-gray" style="margin-top:20px">
-      <div>
+      <div class="park-container">
         <h2>园区规划咨询服务</h2>
         <p>为园区建设提供深度的咨询服务，助力产业园区准确定位，快速发展</p>
         <div class="park-design">
           <div class="column">
             <div class="item">园区科技创新能力建设规划</div>
-            <div class="item" style="background: #65aeff">园区高新技术产业发展规划</div>
+            <div class="item">园区高新技术产业发展规划</div>
           </div>
           <div class="column">
             <div class="item">科技园区规划、申报和评估</div>
-            <div class="item" style="background: #65aeff">国家特色产业基地规划与申报</div>
+            <div class="item">国家特色产业基地规划与申报</div>
           </div>
         </div>
       </div>
@@ -331,21 +331,31 @@ export default {
 .conponents-tab {
   text-align: left;
 }
-.park-design {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  .column {
-    flex-basis: 100%;
+.park-container {
+  margin-bottom: 30px;
+  .park-design {
+    background: url(../../../static/img/park/design.png) no-repeat center center;
+    background-size: 20%;
     display: flex;
-    justify-content: space-around;
-    .item {
-      margin: 10px;
-      padding: 10px;
-      width: 300px;
-      border: 1px solid #ccc;
-      box-shadow: 10px 10px 5px 2px #666;
-      background: rgb(244, 222, 222);
+    flex-wrap: wrap;
+    align-content: space-between;
+    .column {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-around;
+      .item {
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+        height: 60px;
+        line-height: 60px;
+        // border: 1px solid #ccc;
+        // box-shadow: 10px 10px 5px 2px #666;
+        // background: rgb(244, 222, 222);
+        background: url(../../../static/img/park/border.png) no-repeat center
+          center;
+        background-size: 100%;
+      }
     }
   }
 }
